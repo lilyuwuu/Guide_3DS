@@ -1,14 +1,14 @@
 ---
-title: "תודות"
+title: "Kiitokset"
 ---
 
-**תודות מיוחדות לכל [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) על היותכם מדהימים!**
+**Erityiskiitokset kaikille [#Cakey-kanavalla Freenodessa](http://webchat.freenode.net/?channels=%23Cakey)!**
 {: .notice--primary}
 
-**תודה מיוחדת לכל [המתרגמים] (https://crowdin.com/project/3ds-guide) על זה שהם אדירים!**
+**Erityiskiitokset kaikille [kääntäjille](https://crowdin.com/project/3ds-guide)!**
 {: .notice--primary}
 
-אם שכחתי אתכם כאן, צור איתי קשר ואוסיף את שמכם.
+Otathan yhteyttä minuun, jos unohdin sinut tästä, niin lisään nimesi.
 
 {% capture notice-1 %}
 
