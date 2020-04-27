@@ -75,29 +75,20 @@ There are two different methods for building on the Seedminer exploit (described
   + 您在待會還會用到該檔案，請先將其保留
 
 ___
-### 方法
 
-___
+#### Seedminer + unSAFE_MODE
 
-#### Seedminer + BannerBomb3 + Fredtool
-
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. 
+This method of using Seedminer for further exploitation uses your `movable.sed` file to take advantage of exploits in the SAFE_MODE firmware present on all 3DS units.
 
 This method is compatible with all regions, though CHN region is not covered by this guide.
 
-此方法需要使用 DS 網路設定。請透過本頁上方的測試確認您的主機可以正常使用此程式再行繼續。
-
-Continue to [BannerBomb3](bannerbomb3)
+Continue to [unSAFE_MODE](installing-boot9strap-(usm))
 {: .notice--primary}
 
 ___
 
-#### Seedminer + PicHaxx + DSiDumper + Fredtool
+#### Legacy Methods
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the PicHaxx exploit for the purpose of dumping a system DSiWare. This method requires you to already own (or download) the free "Pokemon Picross" game from the eShop.
+These methods are outdated and not recommended unless you have a specific purpose for them, or you have been advised to use them.
 
-此方法僅適用於歐版、日版、及美版主機，且比上方所述方法更加複雜一點。 It is only recommended to use this method if you do not have a functioning DS Internet Settings application.
-
-Continue to [Homebrew Launcher (PicHaxx)](homebrew-launcher-(pichaxx))
-{: .notice--primary}
-
+[Legacy Methods](legacy-methods)
