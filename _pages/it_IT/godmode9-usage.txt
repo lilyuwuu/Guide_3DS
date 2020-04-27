@@ -128,7 +128,7 @@ Inserisci nella console la scheda di gioco del quale vuoi creare un backup
 1. Seleziona il drive appropriato per il tipo di titolo di cui vuoi creare un backup:
   + **Titolo installato dall'utente**: `[A:] SYSNAND SD`
   + **Titolo di sistema**: `[1:] SYSNAND CTRNAND`
-1. Tenendo premuto (R), premi (B) per aprire le opzioni del drive
+1. Tenendo premuto (R), premi (A) per aprire le opzioni del drive
 1. Seleziona "Search for titles"
 1. Premi il pulsante (A) per continuare
 1. Premi (A) sul file `.tmd` per selezionarlo, quindi seleziona "TMD file options...", ed infine seleziona "Build CIA (standard)"
