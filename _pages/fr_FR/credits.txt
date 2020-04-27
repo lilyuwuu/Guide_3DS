@@ -2,13 +2,13 @@
 title: "Credits"
 ---
 
-**Remerciements spéciaux à toutes les personnes du salon [#Cakey sur Freenode](http://webchat.freenode.net/?channels=%23Cakey), vous êtes géniaux !**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
-**Un grand merci à tous [les traducteurs](https://crowdin.com/project/3ds-guide), vous êtes géniaux !**
+**Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-Si je vous ai oublié, contactez-moi et j'ajouterai votre nom.
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 
