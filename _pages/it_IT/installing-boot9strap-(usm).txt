@@ -1,0 +1,90 @@
+---
+title: "Installing boot9strap (USM)"
+---
+
+{% include toc title="Indice" %}
+
+### Lettura necessaria
+
+In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+
+We can do this using an existing exploit, BannerBomb3.
+
+To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile to your connections list.
+
+Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+
+Queste istruzioni funzionano su console americane, europee, giapponesi e coreane, indicate rispettivamente dalle lettere U, E, J o K dopo la versione del sistema operativo.
+
+If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will need to use a [Legacy Method](legacy-methods). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--danger}
+
+### Cosa serve
+
+* Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
+* L'ultima versione di [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+
+#### Sezione I - Preparazione
+
+1. Open [unSAFE_MODE-bb3 tool](https://usm.bruteforcemovable.com/) on your computer
+1. Carica il tuo file movable.sed scegliendo l'opzione "Choose File"
+1. Click "Download unSAFE_MODE-bb3 archive"
+  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip folder (`unSAFE_MODE-bb3.zip`)
+1. Se la tua console è accesa, spegnila
+1. Inserisci la scheda SD nel tuo computer
+1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
+1. Copy `usm.bin` from the USM archive (`unSAFE_MODE-bb3.zip`) to the root of your SD card
+1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID a 32 caratteri>` -> `Nintendo DSiWare`
+  + Questo `<ID0>` sarà lo stesso che hai utilizzato in [Seedminer](seedminer)
+  + Se la cartella `Nintendo DSiWare` non esiste, creala
+1. Se ci sono file di backup DSiWare esistenti (`<ID a 8 caratteri.bin>`) nella cartella, spostali sul tuo PC
+  + Così facendo la cartella Nintendo DSiWare verrà svuotata. Moving the files to your PC ensures you don't delete any intentional backups
+1. Copy the `F00D43D5.bin` file from the USM archive (`unSAFE_MODE-bb3.zip`) to the `Nintendo DSiWare` folder
+
+#### Section II - BannerBomb3
+
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la console
+1. Avvia "Impostazioni della console"
+1. Entra in `Gestione dati` -> `DSiWare`
+1. Clicca sulla sezione Scheda SD
+  + Your system should flash Red and then crash a few seconds later. This means the exploit profile was successfully copied
+1. Spegni il tuo 3DS
+
+#### Section III - unSAFE_MODE
+
+1. With your system still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)
+  + Release the buttons after a few seconds. Your console will boot into Safe Mode
+1. Press "OK" to accept the update
+  + There is no update. This is part of the exploit
+1. Press "I accept" to accept the terms and conditions
+1. The update will eventually fail, with error code `003-1099`. This is intended behaviour
+1. When asked "Would you like to configure Internet settings?", select "Yes"
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup`
+1. Once you see `B9S install SUCCESS` on the top screen, press any button to reboot to Luma Configuration
+
+#### Sezione IV - Configurare Luma3DS
+
+1. Your device should automatically show the Luma Configuration menu
+1. Usa il pulsante (A) e il D-Pad per abilitare le seguenti opzioni:
+  + **"Show NAND or user string in System Settings"**
+1. Premi (Start) per salvare e riavviare il 3DS
+  + La console dovrebbe avviare il menu HOME dopo un po'. Se ottieni uno schermo nero per più di 5 minuti, [segui questa guida per risolvere il problema](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+
+#### Section V - Restoring WiFi Configuration Profiles
+
+1. Avvia "Impostazioni della console"
+1. Entra in `Gestione dati` -> `DSiWare`
+1. Clicca sulla sezione Scheda SD
+  + Your system should flash Green and then crash a few seconds later. This means your WiFi configuration profiles were successfully restored
+1. Power your system off
+1. Inserisci la scheda SD nel tuo computer
+1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID a 32 caratteri>` -> `Nintendo DSiWare`
+  + Questo `<ID0>` sarà lo stesso che hai utilizzato in [Seedminer](seedminer)
+1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
+1. Put your SD card back in your console and power on
+
+___
+
+### Prosegui con il [Completamento dell'installazione](finalizing-setup)
+{: .notice--primary}
