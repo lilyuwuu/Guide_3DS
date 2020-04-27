@@ -54,7 +54,7 @@ Dopo l'esecuzione dell'exploit Seedminer possono essere eseguiti due diversi exp
 
 #### Sezione III - Seedminer
 
-1. Open [Bruteforce Movable](https://seedminer.hacks.guide/) on your computer
+1. Avvia [Bruteforce Movable](https://seedminer.hacks.guide/) sul tuo computer
   + Questo sito permette il recupero automatico del file `movable_part1.sed` (utilizzando una console 3DS fittizia) e la decriptazione della chiave DSiWare della tua console (utilizzando Seedminer tramite il computer di un volontario)
   + Se il servizio automatizzato non funziona, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) (in Inglese) per richiedere assistenza
 1. Inserisci il Codice Amico della tua console (senza spazi o trattini) nel campo "Your friend code"
@@ -75,29 +75,20 @@ Dopo l'esecuzione dell'exploit Seedminer possono essere eseguiti due diversi exp
   + Conserva questo file in quanto ti servirà nelle pagine successive
 
 ___
-### Metodi
 
-___
+#### Seedminer + unSAFE_MODE
 
-#### Seedminer + BannerBomb3 + Fredtool
-
-Seedminer utilizza il tuo file `movable.sed` per decriptare un qualunque titolo DSiWare per iniettare una particolare applicazione DSiWare nell'applicazione Impostazioni Internet DS. 
+This method of using Seedminer for further exploitation uses your `movable.sed` file to take advantage of exploits in the SAFE_MODE firmware present on all 3DS units.
 
 Questo metodo è compatibile con tutte le regioni, anche se la regione CHN non è coperta da questa guida.
 
-Questo metodo richiede che le Impostazioni Internet DS funzionino regolarmente (vedi il test in cima a questa pagina).
-
-Prosegui con [BannerBomb3](bannerbomb3)
+Continue to [unSAFE_MODE](installing-boot9strap-(usm))
 {: .notice--primary}
 
 ___
 
-#### Seedminer + PicHaxx + DSiDumper + Fredtool
+#### Legacy Methods
 
-Seedminer utilizza il tuo file `movable.sed` per ottenere accesso all'Homebrew Launcher tramite l'exploit PicHaxx per eseguire il dump di un'applicazione DSiWare di sistema. Questo metodo richiede il possesso (o lo scaricamento) del gioco gratuito "Pokémon Picross" dall'eShop.
+These methods are outdated and not recommended unless you have a specific purpose for them, or you have been advised to use them.
 
-Questo metodo è compatibile con le regioni EUR, JPN e USA, ed è leggermente più complicato del precedente. È consigliabile utilizzare questo metodo solo se non hai un'applicazione Connessioni Nintendo DS funzionante.
-
-Prosegui con l'[Homebrew Launcher (PicHaxx)](homebrew-launcher-(pichaxx))
-{: .notice--primary}
-
+[Legacy Methods](legacy-methods)
