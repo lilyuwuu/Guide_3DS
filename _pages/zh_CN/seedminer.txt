@@ -75,29 +75,20 @@ title: "Seedminer"
   + 你在之后还会用到这个文件，请先把这个文件存起来
 
 ___
-### 方法
 
-___
+#### Seedminer + unSAFE_MODE
 
-#### Seedminer + BannerBomb3 + Fredtool
-
-本章节 Seedminer 将使用你的 `movable.sed` 文件来解密所有的 DSiWare 程序，以便在3DS中内置的 DS 网络设定中注入修改后的 DSiWare 程序。 
+This method of using Seedminer for further exploitation uses your `movable.sed` file to take advantage of exploits in the SAFE_MODE firmware present on all 3DS units.
 
 这种方法与所有区域兼容，尽管神游机因为阉割了此部分所需内容并不能执行这个操作
 
-这个方法要求 DS 互联网设置正常运行。请通过此页面顶部的测试确认可以使用后再继续此教程。
-
-继续至 [BannerBomb3](bannerbomb3)
+Continue to [unSAFE_MODE](installing-boot9strap-(usm))
 {: .notice--primary}
 
 ___
 
-#### Seedminer + PicHaxx  + DSiDumper + Fredtool
+#### Legacy Methods
 
-本章节 Seedminer 将使用你的 `movable.sed` 文件，通过 PicHaxx 漏洞启动 Homebrew Launcher，以便获得权限来启动 Homebrew Launcher 来导出系统的 DsiWare 软件。 在进行本教程前，你必须先拥有 （或下载） eShop 中的免费的“精灵宝可梦：绘图方块（Pokemon Picross）”游戏。
+These methods are outdated and not recommended unless you have a specific purpose for them, or you have been advised to use them.
 
-这个方法只适用于欧版，日版和美版的设备。而且比另一方法稍微复杂一些。 只有当你无法运行 DS 互联网设置时才建议使用此方法。
-
-继续至 [启动 Homebrew Launcher （通过PicHaxx）](homebrew-launcher-(pichaxx))
-{: .notice--primary}
-
+[Legacy Methods](legacy-methods)
