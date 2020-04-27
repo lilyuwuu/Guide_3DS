@@ -9,7 +9,7 @@ sitemap: false
 
 + [Finalisation de l'installation](finalizing-setup)
 + [Homebrew Launcher (Soundhax)](homebrew-launcher-(soundhax))
-+ [Installation de boot9strap (SafeB9SInstaller)](installing-boot9strap-(SafeB9SInstaller))
++ [Installing boot9strap (unSAFE_MODE)](installing-boot9strap-(usm))
 {% endcapture %}
 <div class="notice--info">{{ notice-1 | markdownify }}</div>
 
@@ -49,10 +49,12 @@ sitemap: false
 + [Installation de boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
 + [Installation de boot9strap (SafeB9SInstaller)](installing-boot9strap-(safeb9sinstaller))
 + [Installation de boot9strap (Soundhax)](installing-boot9strap-(soundhax))
++ [Installing boot9strap (unSAFE_MODE)](installing-boot9strap-(usm))
 + [Transférer une EmuNAND](move-emunand)
 + [ntrboot](ntrboot)
 + [Changement de Région](region-changing)
 + [Seedminer](seedminer)
++ [Legacy Seedminer Methods](legacy-methods)
 + [Dépannage](troubleshooting)
 + [Désinstallation du CFW](uninstall-cfw)
 + [Mettre à jour B9S](updating-b9s)
