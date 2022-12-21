@@ -4,7 +4,7 @@ title: "GYIK"
 {% include toc title="Tartalomjegyzék" %}
 
 {% capture notice-6 %}
-**The latest 3DS firmware is 11.16.0**. Amit érdemes tudnod:
+**A legutolsó 3DS firmware a 11.16.0**. Amit érdemes tudnod:
 
 - Ha az eszközöd *Luma 11.0* -t futtat, *100% biztonságos* a frissítés. Ellenőrizheted a Luma verziódat a (Select) lenyomva tartásával az eszközöd elindítása közben.
 - Ha az eszközöd régebbi Luma verziót futtat, [frissítened kell a Luma-t](checking-for-cfw) mielőtt az eszközöd 11.16.0 verzióra frissíted.

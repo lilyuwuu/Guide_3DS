@@ -168,7 +168,7 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
 1. Reinserisci la scheda SD nella tua console
 1. Premi (A) per eseguire il remount della scheda SD
 1. Premi il pulsante (Start) per riavviare la console
-1. Se ottieni una schermata nera, [segui questa guida per risolvere il problema](troubleshooting#ts_sys_a9lh)
+1. If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_down)
 
 ___
 

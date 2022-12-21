@@ -8,18 +8,34 @@ title: "CFW eltávolítása"
 
 A következőkben teljes egészében el fogjuk távolítani a CFW-t a készülékedről, beleértve a boot9strap-et és a Luma3DS-t azzal a céllal, hogy visszaállítsuk a készüléket gyári állapotra.
 
-Ez nem old meg semmilyen olyan problémát, ami a CFW telepítése közben felmerülhetett. Jobb ötlet az, hogy segítséget kérsz (angolul) a [Nintendo Homebrew Discord szerveren](https://discord.gg/MWxPgEp).
-{: .notice--danger}
+Minden aláíratlan (nem eredeti) játék használhatatlanná fog válni és eltávolításra fog kerülni ezen folyamat során. Használj [mentéskezelőt](https://github.com/FlagBrew/Checkpoint/releases/latest), hogy biztonsági másolatot készíts azon játékok mentéséről, amik fontosak a számodra.
 
-Minden aláíratlan (nem eredeti) játék használhatatlanná fog válni és eltávolításra fog kerülni ezen folyamat során. Használj [mentéskezelőt](https://github.com/FlagBrew/Checkpoint/releases/latest), hogy biztonsági másolatot készíts azon (nem eredeti) játékok mentéséről, amik fontosak a számodra.
+{% capture notice-6 %}
+Ha azért távolítod el a CFW-t, mert:
 
-Ha végeztél olyan módosítást, ami a rendszerszoftver kritikus részeit érinti (például egyedi HOME Menü CIA telepítése, konzol unbannolása, régió módosítás, stb.), a CFW eltávolítása BRICKELI a készülékedet! Biztosítsd azt, hogy minden szekciót követsz ezen az oldalon.
-{: .notice--danger}
+* Szeretnéd újratelepíteni
+* Valamelyik játékod hibás
+* Valamelyik rendszer alkalmazásod hibás
+* A konzolod nem tud bebootolni a HOME Menübe
+
+<u><strong>ÁLLJ!!!</strong></u> Az egyedi firmware eltávolítása egy felesleges kockázat, ami legjobb esetben az időd pocsékolása, a legrosszabb esetben pedig <u><strong>BRICKELI</strong></u> a konzolodat. Jobb ötlet az, hogy segítséget kérsz (angolul) a [Nintendo Homebrew Discord szerveren](https://discord.gg/MWxPgEp).
+{% endcapture %}
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+
+{% capture notice-6 %}
+Ha VALAMELYIKET az alábbiakból már végre hajtottad:
+* [Módosítottad a régióját](region-changing) a konzolnak
+* Egyedi billentyűzetet telepítettél
+* Egyedi HOME Menüt telepítettél (*nem* egy egyedi témát)
+* Kézzel módosítottad a titkosítási kulcsát (`movable.sed`) a konzolnak
+* Unbannoltad a konzolt
+
+akkor a CFW eltávolítása <u><strong>BRICKELNI FOGJA A KONZOLODAT</strong></u>. Ha ez vonatkozik rád, [állíts vissza egy tiszta NAND mentést](godmode9-usage#restoring-a-nand-backup) mielőtt folytatnád.
+{% endcapture %}
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
 Ezek a lépések csak olyan eszközökkel működnek, amint a Luma3DS verziója 8.0 vagy magasabb. Ha a Luma korábbi verzió van a rendszereden, először frissítened kell a következő lépésekkel. Kövesd [ezt az oldalt](checking-for-cfw), hogy megtaláld a frissítési lépéseid.
 {: .notice--warning}
-
-Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd. 
 
 ### Amire szükséged lesz
 
@@ -115,7 +131,7 @@ Ez a rész az illegitim tartalom eltávolításáról szól, mint a homebrew vag
 1. Navigálj ide: Data Management -> DSiWare
 1. Ebben a szoftver listában törölj minden nem-Nintendo tartalmat, amit telepítettél a CFW használatával
   + Ebbe bele tartoznak olyan szoftverek, mint az TWiLightMenu++ beleértve minden játékot és címet, amit *nem* az eShop-ból telepítettél
-  + A sikertelen eltávolítása minden CFW szoftvernek a 3DS és a DSiWare szekciókban a CFW eltávolítása előtt megakadályozhatja vagy letilthatja a hozzáférést a Data Management menühöz a CFW eltávolítása után
+  + A sikertelen eltávolítása minden CFW szoftvernek a 3DS és a DSiWare szekciókban a CFW eltávolítása előtt megakadályozhatja vagy letilthatja a hozzáférést a Data Management menühöz a CFW eltávolítása után, ami megnehezíti a CFW újratelepítését a jövőben
 1. Lépj ki a System Settings alkalmazásból
 1. Indítsd el a Download Play alkalmazást (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. Várj, amíg két gombot nem látsz
@@ -146,6 +162,7 @@ Ez az utolsó lehetőséged, hogy ellenőrizd, hogy minden fenti biztonsági lé
 {: .notice--warning}
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
+  + Ha helyette a Luma3DS chainloader-t látod, használd a D-Pad-et és az (A) gombot a GodMode9 kiválasztásához
 1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 1. Válaszd a "Scripts..." opciót
 1. Válaszd ezt: "GM9Megascript"

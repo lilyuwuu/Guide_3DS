@@ -66,11 +66,11 @@ title: "问题排查"
 
 ## 启动 Homebrew Launcher（通过 PicHaxx）
 
-### “An error has occurred. Hold down the POWER button to turn off the power..."（黑屏，下屏显示白底的文字）
+### “An error has occurred. Hold down the POWER button to turn off the power...”（黑屏，下屏显示白底的文字）
 
 你可能把 `00000001.sav` 和（或者） `otherapp.bin` 文件的位置搞错了。 确保 `00000001.sav` 放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中，`otherapp.bin` 放在了 SD 卡的根目录中。
 
-如果你确定一切都在正确的位置上了，那就尝试重新用 [PicHaxx 存档工具](https://3dstools.nhnarwhal.com/#/pichaxx)创建一份存档，然后把要求的文件重新放到 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中。 确保它是用你主机的 `movable.sed` 文件创建的，且文件已经准确命名为了 `00000001.sav`。 Re-download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest), place the `.bin` file relevant to your console from the `otherapps_with_CfgS` folder to the root of your SD card, and rename it to `otherapp.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+如果你确定一切都在正确的位置上了，那就尝试重新用 [PicHaxx 存档工具](https://3dstools.nhnarwhal.com/#/pichaxx)创建一份存档，然后把要求的文件重新放到 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中。 确保它是用你主机的 `movable.sed` 文件创建的，且文件已经准确命名为了 `00000001.sav`。 重新下载最新版本的 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)，从文件中解压 `otherapps_with_CfgS` 文件夹，然后将里面对应你主机型号和区域的 `.bin`  文件复制到 SD 卡的根目录，并改名为 `otherapp.bin`。  如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
 ### 打开 Picross 时显示了 “An exception occurred” 或 Errdisp 报错
 
@@ -120,13 +120,13 @@ title: "问题排查"
 
 这可能代表着你的主机已经安装过了自制固件。 你应该[检查一下](checking-for-cfw)。
 
-### “An error has occurred. Hold down the POWER button to turn off the power..."（黑屏，下屏显示白底的文字）
+### “An error has occurred. Hold down the POWER button to turn off the power...”（黑屏，下屏显示白底的文字）
 
-The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+`arm11code.bin` 文件丢失或位置错误。 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中，然后重命名为 `arm11code.bin`。 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
 ### “An error has occurred, forcing the software to close...”（程序被强制关闭，下屏跳出白色的消息框）
 
-There is an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+这说明你放的 `arm11code.bin` 文件有问题。 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中，然后重命名为 `arm11code.bin`。 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
 ### 打开浏览器破解二维码或链接后崩溃了
 
@@ -140,9 +140,9 @@ There is an issue with your `arm11code.bin` file. Download the latest release of
 
 你可能没有正确配置 SSLoth 代理服务器。 尝试重做页面上的 SSLoth 部分内容。
 
-### Error 032-0420 when trying to open the browser
+### 打开浏览器后报出了 032-0420 错误
 
-Follow these steps in order:
+按照以下步骤操作：
 
 1. 打开系统设置（本体設定 / System Settings）
 1. 进入到 `互联网设置（インターネット設定 / Internet Settings）` -> `连接设置（インターネット接続設定 / Connection Settings）`
@@ -153,10 +153,10 @@ Follow these steps in order:
   + 测试应该会成功
 1. 点击 “OK” 继续
 1. 点两次 “返回”，然后点“关闭”来返回主菜单。
-1. Open the Internet Browser once
-1. If prompted about a system update, press OK
-  + This won't actually update the system
-1. Start again from [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
+1. 打开浏览器
+1. 如果它提示需要系统更新，点击 OK
+  + 这实际不会将系统更新
+1. 重新从[第二步](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)开始
 
 ### Failed to open SafeB9SInstaller.bin
 
@@ -291,7 +291,7 @@ unSAFE_MODE 没有成功安装上。 请按照你安装 unSAFE_MODE 的步骤页
 1. 如果仍然提示错误，请进行 [CTRTransfer](ctrtransfer)，然后再尝试一次更新
 1. 如需援助，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)并说英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 
-### 主机中对应打开 Rosalina 菜单组合键的按钮坏了，无法打开菜单
+### 主机中对应打开 Rosalina 菜单组合键的按键坏了，无法打开菜单
 
 下载这个[备用 config.ini](https://cdn.discordapp.com/attachments/196635695958196224/982798396265988186/config.ini)，然后将其放在 SD 卡的 `/luma/` 文件夹中。 这样会把 Rosalina 菜单组合键改成 “X” + “Y”。
 
@@ -383,7 +383,7 @@ ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启�
 
 ## 破解主机的功能相关问题
 
-### DSi / DS 功能损坏，或变成了 Flipnote Studio
+### DSi / DS 功能损坏（或变成了 Flipnote Studio）
 
 1. 下载最新版本的 [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) （下载 `.3dsx` 文件）
 1. 关闭你的主机的电源
@@ -398,7 +398,7 @@ ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启�
   + 更新程序将检查到你主机基本的 TWL 程序被卸载，然后它将重新安装它们
 1. 更新完成后，点击 “OK” 来重启主机 
 
-### GBA VC 无法运行，或无法进入安全模式
+### GBA VC 无法运行（或无法进入安全模式）
 
 你的主机正在使用 Luma3DS / AuReiNand 6.6 或更老的版本，而且像是 arm9loaderhax 破解的。 你应该按照 [A9LH 升级 B9S](a9lh-to-b9s) 将主机更新到最新的自制固件环境。
 
@@ -412,7 +412,7 @@ ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启�
 
 ### 清除主菜单的外部存储文件
 
-1. 关闭你的主机的电源
+1. 将主机关机
 1. 将你的 SD 卡插入到电脑
 1. 打开你 SD 卡的 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 文件夹
 1. 删除对应你的 3DS 区域的文件夹：

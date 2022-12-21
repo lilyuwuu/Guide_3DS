@@ -7,9 +7,9 @@ title: "Installazione di boot9strap (Fredtool)"
 {% capture technical_info %}
 <summary><em>Dettagli Tecnici (opzionale)</em></summary>
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application.
+Seedminer utilizza il tuo file `movable.sed` per decriptare un qualunque titolo DSiWare per iniettare una particolare applicazione DSiWare nell'applicazione Connessioni Nintendo DS.
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto nelle partizioni FIRM" spiegato [qui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -44,7 +44,7 @@ In questa sezione attiverai l'exploit BannerBomb3 utilizzando il menu Gestione N
 1. Avvia "Impostazioni della console"
 1. Entra in `Gestione dati` -> `DSiWare` -> `Scheda SD` ([image](/images/screenshots/bb3/dsiware-management.png))
   + La tua console dovrebbe mostrare il menu BB3 multihax
-  + Se questo passaggio causa il crash della tua console, [segui questa guida per risolvere il problema](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu)
+  + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu)
 1. Usa il D-Pad per spostarti sul menu "Dump DSiWare", quindi premi il pulsante (A)
   + La tua console si riavvierà automaticamente
 1. Spegni il tuo 3DS

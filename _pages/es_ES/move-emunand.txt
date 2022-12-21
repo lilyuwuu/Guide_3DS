@@ -165,10 +165,10 @@ Para identificar el Title ID de un archivo `<TitleID>.gbavc.sav`, tu podrías ob
 1. Inserta tu tarjeta SD en tu computadora
 1. Copia todos tus archivos de regreso a tu tarjeta SD
   + Asegúrate de reemplazar el archivo `boot.firm` en tu tarjeta SD con el de tu respaldo
-1. Reinserta tu tarjeta SD en tu consola
+1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Presiona (A) para montar la SD
 1. Presiona (Start) para reiniciar
-1. Si se queda la pantalla en negro, [sigue esta guía de resolución de problemas](troubleshooting#ts_sys_down)
+1. If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_down)
 
 ___
 

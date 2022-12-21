@@ -15,7 +15,7 @@ title: "FAQ"
 ## Pre-Installation FAQ
 
 #### **Q:** *I am on the latest system version. Is my device hackable without any external hardware?*    
-**A:** Ya! The latest firmware (11.16.0) has a free method for getting CFW named [Seedminer](seedminer).
+**A:** Yes! The latest firmware (11.16.0) has a free method for getting CFW named [Seedminer](seedminer).
 
 #### **Q:** *What devices is this guide compatible with?*    
 **A:** The instructions are the same for all retail 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, and New 2DS XL devices. If your system version string displays as "0.0.0-0", then you may have a developer unit.
@@ -24,13 +24,13 @@ title: "FAQ"
 **A:** Bricks are now effectively impossible unless you are purposely trying to brick your device. 
 
 #### **Q:** *Can I run awesome homebrew and emulators with this?*    
-**A:** Ya! This guide will install a few useful homebrew applications, including [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), which acts as a homebrew app store.
+**A:** Yes! This guide will install a few useful homebrew applications, including [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), which acts as a homebrew app store.
 
 #### **Q:** *Can I use this to play games from other regions?*    
 **A:** Yes; Luma3DS will automatically ignore the region check for cartridges and installed titles. Some games may need to make use of Luma's [locale emulation feature](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) in order to work properly on out-of-region devices.
 
 #### **Q:** *Will I lose any features if I install CFW?*    
-**A:** Tidak. Devices with custom firmware can still use the eShop and run physical cartridges as any other 3DS can.
+**A:** No. Devices with custom firmware can still use the eShop and run physical cartridges as any other 3DS can.
 
 #### **Q:** *Can I keep my NNID?*    
 **A:** Your NNID (if you have one) will not be affected by this guide. Devices with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.
@@ -38,14 +38,14 @@ title: "FAQ"
 #### **Q:** *Will my 3DS be banned for having CFW?*    
 **A:** There was a ban wave in May 2017 that banned CFW users from online play (eShop access, NNIDs, and Nintendo Accounts were unaffected), seemingly at random. A ban wave at such a scale has not been seen since. That being said, we don't know what Nintendo may have in store in the future. At this time, we don't think that bans are something that you need to worry about.
 
-#### **Q:** *Can I do this without a computer (e.g. telefon Android)?*    
+#### **Q:** *Can I do this without a computer (e.g. an Android phone)?*    
 **A:** All you need is the ability to put files on a compatible SD card!
 
 #### **Q:** *What size SD card can I use?*    
 **A:** You will need at least 1.5GB of free SD card space to follow this guide in its entirety. While the 3DS is officially compatible with SD cards up to 32GB, larger SD cards can be used if they are manually re-formatted as FAT32. It is not recommended to use SD cards greater than 128GB due to known issues with GBA graphics and custom themes.
 
 #### **Q:** *I heard about this thing I have to pay for (Gateway, Sky3DS, ntrboot, R4, etc). Is that something I need?*    
-**A:** Tidak. Custom firmware can be installed for free on the latest firmware without any hardware devices. In fact, 3DS-mode flashcarts like Gateway and Sky3DS are not recommended because they are obsolete and may carry ban or brick risk.
+**A:** No. Custom firmware can be installed for free on the latest firmware without any hardware devices. In fact, 3DS-mode flashcarts like Gateway and Sky3DS are not recommended because they are obsolete and may carry ban or brick risk.
 
 #### **Q:** *What's the difference between custom firmware and homebrew access?*    
 **A:** Historically, the 3DS used to have userland homebrew access through older exploits like ninjhax. The level of system access granted with userland allowed you to run basic homebrew and emulators but did not allow you to (easily) modify games or dump cartridges. It was also a lot less stable, with homebrew often ungracefully crashing and requiring a full reboot. Custom firmware grants a far greater level of system access while also being more stable than homebrew-only entrypoints.
@@ -74,8 +74,8 @@ title: "FAQ"
 #### **Q:** *How do I update games from outside of my 3DS region?*    
 **A:** You will need to [dump the updates](dumping-titles-and-game-cartridges) from a 3DS that has the updates installed. The Nintendo eShop only contains updates for the console's region (a Japanese 3DS will only have updates for Japanese games).
 
-#### **Q:** *Help! Sesuatu buruk berlaku dan sekarang tidak boleh boot...*    
-**A:** Sila lihat [panduan penyelesaian](troubleshooting). **Uninstalling CFW when your device is in an unbootable state is not recommended, as it is very likely to lead to a brick**.
+#### **Q:** *Help! Something bad happened and now I cannot boot...*    
+**A:** Please look at the [troubleshooting guide](troubleshooting). **Uninstalling CFW when your device is in an unbootable state is not recommended, as it is very likely to lead to a brick**.
 
 ## menuhax / A9LH / Gateway FAQ
 

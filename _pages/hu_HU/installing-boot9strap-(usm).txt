@@ -15,7 +15,7 @@ Hogy ezt elérjük, a rendszer titkosítási kulcsoddal (movable.sed) újra ép�
 
 Amint a WiFi profil injektálásra került, a SAFE_MODE-ot fogjuk használni, ami egy helyreállítás szolgáltatás, ami elérhető minden 3DS konzolon, hogy aktiválja az exploitolt WiFi profilt.
 
-For a more technical explanation, see the following links for information on the BannerBomb3 and unSAFE_MODE exploits: [BannerBomb3](https://github.com/zoogie/Bannerbomb3), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
+További technikai információkért a Bannerbom3 és az unSAFE_MODE exploitokról kövesd ezeket a linkeket: [BannerBomb3](https://github.com/zoogie/Bannerbomb3), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -91,8 +91,8 @@ Ebben a fejezetben egyedi firmware-t fogsz telepíteni az eszközödre.
   + Ha felső képernyő üres, kapcsold ki az eszközödet, majd csináld újra a III. részt
 1. Ha ez elkészült, nyomd meg az (A) gombot az eszközöd újraindításához
 1. A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
-  + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-  + For the purpose of this guide, these settings will be left on default settings
+  + A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmverhez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz
+  + Az útmutató céljának megfeleléshez ezen beállítások alapértelmezett állapoton lesznek hagyva
   + Ha a készüléked kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a `boot.firm` fájlt a Luma3DS `.zip` fájlból az SD kártya gyökerébe
 1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
 

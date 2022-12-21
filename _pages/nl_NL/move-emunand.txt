@@ -96,7 +96,7 @@ Als je geen backup DSiWare Saves hebt gemaakt, kan je dit overslaan.
 1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
 1. Selecteer "Overwrite file(s)"
   + Dit proces kan even duren als je veel DSiWare spellen hebt
-1. Druk op (B) om het opnieuw vergrendelen van schrijfrechten te weigeren als dit gevraagd wordt
+1. Druk op (B) om het opnieuw vergrendelen van schrijfrechten te weigeren
 1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
 
 #### Deel VI - GBA VC saves herstellen
@@ -168,7 +168,7 @@ Om te weten van welk spel een `<TitleID>.gbavc.sav` is kan je een lijst van spel
 1. Stop je SD kaart terug in je 3DS
 1. Druk (A) om je SD kaart te remounten
 1. Druk op (Start) om te herstarten
-1. Wanneer je een zwart scherm hebt, [volg dan deze foutoplossingshadleiding](troubleshooting#ts_sys_down)
+1. If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_down)
 
 ___
 

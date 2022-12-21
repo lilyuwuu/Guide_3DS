@@ -165,10 +165,10 @@ Pour identifier le Title ID d'un fichier `<TitleID>.gbavc.sav`, vous pouvez obte
 1. Insérez votre carte SD dans votre ordinateur
 1. Copier tous vos fichiers sur votre carte SD
   + Assurez-vous de remplacer le fichier `boot.firm` sur votre carte SD avec le 'boot.firm' de votre sauvegarde
-1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
+1. Réinsérez votre carte SD dans votre 3DS
 1. Appuyez sur (A) pour remonter votre carte SD
 1. Appuyez sur (Start) pour redémarrer
-1. Si vous obtenez un écran noir, [suivez ce guide de dépannage](troubleshooting#ts_sys_down)
+1. If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_down)
 
 ___
 

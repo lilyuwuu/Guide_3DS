@@ -20,11 +20,11 @@ Ofwel zitten `boot9strap.firm` en `boot9strap.firm.sha` niet in de `boot9strap` 
 
 Er is een probleem met je `boot9strap.firm` en `boot9strap.firm.sha` bestanden. Download de nieuwste versie van [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) opnieuw en plaats `boot9strap.firm` en `boot9strap.firm.sha` in de `boot9strap` map.
 
-#### Secret Sector - Bestand niet gevonden
+#### Secret Sector - File not found
 
 Je mist `secret_sector.bin` van de `boot9strap` map, of de `boot9strap` map heeft niet de juiste naam. Download [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce) met behulp van een torrent client en plaats het in de `boot9strap` map.
 
-#### Iets anders
+#### Something else
 
 Sluit je aan bij [Nintendo Homebrew op Discord](https://discord.gg/MWxPgEp) voor hulp, en beschrijf het bericht dat je ziet.
 
@@ -32,7 +32,7 @@ Sluit je aan bij [Nintendo Homebrew op Discord](https://discord.gg/MWxPgEp) voor
 
 ## Seedminer
 
-### Meerdere lange mapnamen in de Nintendo 3DS map
+### Multiple long folder names in Nintendo 3DS folder
 
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
@@ -50,7 +50,7 @@ Dit gebeurt wanneer je je SD-kaart in meerdere 3DS systemen gebruikt en is bedoe
 1. Verwijder de `Nintendo 3DS` map
 1. Hernoem de `BACKUP_Nintendo 3DS` map naar `Nintendo 3DS`
 
-### Bruteforce movable overslaan naar stap 4
+### Bruteforce Movable skips to step 4
 
 De website heeft al je `movable.sed` gemijnd met je friend code en ID0 combinatie. Je kunt de 'movable.sed' gebruiken die het je biedt.
 
@@ -66,21 +66,21 @@ De website heeft bepaald dat jouw 'movable.sed' niet kan gebruteforced worden. Z
 
 ## Homebrew Launcher (PicHaxx)
 
-### "An error has occurred. Hold down the POWER button to turn off the power..." (zwart scherm met deze tekst)
+### "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
 Je `00000001.sav` en/of `otherapp.bin` bestanden werden mogelijk op de verkeerde plaats gezet. Zorg ervoor dat `00000001.sav` zich in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` bevindt en dat `otherapp.bin` in de hoofdmap van je SD-kaart zit.
 
 If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Zorg ervoor dat de bestandsnaam exact `00000001.sav` is en dat je de `movable.sed` van je 3DS hebt gebruikt om het te maken. Re-download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest), place the `.bin` file relevant to your console from the `otherapps_with_CfgS` folder to the root of your SD card, and rename it to `otherapp.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
-### "An exception occurred" of Errdisp bij het openen van Picross
+### "An exception occurred" or Errdisp when opening Picross
 
 Je apparaat heeft al custom firmware. Je zou best [controleren op CFW](checking-for-cfw).
 
-## "An error has occured, forcing the software to close..." (wit berichtveld)
+### "An error has occurred, forcing the software to close..." (white message box)
 
 Er is een probleem met je `otherapp.bin` bestand. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest), place the `.bin` file relevant to your console from the `otherapps_with_CfgS` folder to the root of your SD card, and rename it to `otherapp.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
-### Spel start normaal op
+### Game starts normally
 
 Je aangepaste `00000001.sav` bestand kan mogelijks op de verkeerde plek staan of je hebt de verkeerde `movable.sed` gebruikt bij het creëren ervan. Re-generate your `movable.sed` from [Bruteforce Movable](https://seedminer.hacks.guide), then re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx) and place the resulting file (`00000001.sav`) in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
 
@@ -88,13 +88,13 @@ Je aangepaste `00000001.sav` bestand kan mogelijks op de verkeerde plek staan of
 
 ## Boot9strap installeren (Soundhax)
 
-### Rood/paars/roze en wit scherm na het uitvoeren van Soundhax
+### Red/purple/pink and white screen after running Soundhax
 
 Als jouw apparaat op systeemversie 9.4.0, 9.5.0 of 9.6.0 is, kun je op een bug stuiten met een oude versie van universal-otherapp. Download de nieuwste versie [hier](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
 Als je apparaat niet op deze firmware draait, is de kans groot dat je al custom firmware hebt. Je zou best [controleren op CFW](checking-for-cfw).
 
-## "An error has occured, forcing the software to close..." (wit berichtveld)
+### "An error has occurred, forcing the software to close..." (white message box)
 
 Er is een probleem met je `otherapp.bin` bestand (het ontbreekt, werd misplaatst of is corrupted). Download de nieuwste versie van [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) en plaats het op de hoofdmap van je SD-kaart.
 
@@ -102,7 +102,7 @@ Er is een probleem met je `otherapp.bin` bestand (het ontbreekt, werd misplaatst
 
 Je hebt het verkeerde Soundhax bestand gebruikt voor je apparaat en regio, of je apparaat is niet compatibel met Soundhax. In het laatste geval moet je je apparaat updaten naar de nieuwste versie en volg [Seedminer](seedminer).
 
-### Kan SafeB9SInstaller.bin niet openen
+### Failed to open SafeB9SInstaller.bin
 
 Het bestand `SafeB9SInstaller.bin` ontbreekt of zit in de verkeerde map. Download de nieuwste versie van [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), pak het uit en plaats `SafeB9SInstaller.bin` op de hoofdmap van je SD-kaart. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
@@ -120,11 +120,11 @@ Mocht dit niet lukken, gebruik dan een andere SD-kaart.
 
 This likely indicates that you already have custom firmware. Je zou best [controleren op CFW](checking-for-cfw).
 
-### "An error has occurred. Hold down the POWER button to turn off the power..." (zwart scherm met deze tekst)
+### "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
 The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
-## "An error has occured, forcing the software to close..." (wit berichtveld)
+### "An error has occurred, forcing the software to close..." (white message box)
 
 There is an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
@@ -158,11 +158,11 @@ Follow these steps in order:
   + This won't actually update the system
 1. Start again from [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
 
-### Kan SafeB9SInstaller.bin niet openen
+### Failed to open SafeB9SInstaller.bin
 
 Het bestand `SafeB9SInstaller.bin` ontbreekt of zit in de verkeerde map. Download de nieuwste versie van [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), pak het uit en plaats `SafeB9SInstaller.bin` op de hoofdmap van je SD-kaart. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
-### Bevroren op "Doing agbhax..."
+### Frozen on "Doing agbhax..."
 
 There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
@@ -192,11 +192,11 @@ Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, the
 
 If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case and Safe Mode works, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). If Safe Mode doesn't work or you need assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 
-### DSiWare Management menu crasht niet
+### DSiWare Management menu does not crash
 
 `F00D43D5.bin` bevindt zich niet in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. Zorg ervoor dat `Nintendo DSiWare` correct gespeld is en een spatie heeft. Hoofdletters/kleine letters maken niet uit.
 
-### DSiWare Management toont een vraagteken
+### DSiWare Management shows a question mark
 
 Er kan een probleem zijn met je `F00D43D5.bin` bestand (het kan beschadigd zijn of bedoeld voor een andere 3DS). Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen), ensuring that you use the `movable.sed` file for your console.
 
@@ -214,7 +214,7 @@ The file `usm.bin` is missing or misplaced. Download the latest release of [unSA
 
 There is also a possibility that the console isn't reading your SD card. Make sure it is inserted and formatted correctly.
 
-### Kan SafeB9SInstaller.bin niet openen
+### Failed to open SafeB9SInstaller.bin
 
 Het bestand `SafeB9SInstaller.bin` ontbreekt of zit in de verkeerde map. Download de nieuwste versie van [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), pak het uit en plaats `SafeB9SInstaller.bin` op de hoofdmap van je SD-kaart. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
@@ -228,7 +228,7 @@ Mocht dit niet lukken, gebruik dan een andere SD-kaart.
 
 ## Boot9strap installeren (Fredtool)
 
-### Error op de Fredtool Injector pagina
+### Error on Fredtool Injector page
 
 Zorg ervoor dat je `movable.sed` en DSiWare back-up van dezelfde console komen. Een mismatch resulteert in een error.
 
@@ -236,39 +236,39 @@ Zorg ervoor dat je `movable.sed` en DSiWare back-up van dezelfde console komen. 
 
 You forgot to delete `F00D43D5.bin` from the SD card. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card and delete the `F00D43D5.bin` file.
 
-### "Haxxxxxxxxx!" verschijnt niet
+### "Haxxxxxxxxx!" does not appear
 
 Er is een probleem met je `42383821.bin` bestand (het is onjuist, het ontbreekt, werd misplaatst of is beschadigd). Re-create your files with the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website and ensure that you place the `42383821.bin` file from `output.zip` -> `hax` in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`.
 
-### DS Connection Settings start normaal op
+### DS Connection Settings launches normally
 
 `Haxxxxxxxxx!` is niet van je SD-kaart naar het systeemgeheugen gekopieerd.
 
-### Zwart scherm bij het opstarten van DS Connection Settings
+### Black screen when launching DS Connection Settings
 
 Je DS Connection Settings app is stuk en je zult toegang nodig hebben tot de Homebrew Launcher om dit probleem op te lossen. Sluit je aan bij [Nintendo Homebrew op Discord](https://discord.gg/MWxPgEp) voor hulp.
 
-### SD-kaart is grijs gemaakt
+### SD card is grayed out
 
 Flipnote kan een lange tijd nemen om je kaart te indexeren als je een grote SD-kaart hebt. Laat het een aantal minuten blijven zitten.
 
-### Lenny face verschijnt niet
+### Lenny face does not appear
 
 Je hebt de `private` map niet van Frogminer_save `.zip` naar de hoofdmap van je SD-kaart gekopieert.
 
-### Flipnote is bevroren
+### Flipnote is frozen
 
 Het zou kunnen dat je per ongelijk het touch screen hebt aangeraakt terwijl de gemodificeerde Flipnote open stond. Voer je DS Connection Settings opnieuw in en zorg ervoor dat je niet per ongelijk het touchscreen gebruikt.
 
-### Groen scherm na plakken 
+### Green screen after pasting 
 
 Het bestand `boot.nds` ontbreekt of is misplaatst. Download de nieuwste versie van [b9stool](https://github.com/zoogie/b9sTool/releases/latest) en plaats `boot.nds` op de hoofdmap van je SD-kaart, ter vervanging van het bestaande bestand.
 
-### Wit scherm na plakken
+### White screen after pasting
 
 Er is een probleem met je `boot.nds` bestand. Download de nieuwste versie van [b9stool](https://github.com/zoogie/b9sTool/releases/latest) opnieuw en plaats `boot.nds` op de hoofdmap van je SD-kaart, ter vervanging van het bestaande bestand.
 
-### Kan het Luma3DS configuratie menu niet openen na het uitvoeren van b9stool
+### Unable to open Luma3DS configuration menu after running b9stool
 
 Het zou kunnen dat boot9strap niet correct geïnstalleerd werd. Volg deel B van [deze pagina](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md).
 
@@ -276,7 +276,7 @@ Het zou kunnen dat boot9strap niet correct geïnstalleerd werd. Volg deel B van 
 
 ## Installatie voltooien
 
-### Kan apparaat niet bijwerken
+### Unable to update device
 
 De volgende stappen kunnen in elke volgorde uitgevoerd worden, maar zijn gesorteerd volgens de moeilijkheidsgraad om ze uit te voeren.
 
@@ -290,11 +290,11 @@ De volgende stappen kunnen in elke volgorde uitgevoerd worden, maar zijn gesorte
 1. Als je nog steeds een foutmelding krijgt, [volg dan CTRTransfer](ctrtransfer) en probeer het opnieuw
 1. Voor verdere ondersteuning (in het Engels), join dan [Nintendo Homebrew op Discord](https://discord.gg/MWxPgEp)
 
-### Niet in staat om Rosalina te openen door defecte knop(pen)
+### Unable to enter Rosalina due to broken button(s)
 
 Download deze [alternatieve config.ini](https://cdn.discordapp.com/attachments/196635695958196224/982798396265988186/config.ini) en plaats het in `/luma/`. Dit zal de Rosalina sleutel combinatie veranderen naar (X) + (Y).
 
-### "An exception occurred" na het proberen starten van de Homebrew Launcher via Download Play
+### "An exception occurred" after trying to launch Homebrew Launcher via Download Play
 
 Er is een probleem met je `boot.3dsx` bestand (het ontbreekt, werd misplaatst of is corrupted). Download de nieuwste versie van [de Homebrew Launcher](https://github.com/devkitPro/3ds-hbmenu/releases/latest) en plaats `boot.3dsx` op de hoofdmap van je SD-kaart, ter vervanging van elk bestaand bestand. Zorg ervoor dat je het ZIP-bestand uitpakt met een andere tool dan WinRAR, omdat het bekend is dat het problemen veroorzaakt met 3DS-gerelateerde bestanden.
 
@@ -302,24 +302,24 @@ Er is een probleem met je `boot.3dsx` bestand (het ontbreekt, werd misplaatst of
 
 Je hebt de map `gm9` niet van de GodMode9 `.zip` naar de hoofdmap van de SD-kaart gekopieert. Download de nieuwste versie van [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) en plaats de `gm9` map op de hoofdmap van je SD-kaart, voeg deze samen met de bestaande bestanden.
 
-### `essentials.exefs` ontbreekt in `/gm9/out/`
+### `essentials.exefs` missing from `/gm9/out/`
 
-Je console had al custom firmware in het verleden, dus werd je niet automatisch gevraagd om een back-up te maken. Maak manueel een backup:
+Your device had custom firmware in the past, so you were not automatically prompted to make a backup. Make a backup manually:
 
 1. Stop je SD kaart terug in je 3DS
 1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
 1. Navigeer naar `[S:] SYSNAND VIRTUAL`
-1. Selecteer `essentials.exefs` en dan `Copy to 0:/gm9/out/`
-1. Je zou nu `essentials.exefs` in `/gm9/out/` moeten hebben
+1. Select `essentials.exefs`, then `Copy to 0:/gm9/out/`
+1. You should now have `essentials.exefs` in `/gm9/out/`
 
 ---
 
-## Boot-gerelateerde problemen op gemodde apparaten
+## Boot-related issues on modded devices
 
 De instructies die hier vermeld worden gaan er van uit dat je console een moderne custom firmware setup heeft (boot9strap + Luma3DS 8.0 of hoger). Als je console een oudere homebrew setup heeft (bijvoorbeeld iets gebaseerd op arm9loaderhax of menuhax), dan moet je updaten voor je deze instructies probeert.
 {: .notice--info}
 
-### Mijn apparaat schakelt uit wanneer ik het probeer aan te zetten, of de notificatie LED toont een kleur bij het opstarten
+### My device powers off when I try to turn it on, and/or the notification LED shows a color on boot
 
 Er is een probleem met je `boot.firm` bestand. Als je [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4) gebruikt, kan je 3DS notificatie LED een bepaalde kleur flashen. Deze kleur wordt gebruikt om problemen met je `boot.firm` bestand op SD-kaart of intern geheugen te diagnosticeren. Bij oudere versies van boot9strap zal het blauwe licht bijna onmiddellijk uitgeschakeld worden wanneer je je apparaat probeert op te starten.
 
@@ -333,7 +333,7 @@ Je kunt een nieuw `boot.firm` bestand krijgen door de [nieuwste versie van Luma3
 
 Als je een "pop" hoort, mogelijks samen met de achtergrondverlichting die eventjes aanschiet, is er een hardware probleem met je console (zoals een achtergrondlicht kabel die niet aangesloten is). Je zou je apparaat kunnen laten opstarten door het op bepaalde hoeken vast te houden.
 
-### Mijn apparaat zit vast op een zwart scherm met statisch blauw licht
+### My device gets stuck on a black screen, with a static blue light
 
 De volgende stappen kunnen in elke volgorde uitgevoerd worden, maar zijn gesorteerd volgens de tijdsduur om ze uit te voeren.
 
@@ -355,7 +355,7 @@ De volgende stappen kunnen in elke volgorde uitgevoerd worden, maar zijn gesorte
 1. Volg de [CTRTransfer](ctrtransfer) handleiding
 1. Voor verdere ondersteuning vraag om hulp in de [Nintendo Homebrew Discord](https://discord.gg/MWxPgEp)
 
-### Mijn apparaat start op naar een error scherm
+### My device boots to an error screen
 
 #### "An error has occurred: Failed to apply 1 FIRM patch(es)" of "An exception has occurred -- Current process: pm"
 
@@ -369,20 +369,20 @@ ARM11 exception handlers zijn uitgeschakeld of custom firmware is niet geïnstal
   + Zet je apparaat aan, terwijl je (Select) ingedrukt houdt
   + Als "Disable ARM11 exception handlers" is aangevinkt, vink het uit
 
-#### Een andere foutmelding
+#### Some other error
 
 Neem een foto van de fout en meld je aan bij [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) voor hulp.
 
-### Blauw "Bootrom Error" scherm
+### Blue "Bootrom Error" screen
 
 Je apparaat is waarschijnlijk hard-bricked. Je zult een ntrboot flashcard moeten kopen om boot9strap te herinstalleren om te proberen je apparaat te repareren. Dit kan ook duiden op een hardware probleem dat niet kan worden opgelost. In ieder geval, join [Nintendo Homebrew op Discord](https://discord.gg/MWxPgEp) voor hulp.
   + Het is ook mogelijk dat iemand een boot-time splash screen heeft ingesteld dat eruit ziet als een brick. Probeer je apparaat ingeschakeld te laten, wacht op het blauwe scherm gedurende vijf minuten.
 
 ---
 
-## Functionality-gerelateerde problemen op modded apparaten
+## Functionality-related issues on modded devices
 
-### DSi / DS functionaliteit is kapot of vervangen door Flipnote Studio
+### DSi / DS functionality is broken or has been replaced with Flipnote Studio
 
 1. Download de nieuwste versie van [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (het `.3dsx` bestand)
 1. Schakel je 3DS uit
@@ -397,11 +397,11 @@ Je apparaat is waarschijnlijk hard-bricked. Je zult een ntrboot flashcard moeten
   + De update zal zien dat de essenciële TWL titels zijn gedeïstalleerd en zal ze opnieuw installeren
 1. Wanneer de update klaar is, klik dan op "OK" om je 3DS opnieuw op te starten 
 
-### GBA Virtual Console en/of Safe Mode functionaliteit is kapot
+### GBA Virtual Console and/or Safe Mode functionality is broken
 
-Je apparaat draait Luma3DS/AuReiNand 6.6 of ouder, waarschijnlijk via arm9loaderhax. Volg [A9LH naar B9S](a9lh-to-b9s) om je 3DS te updaten naar een moderne custom firmware omgeving.
+Your device is running Luma3DS/AuReiNand 6.6 or older, likely via arm9loaderhax. Volg [A9LH naar B9S](a9lh-to-b9s) om je 3DS te updaten naar een moderne custom firmware omgeving.
 
-### Extended memory mode spellen werken niet
+### Extended memory mode games are broken
 
 Dit kan gebeuren na een CTRTransfer of regio verandering op Old 3DS / 2DS. Je moet je apparaat formatteren om dit probleem op te lossen.
 
@@ -409,7 +409,7 @@ Dit kan gebeuren na een CTRTransfer of regio verandering op Old 3DS / 2DS. Je mo
 
 ## Andere problemen oplossen
 
-### Wis HOME Menu extdata
+### Clear HOME Menu extdata
 
 1. Schakel je 3DS uit
 1. Plaats je SD kaart in je computer
@@ -423,7 +423,7 @@ Dit kan gebeuren na een CTRTransfer of regio verandering op Old 3DS / 2DS. Je mo
   + **TWN Regio**: `000000B1`
 1. Stop je SD kaart terug in je 3DS
 
-### Wis HOME Menu thema gegevens
+### Clear HOME Menu theme data
 
 1. Schakel je 3DS uit
 1. Plaats je SD kaart in je computer
