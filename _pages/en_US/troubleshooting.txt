@@ -470,7 +470,7 @@ The steps below can be attempted in any order, but are listed from easiest to ha
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error #01: SD:/Nintendo 3DS does not exist</u></summary>
+<summary><u>Error #01: No Nintendo 3DS folder</u></summary>
 
 Your SD card does not have the `Nintendo 3DS` folder. Power on your device with your SD card inserted, then wait for the device to show a message box that says "Creating HOME Menu management information". Once the message box disappears, power off your device and try again.
 
@@ -478,7 +478,7 @@ Your SD card does not have the `Nintendo 3DS` folder. Power on your device with 
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error #02: essential.exefs does not exist</u></summary>
+<summary><u>Error #02: Missing essential.exefs</u></summary>
 
 You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power off your device, power it on while holding (Start) to re-enter GodMode9, say 'Yes' to the prompt, then try again.
 
@@ -487,7 +487,7 @@ You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power of
 
 {% capture compat %}
 
-<summary><u>Unable to open GodMode9 or Error #03: SD:/finalize does not exist</u></summary>
+<summary><u>Unable to open GodMode9 or Error #03: Missing files</u></summary>
 
 You did not copy everything from `finalize.zip` to the root of your SD card. Remember, your SD card should have at least these files:
 
@@ -499,7 +499,7 @@ You did not copy everything from `finalize.zip` to the root of your SD card. Rem
 
 {% capture compat %}
 
-<summary><u>Error #04: Insufficient space on SD card</u></summary>
+<summary><u>Error #04: No space</u></summary>
 
 You need at least 1.3GB of free space to perform the NAND backup, which is apart of the script. If you don't have enough space, follow these steps:
 
@@ -523,7 +523,7 @@ Once done, re-run the script.
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error #05: Title database not found</u></summary>
+<summary><u>Error #05: No title database</u></summary>
 
 Press (A) to create a title database, follow the prompts [here](/images/screenshots/database-reset.jpg), then re-run the script.
 
@@ -551,9 +551,9 @@ If you have enough space on your SD card, your SD might be corrupted or faulty. 
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>line 63: install game failed</u></summary>
+<summary><u>Error #08: Dummy title database</u></summary>
 
-You didn't delete the title database. Follow the prompts [here](/images/screenshots/database-reset.jpg), then re-run the script.
+You didn't delete the dummy title database that was created by Error #05. Follow the prompts [here](/images/screenshots/database-reset.jpg), then re-run the script.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
