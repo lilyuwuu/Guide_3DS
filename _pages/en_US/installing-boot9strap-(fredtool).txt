@@ -30,6 +30,9 @@ This is a currently working implementation of the "FIRM partitions known-plainte
 
 In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and copy the resulting file dump to your computer so that you can use it on the next section.
 
+A visual guide for this section is available [here](/images/screenshots/fredtool/haxx.png)!
+{: .notice--success}
+
 1. Reinsert your SD card into your device
 1. Power on your device
 1. Launch System Settings on your device
@@ -43,6 +46,9 @@ In this section, you will trigger the BannerBomb3 exploit using the DSiWare Mana
 #### Section III - Prep Work
 
 In this section, you will copy the files necessary to temporarily replace DS Connection Settings with Flipnote Studio, which is used to launch the boot9strap (custom firmware) installer.
+
+A visual guide for this section is available [here](/images/screenshots/fredtool/prep-work.png)!
+{: .notice--success}
 
 1. Insert your SD card into your computer
 1. Open the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website on your computer
@@ -76,6 +82,9 @@ In this section, you will copy the files necessary to temporarily replace DS Con
 
 In this section, you will copy the hacked DS Connection Settings DSiWare to internal memory, which will temporarily replace it with Flipnote Studio.
 
+A visual guide for this section is available [here](/images/screenshots/fredtool/overwrite-dsconn.png)!
+{:. notice--success}
+
 1. Launch System Settings on your device
 1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
 1. Select the "Haxxxxxxxxx!" title
@@ -98,6 +107,9 @@ In this section, you will copy the hacked DS Connection Settings DSiWare to inte
 #### Section VII - Restoring DS Connection Settings
 
 In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in Section IV.
+
+A visual guide for this section is available [here](/images/screenshots/fredtool/revert-dsconn.png)!
+{: .notice--success}
 
 1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card
 1. Copy the `42383841.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder, replacing the existing one

@@ -7,3 +7,6 @@
 {%- if include.cfw == "true" %}
   + If this still gives you an error, [follow this troubleshooting guide](troubleshooting#finalizing-setup)
 {%- endif %}
+
+![]({{ "/images/screenshots/system-update.png" | absolute_url }})
+{: .notice--info}

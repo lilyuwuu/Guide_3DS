@@ -3,3 +3,8 @@
 1. If you see the system update screen, press Cancel
   + Your device will power off
   + If the device boots to the HOME Menu, just power off your device
+
+![]({{ "/images/screenshots/bb3/safe-mode-test.png" | absolute_url }})
+{: .notice--info}
+
+

@@ -20,6 +20,9 @@ In this section, you will update your system to the latest version, which is nec
   + The updater may display a message saying "Your system is up to date" instead of updating. This is normal if you are already up to date; continue to the next section
   + If this gives you an error, set both your DNS settings and Proxy settings to "Auto"
 
+![]({{ "/images/screenshots/system-update.png" | absolute_url }})
+{: .notice--info}
+
 ### Section II - Prep Work
 
 In this section, you will get the necessary details from your 3DS that are required to figure out your device's encryption key.
@@ -27,7 +30,9 @@ In this section, you will get the necessary details from your 3DS that are requi
 Before following this section:
 + Ensure that you have turned on your console with the SD card inserted at least once to generate the necessary data
 + Ensure that your console is connected to the Internet (you should see a blue "Internet" indicator on the top-left corner of the HOME screen)
-{: .notice--info}
+
+A visual guide is available for this section [here](/images/screenshots/seedminer/fc-id0.png)!
+{: .notice--success}
 
 1. Power off your device
 1. Insert your SD card into your computer
@@ -50,6 +55,9 @@ Before following this section:
 ### Section III - Seedminer
 
 In this section, you will use the Bruteforce Movable website to retrieve your device's encryption key in the form of `movable.sed`.
+
+A visual guide is available for this section [here](/images/screenshots/seedminer/bfm.png)!
+{: .notice--success}
 
 1. Open [Bruteforce Movable](https://seedminer.hacks.guide/) on your computer
   + If the site isn't working, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
