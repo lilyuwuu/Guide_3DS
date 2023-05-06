@@ -60,9 +60,23 @@ In this section, you will update your system to the latest version, which is saf
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Section III - Setup Script
+#### Section III - RTC and DSP setup
 
-In this section, you will use a script to automate Luma3DS configuration, homebrew installation, SD card cleanup, and system file backup.
+In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
+
+1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
+  + If one of these buttons is broken, download [config.ini]({{ base_path }}/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
+1. Select “Miscellaneous options”
+1. Select “Dump DSP firmware”
+1. Press (B) to continue
+1. Select “Nullify user time offset”
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Press (B) to exit the Rosalina menu
+
+#### Section IV - Setup Script
+
+In this section, you will use a script to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. Power off your device
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
@@ -75,11 +89,11 @@ In this section, you will use a script to automate Luma3DS configuration, homebr
   + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
 1. Once the script says "Setup complete!", press (A) to power off the device
 1. Insert your SD card into your computer
-1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
+1. Copy the `/gm9/out/` folder on your SD card to a safe location on your computer
+  + You should have three files inside: `<date>_<serialnumber>_sysnand_##.bin` (~1GB), `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs`
+  + Copy these files to multiple locations (such as online file storage, an external hard drive, etc.)
   + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-  + `essential.exefs` is negligible in size and may be kept on your SD card for ease of access
+1. Delete the `/gm9/out/` folder from your SD card
 1. If you have it, copy the `/luma/backups/` folder on your SD card to a safe location on your computer
 
 ___
