@@ -482,7 +482,7 @@ window.cookieconsent.initialise({
 <ul>
   <li>Seu arquivo <code class="language-plaintext highlighter-rouge">movable.sed</code> de completar <a href="seedminer">Seedminer</a></li>
   <li>A versão mais recente do <a href="https://github.com/zoogie/Frogminer/releases/latest">Frogminer_save</a> (<code class="language-plaintext highlighter-rouge">Frogminer_save.zip</code>)</li>
-  <li>The latest release of <a href="https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip">b9sTool</a> (direct download)</li>
+  <li>A versão mais recente do <a href="https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip">b9sTool</a> (download direto)</li>
   <li>A versão mais recente do <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> (o arquivo <code class="language-plaintext highlighter-rouge">.zip</code> do Luma3DS)</li>
 </ul>
 
@@ -559,7 +559,7 @@ window.cookieconsent.initialise({
       <li>A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela</li>
     </ul>
   </li>
-  <li>Copy <code class="language-plaintext highlighter-rouge">boot.nds</code> (B9STool) from the release <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">boot.nds</code> (B9STool) do <code class="language-plaintext highlighter-rouge">.zip</code> para a raiz do seu cartão SD</li>
   <li>Copie a pasta <code class="language-plaintext highlighter-rouge">private</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do Frogminer_save para a raiz do seu cartão SD</li>
   <li>Reinsira seu cartão SD no seu dispositivo</li>
   <li>
@@ -576,23 +576,32 @@ window.cookieconsent.initialise({
 <ol>
   <li>Abra a Configuração do Console em seu dispositivo</li>
   <li>Navegue para <code class="language-plaintext highlighter-rouge">Gerenciamento de Dados</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">Cartão SD</code> (<a href="/images/screenshots/bb3/dsiware-management.png">imagem</a>)</li>
-  <li>Selecione o aplicativo “Haxxxxxxx!”</li>
+  <li>Selecione o aplicativo “Haxxxxxxx!”
+    <ul>
+      <li>If you are unable to select the “Haxxxxxxxxx” title, <a href="troubleshooting#installing-boot9strap-fredtool">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
   <li>Selecione “Copy”, então selecione “OK”</li>
   <li>Retorne ao menu principal da Configuração do Console</li>
   <li>Navegue até <code class="language-plaintext highlighter-rouge">Configurações da Internet</code> -&gt; <code class="language-plaintext highlighter-rouge">Conexões Nintendo DS</code>, depois selecione “OK” (<a href="/images/screenshots/fredtool/dsconnection.png">imagem</a>)</li>
-  <li>Se o exploit foi bem sucedido, seu dispositivo irá abrir a versão JPN do Flipnote Studio</li>
+  <li>Se o exploit foi bem sucedido, seu dispositivo irá abrir a versão JPN do Flipnote Studio
+    <ul>
+      <li>If your device does not load the JPN version of Flipnote Studio, <a href="troubleshooting#installing-boot9strap-fredtool">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
 </ol>
 
 <h4 id="seção-v---flipnote-exploit">Seção V - Flipnote Exploit</h4>
 
 <p class="notice--info">Caso você prefira um guia visual para esta seção, há um disponível <a href="https://zoogie.github.io/web/flipnote_directions/">aqui</a>.</p>
 
-<p>Nesta seção, você executará uma série de passos muito específicos dentro do Flipnote Studio, que quando executado corretamente, irá iniciar o instalador boot9strap (custom firmware).</p>
+<p>In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch b9sTool, the boot9strap (custom firmware) installer.</p>
 
 <ol>
   <li>Complete o processo inicial do jogo até você chegar no menu principal
     <ul>
       <li>Selecione a opção da esquerda sempre que solicitado durante o processo de instalação</li>
+      <li>If you encounter an issue while doing this section, <a href="troubleshooting#installing-boot9strap-fredtool">check this troubleshooting guide</a> for your issue</li>
     </ul>
   </li>
   <li>Usando a touch-screen, selecione a caixa grande da esquerda, então selecione a caixa com um ícone do cartão SD</li>

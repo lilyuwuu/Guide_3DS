@@ -488,11 +488,7 @@ window.cookieconsent.initialise({
 <ul>
   <li>A versão mais recente do <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a> (download direto)</li>
   <li>A versão mais recente do <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a> (download direto)</li>
-  <li>A versão mais recente do <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a>
-    <ul>
-      <li>Você já pode ter isso por conta de uma seção anterior do guia</li>
-    </ul>
-  </li>
+  <li><a href="https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin">usm.bin</a> (download direto)</li>
 </ul>
 
 <h4 id="seção-i---preparação">Seção I - Preparação</h4>
@@ -516,7 +512,7 @@ window.cookieconsent.initialise({
   <li>Crie uma pasta chamada <code class="language-plaintext highlighter-rouge">boot9strap</code> na raiz do seu cartão SD</li>
   <li>Copie o <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> e o <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do boot9strap para a pasta <code class="language-plaintext highlighter-rouge">/boot9strap/</code> no seu cartão SD</li>
   <li>Copie <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do SafeB9SInstaller para a raiz do seu cartão SD</li>
-  <li>Copie <code class="language-plaintext highlighter-rouge">usm.bin</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do unSAFE_MODE para a raiz do seu cartão SD</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">usm.bin</code> para a raiz do seu cartão SD</li>
   <li>Coloque seu cartão SD de volta no seu console</li>
 </ol>
 
@@ -547,6 +543,7 @@ window.cookieconsent.initialise({
     <ul>
       <li>Se seu dispositivo congela uma tela branca, segure o botão POWER até que ele desligue e tente novamente esta seção</li>
       <li>Se, em vez disso, o seu dispositivo congelar uma tela vermelha, você não tem <code class="language-plaintext highlighter-rouge">usm.bin</code> na raiz do seu cartão SD</li>
+      <li>If you get a different error, <a href="troubleshooting#installing-boot9strap-usm">follow this troubleshooting guide</a></li>
     </ul>
   </li>
 </ol>
@@ -556,7 +553,11 @@ window.cookieconsent.initialise({
 <p>Nesta seção, você instalará custom firmware no seu dispositivo.</p>
 
 <ol>
-  <li>Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap</li>
+  <li>Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
+    <ul>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troublshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
   <li>Quando concluído, aperte (A) para reiniciar o seu dispositivo</li>
   <li>Seu dispositivo deve ter inicializado no menu de configuração do Luma3DS
     <ul>

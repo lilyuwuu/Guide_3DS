@@ -461,23 +461,26 @@ window.cookieconsent.initialise({
   </nav>
 </aside>
 
-<p class="notice--info"><strong>Yes</strong>, you can still install custom firmware on your 3DS, even after the closure of eShop.</p>
-
-<div class="notice--info">
-<p><strong>3DS 最新的系统固件版本为 11.16.0</strong> 。 以下是一些你应该知道的事情：</p>
+<div class="notice--danger">
+<p><strong>3DS firmware 11.17.0 was recently released</strong>. 以下是一些你应该知道的事情：</p>
 
 <ul>
-  <li>If your device is running <em>Luma 11.0</em> or newer, it is <em>100% safe</em> to update. 你可以在关机状态下按住 SELECT 键，然后按下电源键开机以检查主机的 Luma 版本。</li>
-  <li>如果你的主机运行的 Luma 低于此版本，则你应该在更新系统到 11.16.0 前先<a href="checking-for-cfw">更新 Luma</a>。</li>
+  <li>If your device is running <em>Luma 10.2.1 or higher</em>, it is <em>100% safe</em> to update. 你可以在关机状态下按住 SELECT 键，然后按下电源键开机以检查主机的 Luma 版本。</li>
+  <li>If your device is on an older Luma version, you should <a href="checking-for-cfw">update Luma</a> before you update your device to 11.17.0.</li>
+  <li>If your device does not yet have custom firmware, <strong>do NOT update to the latest version</strong>, as installation methods are currently unclear.</li>
+  <li>Information about firmware 11.17.0 is rapidly evolving. For the latest information, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a>.</li>
 </ul>
+
 </div>
+
+<p class="notice--info"><strong>Yes</strong>, you can still install custom firmware on your 3DS, even after the closure of eShop.</p>
 
 <h2 id="破解前的常见问题">破解前的常见问题</h2>
 
 <details>
 <summary><u>I am on the latest system version. Is my device hackable without any external hardware?</u></summary>
 
-<p>Yes! 最新的系统固件（11.16.0）可以用 <a href="seedminer">Seedminer</a> 进行破解。</p>
+<p>Currently the latest system version (11.17.0) cannot be hacked without external hardware.</p>
 </details>
 
 <details>
@@ -554,7 +557,7 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Is it safe to update my 3DS to the latest version with CFW?</u></summary>
 
-<p>If you are using Luma3DS, your custom firmware loader (boot9strap) will <em>never</em> be removed when performing a system update. 不过前一段时间的更新经常使 Luma3DS 在启动系统时崩溃，所以我们建议你在新版本发布后，先等几个小时看看别人的升级反馈或者 Luma3DS 是否会更新，确认更新不会导致主机暂时无法正常使用后再继续。 更新系统可以直接像未破解的 3DS 那样更新。（如：进入系统设置对应选项更新、使用安全模式更新以及等待系统自动下载完成后提醒的更新。）</p>
+<p>If you are using Luma3DS, your custom firmware loader (boot9strap) will <em>never</em> be removed when performing a system update. 不过前一段时间的更新经常使 Luma3DS 在启动系统时崩溃，所以我们建议你在新版本发布后，先等几个小时看看别人的升级反馈或者 Luma3DS 是否会更新，确认更新不会导致主机暂时无法正常使用后再继续。 System updates can be performed the same way as they are on an unmodified 3DS: through System Settings, Safe Mode, or the update prompt when the update is automatically downloaded.</p>
 </details>
 
 <details>
@@ -566,7 +569,7 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Can I system transfer with CFW?</u></summary>
 
-<p>Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is stock). 非法应用（自制程序等）的 Ticket 不会被一同迁移，但可以使用 <a href="https://github.com/ihaveamac/faketik/releases/latest">faketik</a> 伪造，使其重现于桌面。 请确保你不使用无线传输迁移，这会删除非法应用。 破解也依然会继续存在于两台主机中。</p>
+<p>Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is unmodified). 非法应用（自制程序等）的 Ticket 不会被一同迁移，但可以使用 <a href="https://github.com/ihaveamac/faketik/releases/latest">faketik</a> 伪造，使其重现于桌面。 请确保你不使用无线传输迁移，这会删除非法应用。 破解也依然会继续存在于两台主机中。</p>
 </details>
 
 <details>
