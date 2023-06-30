@@ -2,16 +2,16 @@
 title: "Créditos"
 ---
 
-**Agradecimentos especiais ao Plailect, o criador original e mantenedor da guia!**
+**Um agradecimento especial ao Plailect, o criador e mantenedor do guia!**
 {: .notice--primary}
 
-**Um agradecimento especial a todos do [#Cakey na Freenode](http://webchat.freenode.net/?channels=%23Cakey) por serem o máximo!**
+**Um agradecimento especial a todos os [#Cakey no Freenode](http://webchat.freenode.net/?channels=%23Cakey) por serem incríveis!**
 {: .notice--primary}
 
 **Um agradecimento especial a todos os [tradutores](https://crowdin.com/project/3ds-guide) por serem incríveis!**
 {: .notice--primary}
 
-Se eu esqueci de você aqui, entre em contato comigo e eu adicionarei o seu nome.
+Se esqueci de você aqui, entre em contato comigo que adicionarei seu nome.
 
 {% capture notice-1 %}
 

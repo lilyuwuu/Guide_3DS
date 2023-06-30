@@ -1,17 +1,17 @@
 ---
-title: "製作群"
+title: "Credits"
 ---
 
-**特別感謝 Plailect，本系列文章的原作者及維護者！**
+**Special thanks to Plailect, the original creator and maintainer of the guide!**
 {: .notice--primary}
 
-**特別感謝所有在[ Freenode 上 #Cakey ](http://webchat.freenode.net/?channels=%23Cakey)的所有成員！**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
-**感謝所有的超讚的[翻譯人員](https://crowdin.com/project/3ds-guide)！**
+**Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-如果我忘記把您加進來的話，請與我聯繫。
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 

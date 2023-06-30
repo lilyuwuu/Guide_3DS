@@ -6,7 +6,7 @@ title: "Homebrew Launcher (super-skaterhax)"
 
 {% capture technical_info %}
 <summary><em>기술적 상세 정보 (선택 사항)</em></summary>
-For technical details on the exploits that you will be using on this page, see [here](https://github.com/zoogie/super-skaterhax).
+이 페이지에 사용되는 익스플로잇에 자세한 설명은 [여기](https://github.com/zoogie/super-skaterhax)를 참고해 주세요.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -14,47 +14,47 @@ For technical details on the exploits that you will be using on this page, see [
 
 ### 호환성 안내
 
-Super-skaterhax (when used to launch the Homebrew Launcher) is compatible with New models on version 11.16.0 in all regions except TWN/CHN.
+Super-skaterhax (when used to launch the Homebrew Launcher) is compatible with New models on version 11.16.0 in all regions, and 11.17.0 in the EUR, JPN and USA regions.
 
-The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL. Please ensure that the device you are modding is a New 3DS, New 3DS XL, or New 2DS XL before continuing.
+The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL. 해킹되는 콘솔이 New 3DS, New 3DS XL, 또는 New 2DS XL이 맞는지 확인 하고 진행하시길 바랍니다.
 {: .notice--warning}
 
 ### 준비물
 
 * 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (`.zip` 파일)
-* The latest release of [super-skaterhax](https://github.com/zoogie/super-skaterhax/releases) (the release `.zip` file)
+* 최신 버전의 [super-skaterhax](https://github.com/zoogie/super-skaterhax/releases) (release `.zip` 파일)
 
-#### Section I - Updating the System
+#### 섹션 I - 준비 작업
 
-{% include_relative include/sysupdate.txt cfw="false" %}
+이 섹션에서 super-skaterhax하고 Homebrew Launcher를 실행할 파일을 복사합니다.
 
-#### 섹션 II - 준비 작업
-
-In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher.
-
-1. 기기를 종료해 주세요
+1. 콘솔을 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
-  + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 않 들어가 있는 상태의 폴더 입니다
-1. Copy everything inside the folder for your device's region in the super-skaterhax `.zip` to the root of your SD card
-1. SD 카드를 기기에 다시 삽입해 주세요
-1. 기기를 시작해 주세요
+  + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
+1. Copy everything inside the folder for your console's region (and also system version if the region is USA) in the super-skaterhax `.zip` to the root of your SD card
+1. SD 카드를 콘솔에 다시 삽입해 주세요
+1. 콘솔을 시작해 주세요
 
-#### Section III - super-skaterhax
+![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
+{: .notice--info}
+
+
+#### 섹션 II - super-skaterhax
 
 In this section, you will visit the browser exploit webpage, which will launch the Homebrew Launcher.
 
-If you haven't already, make sure you have a working Internet connection set up on your device.
+아직 안하셨다면, 콘솔을 인터넷에 연결해 주세요.
 {: .notice--info}
 
-1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
+1. HOME 메뉴에서 L, R 버튼을 동시에 눌러 카메라를 열어 주세요
   + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
-1. Tap the QR code button and scan one of the following QR codes for your device's region [here](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
+1. Tap the QR code button and scan one of the following QR codes for your console's region [here](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
   + 보안 인증서 경고가 표시되면, (A)를 눌러 연결을 허용하세요
 1. Press the (Select) button to open the bookmark tab
   + If your (Select) button does not respond, tap the star icon on the bottom-left corner of the screen
 1. Tap "Bookmark this page"
-1. Press (B) once to return to the browser
+1. (B)를 눌러 브라우저로 돌아가 주세요
 1. Press (Start) to open the context menu
   + If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
 1. Tap on "Settings"
@@ -63,24 +63,18 @@ If you haven't already, make sure you have a working Internet connection set up 
 1. Press (Home) to return to the HOME Menu, then immediately press (A) to launch the browser again
 1. Select the "GO GO!" button on the top screen
   + If any prompts appear, approve all of them
-  + If your device freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
-  + If your device freezes on a red screen, hold the POWER button until it turns off, redo step Step 3 of Section II, then retry this section
-  + If you get another error, [follow this troubleshooting guide](troubleshooting#homebrew-launcher-super-skaterhax)
-1. If the exploit was successful, your device will have booted into the Homebrew Launcher
-1. 기기를 종료해 주세요
+  + 만약 콘솔에 노란 화면이 표시되면, 전원 버튼을 길게 눌러 콘솔을 종료하고, 이 섹션을 다시 시도해 주세요
+  + If your console freezes on a red screen, hold the POWER button until it turns off, redo step 3 of Section II, then retry this section
+  + If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting#homebrew-launcher-super-skaterhax)
+1. 익스플로잇이 성공적이었다면 Homebrew Launcher로 부팅되었을 것입니다
+1. 콘솔을 종료해 주세요
 
-#### Section IV - Hardware Button Check 
+#### 섹션 III - 하드웨어 버튼 작동 확인
+
+이 섹션에서는 콘솔의 안전 모드 기능을 사용 할 수 있는지 테스트할 것 입니다. 이 테스트를 통해, 다음 페이지에서 어떤 방법을 취해야 할지 결정할 수 있습니다.
 
 {% include_relative include/safemodecheck.txt %}
 
 ___
 
-### Next step: Choose an exploit
-
-만약 본체 업데이트 화면이 표시 되었다면, 안전 모드로 부팅을 성공하였다는 의미 입니다.
-
-If your device booted into Safe Mode, continue to [Installing boot9strap (HBL-USM)](installing-boot9strap-(hbl-usm))
-{: .notice--primary}
-
-If your device did NOT boot into Safe Mode, continue to [Dumping Movable (nimhax)](dumping-movable-(nimhax))
-{: .notice--info}
+{% include_relative include/hbl-common-exploits.txt %}

@@ -6,11 +6,11 @@ title: "Seedminer (TWN)"
 
 {%- include_relative include/seedminer-base.txt %}
 
-___ 
+___
 
 ### Passo successivo: BannerBomb3
 
-Una volta ottenuta la chiave di crittografia della tua console (`movable.sed`), la userai in combinazione con BannerBomb3, che utilizza il tuo file `movable.sed` per sfruttare le falle nell'applicazione Impostazioni della console.
+Una volta ottenuta la chiave di crittografia della tua console (`movable.sed`), puoi usarla in combinazione con BannerBomb3, che utilizza il tuo file `movable.sed` per sfruttare le falle nell'applicazione Impostazioni della console.
 
 Prosegui con [BannerBomb3 + Fredtool (TWN)](bannerbomb3-fredtool-(twn))
 {: .notice--primary}

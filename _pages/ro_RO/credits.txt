@@ -1,17 +1,17 @@
 ---
-title: "Contribuții"
+title: "Credits"
 ---
 
 **Special thanks to Plailect, the original creator and maintainer of the guide!**
 {: .notice--primary}
 
-**Mulțumiri speciale tuturor oamenilor din [#Cakey de pe Freenode](http://webchat.freenode.net/?channels=%23Cakey) pentru că sunt minunați!**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
-**Mulțumiri speciale tuturor [traducătorilor](https://crowdin.com/project/3ds-guide) pentru că sunt minunați!**
+**Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-Dacă te-am uitat, contactează-mă și îți voi adaugă numele.
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 

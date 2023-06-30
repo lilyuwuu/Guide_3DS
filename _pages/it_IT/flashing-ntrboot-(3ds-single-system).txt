@@ -23,7 +23,7 @@ Tieni presente che in rare circostanze è possibile **brickare** una flashcart c
 
 #### Sezione I - Preparazione
 
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 1. Inserisci la scheda SD della flashcart nel tuo computer
 1. Crea una cartella chiamata `ntrboot` nella directory principale della scheda SD della tua flashcart
 1. Copia il file `bootstrap_ntr.firm` dall'archivio `.zip` di boot9strap ntr nella cartella `/ntrboot/` della scheda SD della tua flashcart
@@ -45,7 +45,7 @@ Tieni presente che in rare circostanze è possibile **brickare** una flashcart c
 1. Seleziona "Inject FIRM" per installare boot9strap sulla tua flashcart
 1. Inserisci la combinazione di tasti richiesta a schermo per confermare l'operazione
 1. Premi il pulsante (A) per continuare
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 
 ___
 

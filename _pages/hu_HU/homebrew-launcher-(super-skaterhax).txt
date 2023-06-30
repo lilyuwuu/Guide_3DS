@@ -6,7 +6,7 @@ title: "Homebrew Launcher (super-skaterhax)"
 
 {% capture technical_info %}
 <summary><em>Technikai részletek (opcionális)</em></summary>
-For technical details on the exploits that you will be using on this page, see [here](https://github.com/zoogie/super-skaterhax).
+A technikai részletei az ezen az oldalon használt exploit-oknak [itt](https://github.com/zoogie/super-skaterhax) találhatók.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -14,73 +14,67 @@ For technical details on the exploits that you will be using on this page, see [
 
 ### Kompatibilitási megjegyzések
 
-Super-skaterhax (when used to launch the Homebrew Launcher) is compatible with New models on version 11.16.0 in all regions except TWN/CHN.
+A super-skaterhax (ami a Homebrew Launcher indítására használt) kompatibilis a 11.16.0 verziós New modellekkel minden régióban és 11.17.0 verziós EUR, JPN, és USA régiós konzolokon.
 
-The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL. Please ensure that the device you are modding is a New 3DS, New 3DS XL, or New 2DS XL before continuing.
+A megadott lépések csak a New 3DS, New 3DS XL és New 2DS XL típusokra vonatkoznak. Mielőtt folytatnád, kérjük ellenőrizd, hogy a moddolandó konzolod New 3DS, New 3DS XL, vagy New 2DS XL.
 {: .notice--warning}
 
 ### Amire szükséged lesz
 
 * A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
-* The latest release of [super-skaterhax](https://github.com/zoogie/super-skaterhax/releases) (the release `.zip` file)
+* A [super-skaterhax](https://github.com/zoogie/super-skaterhax/releases) legújabb kiadása (a kiadás`.zip` fájl)
 
-#### Section I - Updating the System
+#### I. rész - Előkészületek
 
-{% include_relative include/sysupdate.txt cfw="false" %}
+Ebben a fejezetben fel fogod másolni a fájlokat, amik a super-skaterhax és a Homebrew Launcher triggereléshez szükségesek.
 
-#### II. rész - Előkészületek
-
-In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher.
-
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
   + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
-1. Copy everything inside the folder for your device's region in the super-skaterhax `.zip` to the root of your SD card
-1. Tedd vissza az SD kártyád a készülékedbe
-1. Kapcsold be a készülékedet
+1. Másolj mindent át a konzolod régiójának megfelelő mappájából (és a rendszer verziónak megfelelően, ha a régió USA) a super-skaterhax `.zip`-nek az SD kártyád gyökerébe
+1. Tedd vissza az SD kártyád a konzoldba
+1. Kapcsold be a konzolod
 
-#### Section III - super-skaterhax
-
-In this section, you will visit the browser exploit webpage, which will launch the Homebrew Launcher.
-
-If you haven't already, make sure you have a working Internet connection set up on your device.
+![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
 {: .notice--info}
 
-1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
-  + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
-1. Tap the QR code button and scan one of the following QR codes for your device's region [here](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-  + Ha tanúsítvány figyelmeztetést kapsz, nyomd meg az (A) gombot a kapcsolat engedélyezéséhez
-1. Press the (Select) button to open the bookmark tab
-  + If your (Select) button does not respond, tap the star icon on the bottom-left corner of the screen
-1. Tap "Bookmark this page"
-1. Press (B) once to return to the browser
-1. Press (Start) to open the context menu
-  + If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
-1. Tap on "Settings"
-1. Tap on "Delete Cookies"
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Press (Home) to return to the HOME Menu, then immediately press (A) to launch the browser again
-1. Select the "GO GO!" button on the top screen
-  + If any prompts appear, approve all of them
-  + If your device freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
-  + If your device freezes on a red screen, hold the POWER button until it turns off, redo step Step 3 of Section II, then retry this section
-  + If you get another error, [follow this troubleshooting guide](troubleshooting#homebrew-launcher-super-skaterhax)
-1. If the exploit was successful, your device will have booted into the Homebrew Launcher
-1. Kapcsold ki a készüléked
 
-#### Section IV - Hardware Button Check 
+#### II. rész - super-skaterhax
+
+Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami elindítja a Homebrew Launcher-t.
+
+Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolata a konzolodnak.
+{: .notice--info}
+
+1. A HOME menüben nyomd meg a bal és jobb váll gombokat egyszerre, hogy megnyisd a kamerát
+  + Ha nem tudod megnyitni a kamerát, nyisd meg az Internet Browser-t kézzel, és írd be az URL-t e helyett. (`https://zoogie.github.io/web/super/` az EUR/USA/JPN régiókhoz, `https://zoogie.github.io/web/korea` a KOR régióhoz)
+1. Nyomd meg a QR kód gombot és olvasd be a következő QR kódok egyikét, ami megfelel a konzol régiódnak, [itt](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
+  + Ha tanúsítvány figyelmeztetést kapsz, nyomd meg az (A) gombot a kapcsolat engedélyezéséhez
+1. Nyomd meg a (Select) gombot a könyvjelző fül megnyitásához
+  + Ha a (Select) gombod nem reagál, akkor érintsd meg a csillag ikont a bal alsó sarkában a képernyőnek
+1. Éríntsd meg a "Bookmark this page" feliratot
+1. Nyomd meg a (B) gombot egyszer, hogy visszatérj a böngészőhöz
+1. Nyomd meg a (START) gombot, hogy megnyisd a helyérzékeny menüt
+  + Ha a (Start) gombod nem reagál, akkor érintsd meg 3-vonal menüt a jobb alsó sarkában a képernyőnek
+1. Érintsd meg a "Settings"-et
+1. Érintsd meg a "Delete Cookies"-t
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Nyomj (Home) gombot a HOME Menübe visszatéréshez, majd nyomj azonnal egy (A)-t a böngésző ismételt elindításához
+1. Válaszd a "GO GO!" gombot a felső képernyőn
+  + Ha bármilyen kérdés előjön, fogadd el mind
+  + Ha a konzolod lefagy egy sárga képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, és próbáld újra ezt a részt
+  + Ha a konzolod lefagy egy piros képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, csináld újra a 3. lépést a II. részben, majd próbáld újra ezt a részt
+  + Ha más hibát kapsz, próbáld meg 5x, és ha még minden nem megy [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#homebrew-launcher-super-skaterhax)
+1. Ha az exploit sikeres volt, a konzolodnak ezt követően be kell bootolnia a Homebrew Launcherbe
+1. Kapcsold ki a konzolod
+
+#### III. rész - Fizikai gombok ellenőrzése
+
+Ebben a fejezetben tesztelni fogod azt, hogy egyáltalán eléred-e a SAFE_MODE funkcióját a konzolodnak. Ez meghatározza, hogy melyik metódust kell követned a következő oldalon.
 
 {% include_relative include/safemodecheck.txt %}
 
 ___
 
-### Next step: Choose an exploit
-
-Ha láttad a rendszer frissítés képernyőt az előző részben, a Safe Mode működik az eszközödön.
-
-If your device booted into Safe Mode, continue to [Installing boot9strap (HBL-USM)](installing-boot9strap-(hbl-usm))
-{: .notice--primary}
-
-If your device did NOT boot into Safe Mode, continue to [Dumping Movable (nimhax)](dumping-movable-(nimhax))
-{: .notice--info}
+{% include_relative include/hbl-common-exploits.txt %}

@@ -6,7 +6,7 @@ title: "Telepítés véglegesítése"
 
 ### Fontos tudnivalók
 
-A `boot.firm` nevezetű fájl az, amit maga a boot9strap elindít, amint betöltődik a NAND-ból. Ebben az esetben a [LumaTeam](https://github.com/LumaTeam/) által készített Luma3DS-t használjuk az eszköz patcheléséhez, hogy tudjon homebrew programokat futtatni.
+A `boot.firm` nevezetű fájl az, amit maga a boot9strap elindít, amint betöltődik a NAND-ból. Ebben az esetben a [LumaTeam](https://github.com/LumaTeam/) által készített Luma3DS-t használjuk a konzol patcheléséhez, hogy tudjon homebrew programokat futtatni.
 
 Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és a következő homebrew alkalmazásokat fogjuk telepíteni:
 
@@ -31,7 +31,7 @@ Ha az előző egyedi firmware rendszered EmuNAND alapú volt és szeretnéd az E
 ### Amire szükséged lesz
 
 * Az [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) legújabb kiadása (a `.cia` fájl)
-* The v3.7.4 release of [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/tag/v3.7.4) (the `.cia` file)
+* A [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/tag/v3.7.4) v3.7.4 verziója (a `.cia` fájl)
 * A [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) legújabb kiadása (a `.cia` fájl)
 * Az [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) legújabb kiadása (a `.cia` fájl)
 * Az [FBI](https://github.com/Steveice10/FBI/releases/latest) legújabb kiadása (**mindkét fájl**, a `.cia` és a `.3dsx` is szükséges)
@@ -43,18 +43,18 @@ Ha az előző egyedi firmware rendszered EmuNAND alapú volt és szeretnéd az E
 
 Ebben a fejezetben fel fogod másolni az ahhoz szükséges fájlokat, hogy kövesd a lépéseket ezen az oldalon.
 
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Hozz létre egy mappát `cias` néven az SD kártyád gyökerében, ha még nem létezik ilyen
 1. Másold be az összes CIA fájlt (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, és `Universal-Updater.cia`) a `/cias/` mappába az SD kártyádon
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
-    + Ez a mappa tárolja a homebrew applikációkat és adataikat; ez mást mint a `Nintendo 3DS` mappa, amit az eszköz automatikusan generál
+    + Ez a mappa tárolja a homebrew applikációkat és adataikat; ez mást mint a `Nintendo 3DS` mappa, amit a konzol automatikusan generál
 1. Másold az `FBI.3dsx` fájlt az SD kártyád `/3ds/` mappájába
 1. Hozz létre egy mappát `payloads` néven az SD kártyád `luma` nevezetű mappájában, ha még nem létezik ilyen
 1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
 1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
-1. Tedd vissza az SD kártyád a készülékedbe
-1. Kapcsold be a készülékedet
+1. Tedd vissza az SD kártyád a konzoldba
+1. Kapcsold be a konzolod
 
 Az alábbi képernyőképek mutatják az SD kártya minimális elrendezését ahhoz, hogy ezt az útmutatót követni tudd. Lehetnek extra fájljaid és mappáid az SD kártyádon, függően a korábbi telepítésedtől vagy metódustól, amit követtél.
 
@@ -65,20 +65,34 @@ Az alábbi képernyőképek mutatják az SD kártya minimális elrendezését ah
 {: .notice--info}
 
 
+#### II. rész - CFW ellenőrzés
 
-#### II. rész - A rendszer frissítése
+További biztonsági lépésként további ellenőrzést végzünk egyedi firmware-re. Ha egyedi firmware nem kerül telepítésre ezen a ponton bármilyen okból, a következő szakasz a konzolodat külső hardver nélkül hackelhetetlenné teszi.
+
+1. Kapcsold ki a konzolod
+1. Nyomd le és tartsd nyomva (Select) gombot
+1. Kapcsold be a konzolod, miközben nyomva tartod a (Select) gombot
+1. Ha az ellenőrzés sikeres volt a konzolodnak a Luma3DS konfigurációs menüjébe kellett bootolnia
+1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
+1. Kapcsold ki a konzolod
+
+Ha az eszközöd NEM a Luma3DS konfigurációs menübe bootolt, az egyedi firmware nem került telepítésre a konzolodra. Csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj támogatást angolul.
+{: .notice--danger}
+
+
+#### III. rész - A rendszer frissítése
 
 Ebben a fejezetben frissíteni fogod a rendszered a legutolsó verzióra, ami biztonságos az egyedi firmware-rel.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### III. rész - Homebrew Launcher
+#### IV. rész - Homebrew Launcher
 
-Ebben a fejezetben átmenetileg le fogod cserélni a Download Play-t a Homebrew Launcher-rel (ami szükséges az FBI indításához). A Download Play automatikusan visszaáll normálisra, amint újrabootolod az eszközödet.
+Ebben a fejezetben átmenetileg le fogod cserélni a Download Play-t a Homebrew Launcher-rel (ami szükséges az FBI indításához). A Download Play automatikusan visszaáll normálisra, amint újrabootolod a konzolodat.
 
 {% include_relative include/launch-hbl-dlp.txt %}
 
-#### IV. rész - RTC és DSP telepítése
+#### V. rész - RTC és DSP telepítése
 
 Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális időhöz és dumpolni a hang firmware-t (ami szükséges néhány homebrew alkalmazáshoz, hogy a hangot megfelelően használja).
 
@@ -91,7 +105,7 @@ Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális id�
 1. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
 1. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 
-#### V. rész - CIA fájlok telepítése
+#### VI. rész - CIA fájlok telepítése
 
 Ebben a fejezetben fel fogsz telepíteni néhány hasznos homebrew alkalmazást a HOME Menube.
 
@@ -101,12 +115,12 @@ Ebben a fejezetben fel fogsz telepíteni néhány hasznos homebrew alkalmazást 
 1. Válaszd az "Install and delete all CIAs" opciót, majd nyomd meg az (A) gombot a megerősítéshez
 1. Nyomd meg a (Home) gombot és zárd be a Download Play-t
 
-#### VI. rész - Luma3DS telepítése CTRNAND-ba
+#### VII. rész - CTRNAND Luma3DS
 
 Ebben a fejezetben egy szkriptet fogsz használni, hogy bemásold a Luma3DS néhány fájlját a belső memóriába, így elérhetők még akkor is, ha nincs SD kártya behelyezve.
 
-1. Kapcsold ki a készüléked
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
+1. Kapcsold ki a konzolod
+1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
   + Ha nem bootolsz be GodMode9 módba, ellenőrizd, hogy, a `GodMode9.firm` megtalálható a `/luma/payloads/` könyvtárban és hogy a `payloads` helyesen van írva
 1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
 1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
@@ -119,7 +133,7 @@ Ebben a fejezetben egy szkriptet fogsz használni, hogy bemásold a Luma3DS néh
 1. Nyomd meg az (A) gombot, hogy feloldd a SysNand (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
 1. Nyomd meg az (A) gombot a folytatáshoz
 
-#### VII. rész - Takarítás az SD kártyán
+#### VIII. rész - Takarítás az SD kártyán
 
 Ebben a fejezetben egy szkriptet fogsz használni arra, hogy eltávolítsd a felesleges fájlokat az SD kártyádról.
 
@@ -128,7 +142,7 @@ Ebben a fejezetben egy szkriptet fogsz használni arra, hogy eltávolítsd a fel
 1. Nyomd meg az (A) gombot a folytatáshoz
 1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
 
-#### VIII. rész - Backup Essential Files
+#### IX. rész - Fontos fájlok biztonsági mentése
 
 Ebben a fejezetben mentés fájlokat fogsz készíteni, amik a helyreállításhoz használhatók, ha szoftveres brickelés történik, vagy ha helyre szeretnéd állítani az adatokat.
 
@@ -147,7 +161,7 @@ Ebben a fejezetben mentés fájlokat fogsz készíteni, amik a helyreállításh
   + Ha azt látod, hogy "Destination already exists", nyomj (A) gombot az "Overwrite file(s)" opción
 1. Nyomd meg az (A) gombot a folytatáshoz
 1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-1. Válaszd a "Poweroff system"-et az eszközöd kikapcsolásához
+1. Válaszd a "Poweroff system"-et a konzolod kikapcsolásához
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold a `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, `essential.exefs` fájlokat a `/gm9/out/` mappából az SD kártyáról egy biztonságos helyre a számítógépeden
   + Tarts belőle biztonsági másolatokat több különböző helyen is (például online tárhelyen, külső merevlemezen.)
@@ -155,16 +169,13 @@ Ebben a fejezetben mentés fájlokat fogsz készíteni, amik a helyreállításh
 1. Töröld a `<dátum>_<sorozatszám>_sysnand_##.bin` és a `<dátum>_<sorozatszám>_sysnand_##.bin.sha` fájlokat az SD kártyád `/gm9/out/` mappájából, miután lemásoltad azokat
   + A többi biztonségi mentés fájl mérete elhanyagolható és a könnyű hozzáférés érdekében az SD kártyádon tárolt
 1. Ha van ilyened, másold a `/luma/backups/` mappát az SD kártyáról egy biztonságos helyre a számítógépeden
-1. Tedd vissza az SD kártyád a készülékedbe
-1. Kapcsold be a készülékedet
+1. Tedd vissza az SD kártyád a konzoldba
+1. Kapcsold be a konzolod
 
 ___
 
-Kész vagy! Az egyedi firmware most már teljesen be van állítva az eszközödön.
+Kész vagy! Az egyedi firmware most már teljesen be van állítva a konzolodon.
 {: .notice--success}
-
-Szia! Szívesen veszünk visszajelzéseket az útmutatónk követéséről. Ha szeretnél segíteni, töltsd ki a kérdőívünket [itt](https://forms.gle/vZNoc4QLCz5MEXCK7) (csak angolul elérhető). Köszönjük!
-{: .notice--info}
 
 ### Információk és megjegyzések
 

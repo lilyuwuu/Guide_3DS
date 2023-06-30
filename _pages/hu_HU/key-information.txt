@@ -4,6 +4,11 @@ title: "Alapvető információk"
 
 {% include toc title="Tartalomjegyzék" %}
 
+{% capture update-notice %}
+{% include_relative include/3ds-11.17.txt %}
+{% endcapture %}
+<div class="notice--danger">{{ update-notice | markdownify }}</div>
+
 Ha ez az első alkalom, hogy moddolsz egy 3DS-t (vagy nem vagy ismerős a technológiával) akkor folytasd az olvasást! Egyébként, ha rendelkezel tapasztalattal és tudod, hogy mit csinálsz, folytasd a [Kezdeti lépésekkel](get-started).
 {: .notice--info}
 
@@ -18,7 +23,7 @@ Minden szekció összezárt alapértelmezésként. Kattints rá vagy érintsd me
 ![]({{ "/images/screenshots/onboarding/compatible.png" | absolute_url }})
 {: .notice--info}
 
-Ez az útmutató minden kereskedelmi eszközzel működik a Nintendo 3DS konzol családból (beleértve a 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, és a New 2DS XL/LL-t), függetlenül a régiótól és a firmware-től.
+Ez az útmutató minden kereskedelmi konzollal működik a Nintendo 3DS konzol családból (beleértve a 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, és a New 2DS XL/LL-t), függetlenül a régiótól és a firmware-től.
 {% endcapture %}
 
 <details>{{ compat | markdownify }}</details>
@@ -40,7 +45,7 @@ Követheted ezt az útmutatót egészen addig, amíg képes vagy letölteni fáj
 Az SD kártyá slot helye és az SD kártya típusa amit elfogad a 3DS modelledtől függ. További infromációk találhatók erről a [Nintendo hivatalos támogatási oldalán](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
 
-A 3DS bármilyen kapacitású SD kártyát tud olvasni (még akkor is, ha nagyobb, mint 32GB), de a kártyának FAT32-re kell formatálva lennie (**nem** exFAT vagy NTFS). A következő eszközöket használhatod az SD kártyád formázására, az operációs rendszeredtől függően: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)).
+A 3DS bármilyen kapacitású SD kártyát tud olvasni (még akkor is, ha nagyobb, mint 32GB), de a kártyának FAT32-re kell formatálva lennie (**nem** exFAT vagy NTFS). A következő eszközöket használhatod az SD kártyád formázására, az operációs rendszeredtől függően: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)). **128GB**-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt az egyedi témákkal és a GBA grafikával.
 
 Ahhoz, hogy követhesd ezt az útmutatót szükséged van egy legalább **2GB** kapacitású SD kártyára.
 {: .notice--warning}
@@ -54,9 +59,9 @@ Ha szeretnéd, leellenőrizheted az SD kártyádat valamelyik programmal az alá
 {% capture compat %}
 <summary><strong>Potencionális kockázatok</strong></summary>
 
-A eszközöd moddolásával, van egy nagyon kicsi (de nem nulla) esélye az eszköz bannolásának az online játékbó vagy hogy brickelődik (nem működővé válik). ___A rossz helyre rakott fájlok NEM brickelik a eszközödet___, de szándékosan kihagyott lépések elképzelhető, hogy igen. Hasonlóan, a legutolsó ban hullám 5 évvel ezelőtt történt, de nincs garancia arra, hogy ne fordulna elő egy a jövőben.
+A konzolod moddolásával, van egy nagyon kicsi (de nem nulla) esélye a konzol bannolásának az online játékokból vagy hogy brickelődik (nem működővé válik). ___A rossz helyre rakott fájlok NEM brickelik a konzolodat___, de szándékosan kihagyott lépések elképzelhető, hogy igen. Hasonlóan, a legutolsó ban hullám 5 évvel ezelőtt történt, de nincs garancia arra, hogy ne fordulna elő egy a jövőben.
 
-Röviden: Az eszközöd moddolása biztonságos, de a ___te felelősséged___ ha valami elromlik.
+Röviden: A konzolod moddolása biztonságos, de a ___te felelősséged___ ha valami elromlik.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>

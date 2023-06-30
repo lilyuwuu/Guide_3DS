@@ -22,7 +22,7 @@ Queste istruzioni fanno riferimento a GodMode9 v2.0.0 o successivi. Se hai una v
 
 ### Istruzioni
 
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 1. Inserisci la scheda SD nel tuo computer
 1. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 1. Copia la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD
@@ -102,7 +102,7 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
   + Seleziona "AGBSAVE options..."
   + Seleziona "Dump GBA VC save"
   + Premi il pulsante (A) per continuare
-  + Premi (Start) per riavviare la console
+  + Premi (Start) per riavviare la tua console
 
 ## Ripristinare i salvataggi dei giochi GBA della Virtual Console
 
@@ -122,7 +122,7 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
   + Seleziona "AGBSAVE options..."
   + Seleziona "Inject GBA VC save"
   + Premi il pulsante (A) per continuare
-  + Premi (Start) per riavviare la console
+  + Premi (Start) per riavviare la tua console
   + Avvia il gioco GBA
   + Esci dal gioco GBA
 

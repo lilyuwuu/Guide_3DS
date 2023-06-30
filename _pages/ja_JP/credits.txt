@@ -1,17 +1,17 @@
 ---
-title: "謝辞"
+title: "Credits"
 ---
 
-**ガイドの作成者であり維持者であるPlailetに特別感謝します！**
+**Special thanks to Plailect, the original creator and maintainer of the guide!**
 {: .notice--primary}
 
-**[Freenode上の #Cakey](http://webchat.freenode.net/?channels=%23Cakey) に感謝を！**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
-**[翻訳者全員](https://crowdin.com/project/3ds-guide)に特別な感謝を ！**
+**Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-このページで私があなたを忘れている場合、私に連絡してください。あなたの名前を追加します。
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 

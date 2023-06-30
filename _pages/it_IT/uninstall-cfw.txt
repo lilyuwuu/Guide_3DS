@@ -39,7 +39,7 @@ Queste istruzioni funzioneranno solo su console con una versione di Luma3DS ugua
 
 ### Cosa serve
 
-* L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+* L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
 * L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * L'ultima versione di [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 * [safety_test.gm9]({{ base_path }}/gm9_scripts/safety_test.gm9)
@@ -47,7 +47,7 @@ Queste istruzioni funzioneranno solo su console con una versione di Luma3DS ugua
 ### Istruzioni
 
 #### Sezione I - Preparazione
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 1. Inserisci la scheda SD nel tuo computer
 1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
 1. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
@@ -60,20 +60,20 @@ Queste istruzioni funzioneranno solo su console con una versione di Luma3DS ugua
 Lo scopo di questa sezione è verificare se le applicazioni integrate in modalità DS continueranno a funzionare dopo la rimozione del CFW. Se salti questa parte, la modalità DS o le sue funzionalità potrebbero rimanere inaccessibili finché non avrai reinstallato un CFW.
 
 ##### Test Impostazioni di collegamento DS
-1. Accendi la console
-1. Avvia l'applicazione Impostazioni della console
+1. Accendi la tua console
+1. Avvia le Impostazioni di sistema sulla tua console
 1. Vai su `Impostazioni Internet` -> `Connessioni Nintendo DS`, quindi seleziona OK
 1. Dovrebbe avviarsi il menu Configurazione Nintendo Wi-Fi Connection
   + Se la console visualizza la versione giapponese di Flipnote Studio, uno schermo nero o un messaggio di errore, il test è fallito
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 
 ##### Test Modalità download DS
-1. Accendi la console
+1. Accendi la tua console
 1. Avvia l'applicazione "Modalità download" (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. Seleziona "Nintendo DS"
 1. Se la console ora mostra la scritta "Scarica software tramite il download DS.", il test ha avuto successo
   + Se la console visualizza la versione giapponese di Flipnote Studio, uno schermo nero o un messaggio di errore, il test è fallito
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 
 Se uno di questi test non è riuscito, la modalità DS, la Modalità download DS e/o le impostazioni di collegamento DS potrebbero essere inaccessibili al termine della rimozione del CFW! Dovresti [riparare la modalità DS](troubleshooting#software-issues-on-devices-with-custom-firmware) prima di continuare.
 {: .notice--warning}
@@ -90,18 +90,18 @@ Lo scopo di questa sezione è quello di verificare che la console si avvii e che
 1. Seleziona "safety_test"
 1. Leggi il testo a schermo e premi (A) per continuare
 1. Dovrebbe avviarsi il normale menu HOME del 3DS (i temi custom non sono rilevanti in questo momento). In tal caso, prosegui con le istruzioni
-  + Se non si avvia il normale menu HOME del 3DS (schermata nera, schermata di errore, ecc.), disinstallare il CFW **BRICKERÀ LA TUA CONSOLE!** 
-1. Avvia l'applicazione Impostazioni della console
+  + Se non si avvia il normale menu HOME del 3DS (schermata nera, schermata di errore, ecc.), disinstallare il CFW **BRICKERÀ LA TUA CONSOLE!**
+1. Avvia le Impostazioni di sistema sulla tua console
 	+ Se la console si blocca, il test è fallito
 1. Seleziona "Impostazioni generali"
 1. Seleziona "Profilo"
 1. Seleziona "Nickname"
 1. Se puoi inserire un nuovo nome utente, il test ha avuto successo
 	+ Se la tastiera non viene visualizzata, la schermata rimane ferma o la console si blocca, il test è fallito
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 
 Se NON si avvia il normale menu HOME 3DS, le Impostazioni della console e/o la tastiera sono inaccessibili, **NON PROSEGUIRE con queste istruzioni**! Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) (in Inglese) per richiedere assistenza.
-{: .notice--danger}  
+{: .notice--danger}
 
 #### Sezione IV - Backup della NAND
 
@@ -115,7 +115,7 @@ Se NON si avvia il normale menu HOME 3DS, le Impostazioni della console e/o la t
   + Questo processo durerà un po'
   + Se si verifica un errore, assicurati di avere nella scheda SD almeno 1.3GB liberi
 1. Premi (B) per ritornare al menu principale
-1. Seleziona "Exit”
+1. Seleziona “Exit”
 1. Premi il pulsante HOME per far apparire il menu delle azioni
 1. Seleziona "Poweroff system" per spegnere la console
 
@@ -123,12 +123,12 @@ Se NON si avvia il normale menu HOME 3DS, le Impostazioni della console e/o la t
 Questa sezione rimuoverà contenuti illegittimi, come homebrew e backup di giochi. Se hai dati di salvataggio che desideri mantenere, eseguine il backup con un gestore di salvataggi prima di continuare!
 {: .notice--warning}
 
-1. Accendi la console
-1. Avvia l'applicazione Impostazioni della console
+1. Accendi la tua console
+1. Avvia le Impostazioni di sistema sulla tua console
 1. Apri Gestione dati -> Nintendo 3DS -> Software
 1. In questa lista di software, elimina qualunque contenuto non Nintendo che hai installato usando un CFW
   + Sono compresi programmi comuni come FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, e altri software, compresi giochi e titoli che *non* hai installato tramite eShop
-1. Entra in Gestione dati -> DSiWare
+1. Entra in `Gestione dati` -> `DSiWare`
 1. In questa lista di software, elimina qualunque contenuto non Nintendo che hai installato usando un CFW
   + Sono compresi software come TWiLightMenu++, e tutti i giochi e i titoli che *non* hai installato tramite eShop
   + La mancata rimozione di tutti i software relativi al CFW dalle sezioni 3DS e DSiWare prima della disinstallazione del CFW potrebbe dare problemi all'accesso del menu Gestione dati dopo la sua disinstallazione, il che rendererà difficile reinstallare il CFW in futuro
@@ -145,14 +145,14 @@ Questa sezione rimuoverà contenuti illegittimi, come homebrew e backup di gioch
 1. Avvia l'applicazione "Modalità download"
 1. La console dovrebbe ora avviare l'Homebrew Launcher
 1. Avvia DSiWare Uninstaller dalla lista degli homebrew disponibili
-1. Segui le istruzioni e permetti al programma di disinstallare 
-1. Al termine, esci dall'Homebrew Launcher e spegni la console
+1. Segui le istruzioni e permetti al programma di disinstallare
+1. Al termine, esci dall'Homebrew Launcher e spegni la tua console
 
 #### Sezione VI - Formattare la Console
 Questa sezione garantirà che tutti i ticket illegittimi vengano rimossi, consentendo all'eShop di funzionare normalmente. Verranno rimossi tutti i contenuti del 3DS e verrà fatto log out dal tuo NNID. Tieni presente che la chiave di cifratura della tua console verrà ricreata, per cui qualunque dato preesistente diventerà inaccessibile, anche se manterrai un backup della tua scheda SD.
 
-1. Accendi la console
-1. Avvia l'applicazione Impostazioni della console
+1. Accendi la tua console
+1. Avvia le Impostazioni di sistema sulla tua console
 1. Vai su Impostazioni generali -> procedi fino all'ultima pagina -> Formattazione
 1. Segui le istruzioni per formattare il tuo 3DS
 
@@ -174,7 +174,7 @@ Questa è la tua ultima occasione per verificare che tutti i controlli di sicure
 1. Premi (B) per ritornare al menu principale
 1. Seleziona "Exit"
 1. Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura
-1. Premi (Start) per riavviare la console
+1. Premi (Start) per riavviare la tua console
 
 ___
 

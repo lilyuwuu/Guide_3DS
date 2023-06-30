@@ -23,7 +23,7 @@ SSLoth 익스플로잇의 도움을 받아 이러한 확인을 건너뛸 수 있
 
 SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브라우저 버전 확인을 건너뛰고, 이후 universal-otherapp과 함께 사용할 수 있는 new-broserhax 또는 old-browserhax (모든 지역의 시스템 버전 11.4.0에서 11.13.0에서 호환됨) 을 사용할 수 있게 합니다.
 
-카트리지를 통해 기기를 업데이트하는 경우, 인터넷 브라우저의 접근이 제한될 것입니다. 그런 경우에는 기기를 본체 설정 앱을 통해 최신 버전으로 업데이트한 후 그에 맞는 방법을 따라야 합니다.
+만약 콘솔을 게임 카드로 통해 업데이트 했다면, 이 방법을 사용할 수 없습니다. 이 경우, 업데이트하지 말고, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에서 도움을 요청하세요.
 {: .notice--warning}
 
 ### 준비물
@@ -37,17 +37,17 @@ SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브�
 
 이 섹션에서 browserhax하고 universal-otherapp을 실행할 파일을 복사합니다.
 
-1. 기기를 종료해 주세요
+1. 콘솔을 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. `otherapp.bin`을 SD 카드의 루트에 복사하고 이름을 `arm11code.bin`으로 바꿔 주세요
-  + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 않 들어가 있는 상태의 폴더 입니다
+  + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
   + `.bin` 확장명이 안 보인다면 파일 끝에 추가하지 마세요
 1. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
 1. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
 1. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
 1. SafeB9SInstaller `.zip`의 `SafeB9SInstaller.bin`을 SD 카드의 루트로 복사해 주세요
-1. SD 카드를 기기에 다시 삽입해 주세요
-1. 기기를 시작해 주세요
+1. SD 카드를 콘솔에 다시 삽입해 주세요
+1. 콘솔을 시작해 주세요
 
 #### 섹션 II - SSLoth
 
@@ -67,6 +67,7 @@ SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브�
   + 보안 인증서 경고가 표시되면, (A)를 눌러 연결을 허용하세요
 1. "PROCEED TO HAXX" 버튼을 눌러주세요
 1. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
+  + 오류가 발생하면 이 [문제 해결 가이드](troubleshooting#installing-boot9strap-ssloth-browser) 를 참고해 주세요
 
 #### 섹션 IV - boot9strap 설치
 

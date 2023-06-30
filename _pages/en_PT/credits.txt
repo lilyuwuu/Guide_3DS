@@ -11,7 +11,7 @@ title: "Credits"
 **Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-If I forgot ye here, be contactin' me 'n I gunna be addin' ye name.
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 

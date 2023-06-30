@@ -7,25 +7,25 @@ main:
     title: よくある質問
     url: faq
   - 
-    title: Troubleshooting
+    title: トラブルシューティング
     url: troubleshooting
   - 
-    title: Checking for CFW
+    title: CFWの確認
     url: checking-for-cfw
   - 
-    title: GodMode9 Usage
+    title: GodMode9の使用方法
     url: godmode9-usage
   - 
-    title: Contribute
+    title: 貢献する
     url: contribute
   - 
-    title: Region Changing
+    title: リージョンの変更
     url: region-changing
   - 
-    title: Uninstall CFW
+    title: CFWのアンインストール
     url: uninstall-cfw
   - 
-    title: Credits
+    title: 謝辞
     url: credits
   - 
     title: サイトナビゲーション
@@ -37,7 +37,7 @@ bottom:
   - 
     title: 英語によるサポートについては、<a href="https://discord.gg/MWxPgEp"> Nintendo Homebrew on Discord </a>のヘルプをご覧ください。
   - 
-    title: 'If you appreciate this guide, we accept <a href="contribute#donations">Donations</a>.'
+    title: 'このガイドがお役に立ちましたら <a href="contribute#donations">寄付</a> して頂けると幸いです。'
 footer:
   - 
     title: ソースコード
@@ -53,17 +53,35 @@ sidebar_pages:
     title: ホーム
     url: /
   - 
-    title: Key Information
+    title: 情報
     url: key-information
   - 
-    title: Get Started
+    title: はじめに
     url: get-started
+  - 
+    title: Updating Firmware (New 3DS)
+    url: updating-firmware-(new-3ds)
+  - 
+    title: Updating Firmware (KOR)
+    url: updating-firmware-(kor)
+  - 
+    title: Updating Firmware (TWN)
+    url: updating-firmware-(twn)
   - 
     title: ntrboot
     url: ntrboot
   - 
+    title: Alternate Exploits
+    url: alternate-exploits
+  - 
     title: Seedminer
     url: seedminer
+  - 
+    title: Seedminer (Alternate)
+    url: seedminer-(alternate)
+  - 
+    title: Seedminer (Mii)
+    url: seedminer-(mii)
   - 
     title: Seedminer (TWN)
     url: seedminer-(twn)
@@ -71,8 +89,26 @@ sidebar_pages:
     title: BannerBomb3
     url: bannerbomb3
   - 
+    title: BannerBomb3 (Legacy)
+    url: bannerbomb3-(legacy)
+  - 
+    title: Homebrew Launcher (ninjhax2-dx)
+    url: homebrew-launcher-(ninjhax2-dx)
+  - 
+    title: Homebrew Launcher (PicHaxx)
+    url: homebrew-launcher-(pichaxx)
+  - 
+    title: Homebrew Launcher (smilehax-IIe)
+    url: homebrew-launcher-(smilehax-iie)
+  - 
+    title: Homebrew Launcher (Steelhax)
+    url: homebrew-launcher-(steelhax)
+  - 
     title: Homebrew Launcher (super-skaterhax)
     url: homebrew-launcher-(super-skaterhax)
+  - 
+    title: Dumping eShop DSiWare
+    url: dumping-eshop-dsiware
   - 
     title: Dumping Movable (nimhax)
     url: dumping-movable-(nimhax)
@@ -115,6 +151,12 @@ sidebar_pages:
   - 
     title: Installing boot9strap (Fredtool)
     url: installing-boot9strap-(fredtool)
+  - 
+    title: Installing boot9strap (Fredtool-Inject)
+    url: installing-boot9strap-(fredtool-inject)
+  - 
+    title: Installing boot9strap (Fredtool, Legacy)
+    url: installing-boot9strap-(fredtool-legacy)
   - 
     title: Installing boot9strap (USM)
     url: installing-boot9strap-(usm)

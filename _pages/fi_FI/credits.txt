@@ -1,17 +1,17 @@
 ---
-title: "Kiitokset"
+title: "Credits"
 ---
 
 **Special thanks to Plailect, the original creator and maintainer of the guide!**
 {: .notice--primary}
 
-**Erityiskiitokset kaikille [#Cakey-kanavalla Freenodessa](http://webchat.freenode.net/?channels=%23Cakey)!**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
-**Erityiskiitokset kaikille [kääntäjille](https://crowdin.com/project/3ds-guide)!**
+**Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-Otathan yhteyttä minuun, jos unohdin sinut tästä, niin lisään nimesi.
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 

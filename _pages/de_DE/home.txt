@@ -14,6 +14,11 @@ excerpt: "A complete guide to 3DS (and 2DS) custom firmware, <br /> from stock t
 Lies alle Einleitungsseiten gründlich durch (einschließlich dieser), bevor du fortfährst.
 {: .notice--info}
 
+{% capture update-notice %}
+{% include_relative include/3ds-11.17.txt %}
+{% endcapture %}
+<div class="notice--danger">{{ update-notice | markdownify }}</div>
+
 ## Was ist Custom Firmware?
 
 **Custom Firmware** ("CFW") ist eine vollständige Software-Modifikation zu deinem 3DS, vergleichbar mit dem "Administrator-Zugriff" auf einem Computer. Es erlaubt dir, alles zu tun, was der 3DS physisch tun kann, anstatt von Nintendo eingeschränkt zu sein.
@@ -31,7 +36,7 @@ Beliebte Anwendungsmöglichkeiten für Custom Firmware beinhalten:
 ## Was wird mit dieser Anleitung installiert?
 
 Diese Anleitung wird:
-  + **boot9strap** und **Luma3DS Custom Firmware** auf unmodifizierten Standard 3DS/2DS Konsolen installieren 
+  + Install **boot9strap** and **Luma3DS custom firmware** on unmodified retail 3DS/2DS consoles
     + Luma3DS wird automatisch die Regionsbegrenzung entfernen und erlaubt dir, unsignierte Software auszuführen
   + verschiedene Homebrew Apps, wie einen Paketinstaller, Save Manager, und einen Homebrew App Store installieren
   + wichtige Sicherheitskopien die Bricks verhindern (und Datenverlust im Fall eines Bricks verhindern) erstellen

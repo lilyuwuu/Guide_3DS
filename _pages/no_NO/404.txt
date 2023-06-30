@@ -1,6 +1,5 @@
 ---
 title: "Page Not Found" #
-excerpt: "Finner ikke siden. Pikslene dine er på et annet lerret." #
 sitemap: false
 ---
 

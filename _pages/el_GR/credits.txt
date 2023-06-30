@@ -1,17 +1,17 @@
 ---
-title: "Συντελεστές"
+title: "Credits"
 ---
 
 **Special thanks to Plailect, the original creator and maintainer of the guide!**
 {: .notice--primary}
 
-**Ευχαριστώ ιδιαίτερα όλο το [#Cakey στο Freenode](http://webchat.freenode.net/?channels=%23Cakey) που ήταν υπέροχοι!**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
 **Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-Εάν σας ξέχασα, επικοινωνήστε μαζί μου ώστε να προσθέσω το όνομά σας.
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 

@@ -4,6 +4,11 @@ title: "Key Information"
 
 {% include toc title="Sisällysluettelo" %}
 
+{% capture update-notice %}
+{% include_relative include/3ds-11.17.txt %}
+{% endcapture %}
+<div class="notice--danger">{{ update-notice | markdownify }}</div>
+
 If this is your first time modding a 3DS (or you're unfamiliar with technology), keep reading! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
 {: .notice--info}
 
@@ -18,7 +23,7 @@ Each section is collapsed by default. Click or tap on the name of the section to
 ![]({{ "/images/screenshots/onboarding/compatible.png" | absolute_url }})
 {: .notice--info}
 
-This guide works with every retail device in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL, regardless of region or firmware.
+This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware.
 {% endcapture %}
 
 <details>{{ compat | markdownify }}</details>
@@ -40,7 +45,7 @@ You can follow this guide as long as you are able to download files from the Int
 The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
 
-The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)).
+The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
 
 To follow this guide, you'll need an SD card with a capacity of at least **2GB**.
 {: .notice--warning}
@@ -54,9 +59,9 @@ If you want, you can check your SD card for errors before following this guide u
 {% capture compat %}
 <summary><strong>Potential risks</strong></summary>
 
-By modding your device, you subject it to the remote (but non-zero) possibility of the device being banned from online play or bricked (rendered non-functional). ___Incorrect file placement will NOT brick your device___, but purposely skipping instructions might. Similarly, the last ban wave occurred over five years ago, but there is no guarantee that another one will not occur in the future.
+By modding your console, you subject it to the remote (but non-zero) possibility of the console being banned from online play or bricked (rendered non-functional). ___Incorrect file placement will NOT brick your console___, but purposely skipping instructions might. Similarly, the last ban wave occurred over five years ago, but there is no guarantee that another one will not occur in the future.
 
-In short: Modding your device is safe, but it's ___your responsibility___ if something goes wrong.
+In short: Modding your console is safe, but it's ___your responsibility___ if something goes wrong.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>

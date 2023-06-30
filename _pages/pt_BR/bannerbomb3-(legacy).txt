@@ -1,0 +1,50 @@
+---
+title: "BannerBomb3 (Legado)"
+---
+
+{% include toc title="Tabela de Conteúdo" %}
+
+{% capture technical_info %}
+<summary><em>Detalhes técnicos (opcional)</em></summary>
+
+Para iniciar o código personalizado, nós usamos um exploit no Gerenciamento de Dados DSiWare no aplicativo Configurações do Sistema.
+
+Para fazer isso, usamos a chave de criptografia do seu sistema (movable.sed) para construir um backup de DSiWare que se aproveita do exploit do sistema.
+
+Para obter uma explicação mais técnica, veja [aqui](https://github.com/zoogie/Bannerbomb3).
+{% endcapture %}
+
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+### Notas de Compatibilidade
+
+Essas instruções funcionam nas versões de consoles EUA, Europa, Japão e Coréia, indicadas pelas letras U, E, J ou K após a versão do sistema.
+
+### O que é necessário
+
+* Seu arquivo `movable.sed` de completar o Seedminer ou nimhax
+
+#### Seção I - Preparação
+
+{% include_relative include/bb3-prep.txt %}
+
+#### Seção II - Verificação de Botões
+
+In this section, you will see whether you can access Safe Mode on your console. Isso determinará qual método você seguirá na próxima página.
+
+Seu cartão SD deve permanecer em seu computador enquanto você executa esta verificação.
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+### Próximos passos: Escolha um exploit
+
+If the camera appeared in the previous section, Safe Mode is likely to be working on your console.
+
+Caso a câmera apareceu, continue em [Instalando boot9strap (USM)](installing-boot9strap-(usm))
+{: .notice--primary}
+
+Se a câmera NÃO apareceu, continue em [Instalando boot9strap (Fredtool, Legado)](installing-boot9strap-(fredtool-legacy))
+{: .notice--info}

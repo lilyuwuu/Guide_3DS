@@ -20,7 +20,7 @@ Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di quest
 
 #### Sezione I - Preparazione
 
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 1. Inserisci la scheda SD della console nel tuo computer
   + Questa è la scheda SD del tuo 3DS, *non* la scheda SD della tua flashcart
 1. Copia il file `SafeB9SInstaller.firm` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD e rinominalo in `boot.firm`
@@ -32,14 +32,14 @@ Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di quest
     ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
     {: .notice--info}
 
-1. Reinserisci la scheda SD nel tuo 3DS
-1. Accendi la console
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la tua console
 
 #### Sezione II - ntrboot
 
 1. Trova con il magnete il punto che pone la console in modalità riposo
   + Questo passaggio non è necessario su un Old 2DS (che ha una levetta per la modalità riposo)
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 1. Inserisci la flashcart nella tua console
 1. Posiziona il magnete sulla console per attivare il sensore della modalità riposo
   + Su Old 2DS, devi invece attivare la levetta della modalità riposo
@@ -59,7 +59,7 @@ Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di quest
 1. Elimina il file `boot.firm` dalla directory principale della tua scheda SD
 1. Copia il file `boot.firm` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
 1. Reinserisci la scheda SD nella tua console
-1. Accendi la console
+1. Accendi la tua console
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
@@ -116,7 +116,7 @@ Non seguire questa parte finché non avrai completato tutte le altre istruzioni 
 
 ##### Istruzioni
 
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 1. Inserisci la scheda SD nel tuo computer
   + Questa è la scheda SD del tuo 3DS, *non* la scheda SD della tua flashcart
 1. Crea una cartella chiamata `ntrboot` nella directory principale della tua scheda SD
@@ -134,4 +134,4 @@ Non seguire questa parte finché non avrai completato tutte le altre istruzioni 
 1. Premi (A) per procedere
 1. Attendi il termine del processo
 1. Premi (A) per ritornare al menu principale
-1. Premi (B) per spegnere la console
+1. Premi (B) per spegnere la tua console

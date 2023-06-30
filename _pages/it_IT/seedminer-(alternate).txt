@@ -1,0 +1,34 @@
+---
+title: "Seedminer (Alternativo)"
+---
+
+{% include toc title="Indice" %}
+
+{% include_relative include/seedminer-base.txt %}
+
+___
+
+### Passi successivi
+
+Seleziona il metodo in base all'applicazione che hai installato sul tuo 3DS. Non importa il metodo che sceglierai, il risultato finale sarà lo stesso.
+
+#### DSiWare
+
+Se possiedi un qualunque [titolo DSiWare](https://en.wikipedia. rg/wiki/List_of_DSiWare_games_and_applications) sul tuo 3DS, è possibile scaricarlo sulla scheda SD e utilizzarlo per iniettare temporaneamente Flipnote nelle Impostazioni di collegamento DS.
+
+Prosegui con [Dump DSiWare eShop](dumping-eshop-dsiware)
+{: .notice--primary}
+
+#### PicHaxx
+
+Questo metodo utilizza il gioco Pokémon Picross, un gioco che era gratuito. Utilizzando il file `movable.sed` puoi creare un file di salvataggio modificato che ti darà accesso all'Homebrew Launcher, che verrà usato per exploit successivi.
+
+Prosegui con [Homebrew Launcher (PicHaxx)](homebrew-launcher-(pichaxx))
+{: .notice--primary}
+
+#### steelhax
+
+Questo metodo utilizza il gioco Steel Diver: Sub Wars, un gioco che era gratuito. Utilizzando il file `movable.sed` puoi creare un file di salvataggio modificato che ti darà accesso all'Homebrew Launcher, che verrà usato per exploit successivi.
+
+Prosegui con [Homebrew Launcher (Steelhax)](homebrew-launcher-(steelhax))
+{: .notice--primary}

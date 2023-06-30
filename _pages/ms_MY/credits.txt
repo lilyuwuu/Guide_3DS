@@ -5,13 +5,13 @@ title: "Credits"
 **Special thanks to Plailect, the original creator and maintainer of the guide!**
 {: .notice--primary}
 
-**Ribuan terima kasih kepada semua [#Cakey di Freenode](http://webchat.freenode.net/?channels=%23Cakey) anda semua mengagumkan!**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
 **Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-Jika nama anda tiada disenarai, hubungi saya dan saya akan tambahkan nama anda.
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 

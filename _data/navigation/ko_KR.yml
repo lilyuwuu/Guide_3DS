@@ -59,11 +59,29 @@ sidebar_pages:
     title: 시작하기
     url: get-started
   - 
+    title: 펌웨어 업데이트 (New 3DS)
+    url: updating-firmware-(new-3ds)
+  - 
+    title: 펌웨어 업데이트 (한글판)
+    url: updating-firmware-(kor)
+  - 
+    title: 펌웨어 업데이트 (타이완)
+    url: updating-firmware-(twn)
+  - 
     title: ntrboot
     url: ntrboot
   - 
+    title: Alternate Exploits
+    url: alternate-exploits
+  - 
     title: Seedminer
     url: seedminer
+  - 
+    title: Seedminer (Alternate)
+    url: seedminer-(alternate)
+  - 
+    title: Seedminer (Mii)
+    url: seedminer-(mii)
   - 
     title: Seedminer (타이완)
     url: seedminer-(twn)
@@ -71,10 +89,28 @@ sidebar_pages:
     title: BannerBomb3
     url: bannerbomb3
   - 
+    title: BannerBomb3 (레거시)
+    url: bannerbomb3-(legacy)
+  - 
+    title: Homebrew Launcher (ninjhax2-dx)
+    url: homebrew-launcher-(ninjhax2-dx)
+  - 
+    title: Homebrew Launcher (PicHaxx)
+    url: homebrew-launcher-(pichaxx)
+  - 
+    title: Homebrew Launcher (smilehax-IIe)
+    url: homebrew-launcher-(smilehax-iie)
+  - 
+    title: Homebrew Launcher (Steelhax)
+    url: homebrew-launcher-(steelhax)
+  - 
     title: Homebrew Launcher (super-skaterhax)
     url: homebrew-launcher-(super-skaterhax)
   - 
-    title: Dumping Movable (nimhax)
+    title: Dumping eShop DSiWare
+    url: dumping-eshop-dsiware
+  - 
+    title: movable.sed 덤프 (nimhax)
     url: dumping-movable-(nimhax)
   - 
     title: 여러가지 옵션
@@ -115,6 +151,12 @@ sidebar_pages:
   - 
     title: boot9strap 설치 (Fredtool)
     url: installing-boot9strap-(fredtool)
+  - 
+    title: Installing boot9strap (Fredtool-Inject)
+    url: installing-boot9strap-(fredtool-inject)
+  - 
+    title: boot9strap 설치 (Fredtool, 레거시)
+    url: installing-boot9strap-(fredtool-legacy)
   - 
     title: boot9strap 설치 (USM)
     url: installing-boot9strap-(usm)

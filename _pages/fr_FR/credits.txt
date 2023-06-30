@@ -2,13 +2,13 @@
 title: "Credits"
 ---
 
-**Un énorme merci à Plailect, le créateur et mainteneur original du guide!**
+**Special thanks to Plailect, the original creator and maintainer of the guide!**
 {: .notice--primary}
 
-**Remerciements spéciaux à toutes les personnes du salon [#Cakey sur Freenode](http://webchat.freenode.net/?channels=%23Cakey), vous êtes géniaux !**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
-**Un grand merci à tous [les traducteurs](https://crowdin.com/project/3ds-guide), vous êtes géniaux !**
+**Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
 Si je vous ai oublié, contactez-moi et j'ajouterai votre nom.

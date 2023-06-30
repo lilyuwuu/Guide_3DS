@@ -23,7 +23,7 @@ DEVI aver già installato Luma3DS e boot9strap per poter proseguire.
 
 #### Sezione I - Preparazione
 
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 1. Inserisci la scheda SD nel tuo computer
 1. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 1. Copia la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD
@@ -54,7 +54,7 @@ Questo processo non è necessario per giochi delle altre Virtual Console (quali 
 Il salvataggio verrà creato nella cartella `/gm9/out/` della tua scheda SD, con nome `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID tenendo premuto (R) e premendo (A) mentre è selezionato `[A:] SYSNAND SD`, quindi selezionando "Search for titles".
+Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID premendo il pulsante (Home) per far apparire il menu delle azioni, dopodiché seleziona `Title manager`, quindi`[A:] SD CARD`.
 {: .notice--info}
 
 1. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi:
@@ -67,7 +67,7 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
   + Seleziona "AGBSAVE options..."
   + Seleziona "Dump GBA VC save"
   + Premi il pulsante (A) per continuare
-  + Premi (Start) per riavviare la console
+  + Premi (Start) per riavviare la tua console
 
 #### Sezione IV - Copiare la EmuNAND nella SysNAND
 
@@ -104,11 +104,11 @@ Se non hai mantenuto alcun salvataggio DSiWare, salta questa sezione.
 Se non hai mantenuto alcun salvataggio GBA della Virtual Console, salta questa sezione.
 {: .notice--info}
 
-Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID tenendo premuto (R) e premendo (A) sul menu principale di GodMode9, quindi selezionando "Search for titles".
+Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID premendo il pulsante (Home) per far apparire il menu delle azioni, dopodiché seleziona `Title manager`, quindi`[A:] SD CARD`.
 {: .notice--info}
 
 1. Tenendo premuto (R), premi (Start) per spegnere la console
-1. Avvia la console nella SysNAND
+1. Avvia la tua console nella SysNAND
 1. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi ripristinare i salvataggi:
   + Avvia il gioco GBA
   + Esci dal gioco GBA
@@ -122,7 +122,7 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
   + Seleziona "AGBSAVE options..."
   + Seleziona "Inject GBA VC save"
   + Premi il pulsante (A) per continuare
-  + Premi (Start) per riavviare la console
+  + Premi (Start) per riavviare la tua console
   + Avvia il gioco GBA
   + Esci dal gioco GBA
 

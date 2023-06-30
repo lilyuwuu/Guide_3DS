@@ -1,17 +1,17 @@
 ---
-title: "Tack till"
+title: "Credits"
 ---
 
 **Special thanks to Plailect, the original creator and maintainer of the guide!**
 {: .notice--primary}
 
-**Särskilt tack till alla från [#Cakey på Freenode](http://webchat.freenode.net/?channels=%23Cakey) för att ni är superstjärnor!**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
 **Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-Kontakta mig om jag glömde dig här så lägger jag till ditt namn.
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 

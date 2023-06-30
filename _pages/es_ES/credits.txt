@@ -1,18 +1,17 @@
 ---
-title: "Créditos"
+title: "Credits"
 ---
 
-**¡Un agradecimiento especial a Plailect, el creador original y el mantenedor de la guía!**
+**Special thanks to Plailect, the original creator and maintainer of the guide!**
 {: .notice--primary}
 
-**¡Un agradecimiento especial a todos los de [#Cakey en Freenode](http://webchat.freenode.net/?channels=%23Cakey) por ser 
-asombrosos!**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
-**¡Agradecimientos especiales a todos [los traductores](https://crowdin.com/project/3ds-guide) por ser asombrosos!**
+**Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-Si te olvidé, puedes contactarme para añadir tu nombre.
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 

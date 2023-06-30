@@ -14,4 +14,4 @@ In questa sezione avvierai l'Homebrew Launcher (utilizzando un custom firmware) 
 1. La console dovrebbe ora avviare l'Homebrew Launcher
 1. Avvia slotTool dalla lista degli homebrew disponibili
 1. Seleziona "RESTORE original wifi slots 1,2,3"
-1. La console verrà riavviata
+1. La console si riavvierà

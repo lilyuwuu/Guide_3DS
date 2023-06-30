@@ -1,17 +1,17 @@
 ---
-title: "致谢"
+title: "Credits"
 ---
 
-**特别感谢此教程的原作者和原维护者 Plailect！**
+**Special thanks to Plailect, the original creator and maintainer of the guide!**
 {: .notice--primary}
 
-**特别感谢所有 [Freenode #Cakey](http://webchat.freenode.net/?channels=%23Cakey) 成员的杰出贡献！**
+**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
 {: .notice--primary}
 
-**特别感谢所有的[翻译人员](https://crowdin.com/project/3ds-guide)，他们超棒的！**
+**Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
 {: .notice--primary}
 
-如果我忘了列出你的名字，请联系我。我会把你加上。
+If I forgot you here, contact me and I'll add your name.
 
 {% capture notice-1 %}
 

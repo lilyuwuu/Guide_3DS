@@ -23,7 +23,7 @@ A technikai részleteit az ezen az oldalon használt exploit-oknak tekintsd meg 
 
 Az SSLoth lehetővé teszi a 11.13.0 és alatti verziók számára, hogy megkerüld a böngésző verzió ellenőrzést, ezáltal lehetővé tegye a new-browserhax vagy az old-browserhax (kompatibilis a 11.4.0 verziótól 11.13.0-ig minden régió esetén) használatát, amik az universal-otherapp-pal együtt használhatók.
 
-Ha frissítetted az eszközödet az aktuális verzióra, cartridge használatával, az Internet Browser-ed nem lesz elérhető. Ha ez az eset áll fenn, frissítened kell az eszközödet az utolsó verzióra a System Settings-en keresztül, és a legutolsó verzióhoz készült metódust használnod.
+Ha frissítetted a konzolod az aktuális verzióra egy cartridge használatával, akkor nem fogod tudni megkerülni a böngésző verzió ellenőrzést. Maradj az aktuális firmware-en és kérj segítséget a [Nintendo Homebrew csatornán Discord-on](https://discord.gg/MWxPgEp).
 {: .notice--warning}
 
 ### Amire szükséged lesz
@@ -37,7 +37,7 @@ Ha frissítetted az eszközödet az aktuális verzióra, cartridge használatáv
 
 Ebben a fejezetben fel fogod másolni a fájlokat, amik a browserhax és az universal-otherapp kiváltásához szükségesek.
 
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold az `otherapp.bin`-t az SD kártyád gyökerébe, majd nevezd át `arm11code.bin` névre
   + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
@@ -46,8 +46,8 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a browserhax és az univ
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
-1. Tedd vissza az SD kártyád a készülékedbe
-1. Kapcsold be a készülékedet
+1. Tedd vissza az SD kártyád a konzoldba
+1. Kapcsold be a konzolod
 
 #### II. rész - SSLoth
 
@@ -60,13 +60,14 @@ Ebben a fejezetben módosítani fogod az Internet kapcsolat beállításokat hog
 
 Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami az universal-otherapp-ot fogja használni a boot9strap (egyedi firmware) telepítő indításához.
 
-1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
+1. A HOME menüben nyomd meg a bal és jobb váll gombokat egyszerre, hogy megnyisd a kamerát
     + Ha nem tudod megnyitni a kamerát, nyisd meg az Internet Browser-t kézzel, és írd be az URL-t e helyett. (`https://zoogie.github.io/web/nbhax/`)
 1. Érintsd meg a QR Code gombot és olvasd le [ezt a QR kódot](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
-  + Ha hibát kapsz, [nézd át ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-ssloth-browser)
+  + Ha összeomlik vagy hibakódot kapsz, [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-ssloth-browser)
   + Ha tanúsítvány figyelmeztetést kapsz, nyomd meg az (A) gombot a kapcsolat engedélyezéséhez
 1. Nyomj a "PROCEED TO HAXX" gombra
 1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
+  + Ha hibát kapsz, [nézd át ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-ssloth-browser)
 
 #### IV. rész - boot9strap telepítése
 

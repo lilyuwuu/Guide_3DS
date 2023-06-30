@@ -28,30 +28,29 @@ Ahhoz, hogy követhesd ezeket a lépéseket, a következőkre van szükséged:
 - Egy második 3DS egyedi firmware-rel (a **forrás 3DS**), aminek ugyanaz a régiója, mint annak a 3DS-nek, amit módosítani szeretnél (a **cél 3DS**)
   - A konzoloknak USA, JPN, vagy EUR régiós konzoloknak kell lenniük
 - Egy fizikai vagy digitális példánya a Mario Kart 7-nek, aminek a régiója egyezik mindkét konzol régiójával
-- Egy SD kártyára mindkét eszközhöz
+- Egy SD kártyára mindkét konzolhoz
 
 ### Amire szükséged lesz
 
 A **forrás 3DS**-en (a 3DS egyedi firmware-rel):
 
 * A [kartdlphax] legújabb kiadása (https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
-* The latest release of [Luma3DS 3GX Loader Edition](https://github.com/PabloMK7/Luma3DS_3GX/releases/latest) (`boot.firm`)
+* A [Luma3DS 3GX Loader Edition](https://github.com/PabloMK7/Luma3DS_3GX/releases/latest) legújabb kiadása (`boot.firm`)
 
 A **cél 3DS**-en (a 3DS, amit módosítani szeretnél):
 
 * A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrisseb verziója (közvetlen letöltés)
-* A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrisseb verziója (közvetlen letöltés)
 * A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb standard kiadása (a Luma3DS `.zip` fájl)
 * Az [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) legújabb kiadása (a RELEASE `.zip` fájl)
 
-#### Section I - Hardware Button Check (target 3DS)
+#### I. rész - Fizikai gombok ellenőrzése (cél 3DS)
 
 {% include_relative include/safemodecheck.txt %}
 
-If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
+Ha a kamera nem nyílik meg, nem tudod követni ezt a metódust. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
 {: .notice--warning}
 
-#### Section II - Prep Work (source 3DS)
+#### II. rész - Előkészületi munka (forrás 3DS)
 
 Ebben a fejezetben befogod állítani a forrás 3DS-ed (a 3DS egyedi firmware-rel), hogy küldje az exploit adatot a cél 3DS-nek.
 
@@ -65,21 +64,21 @@ Ebben a fejezetben befogod állítani a forrás 3DS-ed (a 3DS egyedi firmware-re
   - Hozd létre a `plugins` és `00040000...` mappákat, ha nem léteznek
 1. Távolítsd el az SD kártyát és rakd be a **forrás 3DS**-be
 
-#### Section III - Prep Work (target 3DS)
+#### III. rész - Előkészületi munka (cél 3DS)
 
 Ebben a fejezetben fel fogod másolni azokat a fájlokat, amik ahhoz szükségesek, hogy kiváltsák az unSAFE_MODE exploit-ot a cél 3DS (a 3DS, amit módosítani szeretnél) SD kártyájára.
 
 1. Csatlakoztasd a **cél 3DS** SD kártyáját a számítógépedhez
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a standard Luma3DS `.zip`-ből az SD kártya gyökerébe
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
-1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
+1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a RELEASE `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
-1. Másold át a `usm.bin` fájlt az unSAFE_MODE `.zip`-ből az SD kártya gyökerébe
+1. Copy `usm.bin` from the RELEASE `.zip` to the root of your SD card
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében
-1. Másold át a `slotTool` mappát az unSAFE_MODE `.zip`-ből az SD kártya gyökerében található `3ds` mappába
+1. Copy `slotTool.3dsx` from the `slotTool` folder inside the RELEASE `.zip` to the `/3ds/` folder on your SD card
 1. Távolítsd el az SD kártyát és rakd be a **cél 3DS**-be
 
-#### Section IV - kartdlphax
+#### IV. rész - kartdlphax
 
 Ebben a fejelzetben a Download Play-t fogod használni, hogy átvidd az exploit adatot a forrás 3DS-ről a cél 3DS-re, ami arra használható, hogy felülírd a Wi-Fi slotjaid a hackelt adattal. A Wi-Fi kapcsolat beállításaid átmenetileg felülírásra kerülnek, amíg az exploit aktív.
 
@@ -91,10 +90,12 @@ Ebben a fejelzetben a Download Play-t fogod használni, hogy átvidd az exploit 
 1. Indítsd el a Mario Kart 7-et
   - Ügyelj rá, hogy a vezeték nélküli kapcsolat engedélyezett legyen
 1. Navigálj a `Local Multiplayer`-hez. Egy menünek meg kell jelennie
-  - Ha a képernyő lefagy, tartsd nyomva a bekapcsoló gombot 15 másodpercig, hogy a redszert leállításra kényszerítsed, majd próbáld újra
+  - Ha a képernyő lefagy, tartsd nyomva a POWER gombot 15 másodpercig, hogy a konzolt leállításra kényszerítsd, majd próbáld újra
   - Ha már futtattad a kartdlphax-t korábban, az utóljára megadott beállítások fognak betölteni. Ha azok helyesek, válaszd a `Use settings` opciót és lépd át a következő 3 lépést. Ha azok nem helyesek válaszd a `Change settings` opciót, majd folytasd.
-1. Válaszd ki a **cél 3DS** eszköz típusát (Old 3DS family vagy New 3DS family)
-1. Válaszd a `3DS ROP xPloit Injector` exploit típust
+1. Válaszd ki a **cél 3DS** konzol típusát (Old 3DS-család vagy New 3DS-család)
+1. Válaszd a következő exploit típusok közül a rendszer verziódnak megfelelően:
+  - 11.16.0: válaszd a `xPloitInjector (11.16)` opciót
+  - 11.17.0: válaszd a `xPloitInjector (11.17)` opciót
 1. Egy megerősítő menü fog megjelenni. Ha a felső képernyőn megjelenő beállítások helyesek, válaszd a `Use settings` opciót
   Ha a beállítások nem helyesek válaszd a `Change settings` opciót, majd módosítsd őket megfelelően
 1. Válaszd a `Create Group` opciót
@@ -115,18 +116,18 @@ Ebben a fejelzetben a Download Play-t fogod használni, hogy átvidd az exploit 
 **Nincs** szükséged a **forrás 3DS** használatára a további lépések végrehajtásához ebben az útmutatóban. Minden további lépést a **cél 3DS**-en kell végre hajtani.
 {: .notice--info}
 
-#### Section V - unSAFE_MODE
+#### V. rész - unSAFE_MODE
 
 {% include_relative include/exploit-usm.txt %}
 
-#### Section VI - Installing boot9strap
+#### VI. rész - boot9strap telepítése
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VII - Restoring WiFi Configuration Profiles
+#### VII. rész - A WiFi Configuration Profiles visszaállítása
 
 {% include_relative include/remove-usm-slottool.txt %}
 

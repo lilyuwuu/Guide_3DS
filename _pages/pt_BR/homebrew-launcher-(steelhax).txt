@@ -1,0 +1,79 @@
+---
+title: "Homebrew Launcher (Steelhax)"
+---
+
+{% include toc title="Tabela de Conteúdo" %}
+
+{% capture technical_info %}
+<summary><em>Detalhes técnicos (opcional)</em></summary>
+Este método de usar o Seedminer para exploiting usa seu `movable.sed` para escrever um save modificado para Steel Diver: Sub Wars, que pode então ser usado para iniciar o Homebrew Launcher.
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+Esse processo irá sobrescrever seu save do jogo Steel Diver: Sub Wars, se você tiver um. Se você deseja preservar seu dados de Steel Diver: Sub Wars, você deve fazer um backup de seu arquivo `00000001.sav` antes de substituí-lo.
+{: .notice--warning}
+
+### O que é necessário
+
++ The game "Steel Diver: Sub Wars" installed on your console
+  + Se você já fez o download antes, você pode [baixá-lo novamente](https://en-americas-support.nintendo.com/app/answers/detail/a_id/607/~/how-to-download-or-redownload-content-in-nintendo-3ds-eshop)
+  + Your SD card must be inserted in your console to install Steel Diver: Sub Wars
++ Seu arquivo `movable.sed` de completar [Seedminer](seedminer)
++ The latest release of [Steelhax](/assets/steelhax-release.zip) (direct download)
++ A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
++ [otherapps.zip]({{ base_path }}/assets/otherapps.zip) (download direto)
+
+### Instruções
+
+#### Seção I - Preparação
+
+Nesta seção, você copiará alguns dos arquivos que serão usados para iniciar o Homebrew Launcher.
+
+1. Desligue seu console
+1. Insira o cartão SD no seu computador
+1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD
+  + A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
+1. Copie a pasta `steelhax` do `Steelhax-release.zip` para a raiz do seu cartão SD
+1. Copie o otherapp payload para o seu modelo/região/versão do `otherapps.zip` para a raiz do seu cartão SD, e então renomeie o payload para `otherapp.bin`
+  + Não adicione a extensão `.bin` se você não a vê
+1. Copie `movable.sed` do seu computador para a raiz do seu cartão SD
+1. Reinsira o cartão SD no seu console
+1. Power on your console
+
+#### Seção II - Steelminer
+
+In this section, you will create a hacked Steel Diver: Sub Wars save file that, when used, will load the Homebrew Launcher on your console.
+
+1. Abra "Steel Diver: Sub Wars" uma vez e selecione um Mii para inicializar seu save
+  + Recuse a atualização do jogo quando for pedido
+  + Se você já atualizou o jogo, use o menu do Gerenciamento de Dados nas Configurações do Console para deletar o update
+1. Saia do "Steel Diver: Sub Wars"
+1. Desligue seu console
+1. Insira o cartão SD no seu computador
+1. Abra [o site SteelHax Save Tool](https://3dstools.nhnarwhal.com/#/steelhax) em seu computador
+1. Selecione o seu arquivo `movable.sed`
+1. Select your region based on your console
+1. Selecione "Build and Download"
+1. Aguarde a conclusão do processo
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` on your SD card
+  + **Região EUR**: `000d7e00`
+  + **Região JPN**: `000d7c00`
+  + **Região USA**: `000d7d00`
+1. Copie o arquivo `00000001.sav` recém-baixado para a pasta `data` no seu cartão SD
+  + Sobrescreva o arquivo de save antigo quando solicitado
+1. Reinsira o cartão SD no seu console
+1. Power on your console
+1. Abra "Steel Diver: Sub Wars"
+1. If the exploit was successful, your console will have booted into the Homebrew Launcher
+1. Desligue seu console
+
+#### Seção III - Verificação de Hardware
+
+In this section, you will see whether you can access Safe Mode on your console. Isso determinará qual método você seguirá na próxima página.
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+{% include_relative include/hbl-common-exploits-movable.txt %}

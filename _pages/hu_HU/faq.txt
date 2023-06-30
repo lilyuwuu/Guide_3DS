@@ -3,38 +3,35 @@ title: "GYIK"
 ---
 {% include toc title="Tartalomjegyzék" %}
 
+{% capture update-notice %}
+{% include_relative include/3ds-11.17.txt %}
+{% endcapture %}
+<div class="notice--danger">{{ update-notice | markdownify }}</div>
+
 **Igen**, továbbra is tudsz telepíteni egyedi firmware-t a 3DS-edre, az eShop bezárása után is.
 {: .notice--info}
-
-{% capture notice-6 %}
-**A legutolsó 3DS firmware a 11.16.0**. Amit érdemes tudnod:
-
-- Ha az eszközöd *Luma 11.0* -et vagy újabbat futtat, *100% biztonságos* a frissítés. Ellenőrizheted a Luma verziódat a (Select) lenyomva tartásával az eszközöd elindítása közben.
-- Ha az eszközöd régebbi Luma verziót futtat, [frissítened kell a Luma-t](checking-for-cfw) mielőtt az eszközöd 11.16.0 verzióra frissíted.
-{% endcapture %}
-
-<div class="notice--info">{{ notice-6 | markdownify }}</div>
 
 ## Telepítés előtti GYIK
 
 {% capture compat %}
-<summary><u>A legújabb verziójú rendszeren vagyok. Hackelhető a rendszerem külső hardver nélkül?</u></summary>
+<summary><u>A legújabb verziójú rendszeren vagyok. Feltörhetem a konzolomat külső hardver vagy előfeltételek nélkül?</u></summary>
 
-Igen! Az utolsó firmware (11.16.0) rendelkezik ingyenes metódussal a CFW beszerzéséhez, amit [Seedminer](seedminer)-nek hívnak.
+A válasz a konzol típusától függően változik. Jelenleg a New 3DS / New 3DS XL / New 2DS XL moddolható a 11.17.0 verzión előfeltételek nélkül (pl. eShop címek, fizikai tételek), míg a 3DS / 3DS XL / 2DS nem.
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Milyen eszközökkel kompatibilis ez az útmutató?</u></summary>
+<summary><u>Milyen konzolokkal kompatibilis ez az útmutató?</u></summary>
 
-A lépések azonosak minden kereskedelmi 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, és New 2DS XL eszközhöz. Ha a rendszered verziója "0.0.0-0", akkor fejlesztői rendszered van.
+A lépések azonosak minden kereskedelmi 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, és New 2DS XL konzolhoz. Ha a rendszered verziója "0.0.0-0", akkor fejlesztői rendszered van.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>Mennyire kockázatos a konzolom meghackelése?</u></summary>
 
-A brickelés ma már alapvetően lehetetlen, kivéve, ha szándékosan szeretnéd brickelni az eszközödet. 
+A brickelés ma már alapvetően lehetetlen, kivéve, ha szándékosan szeretnéd brickelni a konzolodat.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -48,21 +45,21 @@ Igen! Ez az útmutató telepít néhány hasznos homebrew alkalmazást, beleért
 {% capture compat %}
 <summary><u>Használhatom ezt arra, hogy más régióból származó játékokkal tudjak játszani?</u></summary>
 
-Igen; a Luma3DS automatikusan figyelmen kívül hagyja a régió ellenőrzést a cartridge-ek és a telepített címek esetében. Néhány játék igényli a Luma's [nyelvi emulációs funkcióját](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) a működéshez, ha régión kívüli eszközökön fut.
+Igen; a Luma3DS automatikusan figyelmen kívül hagyja a régió ellenőrzést a cartridge-ek és a telepített címek esetében. Néhány játék igényli a Luma's [nyelvi emulációs funkcióját](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) a működéshez, ha régión kívüli konzolokon fut.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>El fogok veszteni bármilyen szolgáltatást, ha CFW-t telepítek?</u></summary>
 
-Nem. Egyedi firmware-rel ellátott eszközökkel ugyanúgy játszhatsz online és futtathatsz fizikai cartridge-eket, amiket minden más 3DS futtatni tud.
+Nem. Egyedi firmware-rel ellátott konzolokkal ugyanúgy játszhatsz online és futtathatsz fizikai cartridge-eket, amiket minden más 3DS futtatni tud.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>Megtarthatom az NNID azonosítóm?</u></summary>
 
-Az NNID-et (ha van) nem befolyásolja az útmutató végrehajtása. A KOR, CHN vagy TWN régiós eszközök nem rendelkeznek alaphelyzetben NNID funkcionalitással, így ezek az eszközök nem érintettek.
+Az NNID-et (ha van) nem befolyásolja az útmutató végrehajtása. A KOR, CHN vagy TWN régiós eszközök nem rendelkeznek alaphelyzetben NNID funkcionalitással, így ezek a konzolok nem érintettek.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -109,7 +106,7 @@ Történetileg a 3DS felhasználói szintű homebrew hozzáférése régi exploi
 {% capture compat %}
 <summary><u>Biztonságos frissíteni a legutolsó verzióra a CFW-vel ellátott 3DS-em?</u></summary>
 
-Ha Luma3DS-t használsz, az egyedi firmware loader (boot9strap) *soha* nem kerül eltávolításra egy rendszer frissítés során. Korábban voltak olyan frissítések, amik a Luma3DS összeomlását eredményezték bootoláskor, így jó ötlet várni egy pár órát, hogy biztos legyél, hogy a legutolsó frissítés átmenetileg nem teszi-e használhatatlanná a rendszered, mielőtt a Luma3DS frissítésre kerül. A rendszer frissítések úgy történnek, mint egy alap 3DS-en: a System Settings-en, Safe Mode-on vagy a felugró frissítési üzeneten keresztül, amikor a frissítések automatikusan letöltődtek.
+Ha Luma3DS-t használsz, az egyedi firmware loader (boot9strap) *soha* nem kerül eltávolításra egy rendszer frissítés során. A múltban voltak olyan frissítések amelyek miatt a Luma3DS rendszerindításkor összeomlott, így néhány órát várni a frissítés előtt bölcs döntés mivel ez biztosítja hogy a konzol nem válik átmenetileg használhatatlanná a Luma3DS frissítéséig. A rendszer frissítések úgy történnek, mint egy alap 3DS-en: a System Settings-en, Safe Mode-on vagy a felugró frissítési üzeneten keresztül, amikor a frissítések automatikusan letöltődtek.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -130,7 +127,7 @@ Igen, a rendszer átvitel végrehajtható a hivatalos System Transfer funkcióva
 {% capture compat %}
 <summary><u>Hogyan módosíthatom a rendszer nyelvét egy japán 3DS-nek?</u></summary>
 
-Az egyetlen módja a rendszer nyelv módosításának egy japán 3DS esetében más nyelvre a [régió csere](region-changing). Fontos megjegyezni, hogy ez erősen valószínű, hogy elrontja a Nintendo eShop-ot a készülékeden, így nem fogsz tudni frissíteni játékokat, függetlenül attól, hogy régión belüli vagy kívüli.
+Az egyetlen módja a rendszer nyelv módosításának egy japán 3DS esetében más nyelvre a [régió csere](region-changing). Fontos megjegyezni, hogy ez erősen valószínű, hogy elrontja a Nintendo eShop-ot a konzolodon, így nem fogsz tudni frissíteni játékokat, függetlenül attól, hogy régión belüli vagy kívüli.
  {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -157,7 +154,7 @@ Ha a játék nem ugyanabból a régióból származik, mint a konzolod, akkor [d
 {% capture compat %}
 <summary><u>Segítség! Valami rossz dolog történt és a 3DS-em nem bootol a HOME menübe...</u></summary>
 
-Kérjük, nézd meg a [hibaelhárítási útmutatót](troubleshooting#boot-issues-on-devices-with-custom-firmware). **A CFW eltávolítása, amikor az eszközöd nem bootható nem ajánlott, mert nagyon 
+Please look at the [troubleshooting guide](troubleshooting#boot-issues-on-consoles-with-custom-firmware). **A CFW eltávolítása, amikor a konzolod nem bootolható nem ajánlott, mert nagyon 
  valószínű, hogy brickeli az eszközödet**.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -165,7 +162,7 @@ Kérjük, nézd meg a [hibaelhárítási útmutatót](troubleshooting#boot-issue
 ## menuhax / A9LH / Gateway GYIK
 
 {% capture compat %}
-<summary><u>Moddoltam az eszközömet (x) évvel ezelőtt, így már van valamilyen homebrew hozzáférésem. Mit kell tennem?</u></summary>
+<summary><u>Moddoltam a konzolomat (x) évvel ezelőtt, így már van valamilyen homebrew hozzáférésem. Mit kell tennem?</u></summary>
 
 Ajánlott, hogy frissítsd egy modern, boot9strap alapúra. Kövesd a [CFW ellenőrzését](checking-for-cfw), hogy megtudd, hogyan frissítheted.
 {% endcapture %}
@@ -188,6 +185,6 @@ A régi konfigurációd (beleértve az EmuNAND-od, ha van ilyened) általában k
 {% capture compat %}
 <summary><u>Hogyan mozgathatom át a mentéseimet egy létező Gateway konfigurációról egy modern konfigurációra?</u></summary>
 
-**V:** Nézd meg [ezt az üzenetszálat](https://gbatemp.net/threads/425743/).
+Nézd meg [ezt az üzenetszálat](https://gbatemp.net/threads/425743/).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>

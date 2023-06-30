@@ -6,7 +6,7 @@ title: "Finalizing Setup"
 
 ### Required Reading
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the device, allowing it to run homebrew software.
+The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
 On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
 
@@ -45,22 +45,37 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 
 In this section, you will copy the files necessary to follow the rest of the instructions on this page.
 
-1. Power off your device
+1. Power off your console
 1. Insert your SD card into your computer
 1. Copy the contents of `finalize.zip` to the root of your SD card, merging/replacing any existing folders if prompted
 
-The screenshot below indicate the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
 
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### Section II - Updating the System
+#### Section II - CFW Check
+
+As an additional safety measure, we will perform an additional check for custom firmware. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.
+
+1. Power off your console
+1. Hold the (Select) button
+1. Power on your console while still holding the (Select) button
+1. If the check was successful, your console should have booted into the Luma3DS configuration menu
+1. Press (Start) to save and reboot
+1. Power off your console
+
+If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your console. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--danger}
+
+
+#### Section III - Updating the System
 
 In this section, you will update your system to the latest version, which is safe to do with custom firmware.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Section III - RTC and DSP setup
+#### Section IV - RTC and DSP setup
 
 In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
 
@@ -74,12 +89,13 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 1. Press (B) to return to the Rosalina main menu
 1. Press (B) to exit the Rosalina menu
 
-#### Section IV - Setup Script
+#### Section V - Setup Script
 
 In this section, you will use a script to automate homebrew installation, SD card cleanup, and system file backup.
 
-1. Power off your device
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Power off your console
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+  + If you do not boot into GodMode9, ensure that `GodMode9.firm` is in `/luma/payloads/` and that `payloads` is correctly spelled
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
 1. Press (Home) to bring up the action menu
@@ -88,21 +104,11 @@ In this section, you will use a script to automate homebrew installation, SD car
 1. Follow the prompts in the script, answering each question that you are asked
   + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
 1. Once the script says "Setup complete!", press (A) to power off the device
-1. Insert your SD card into your computer
-1. Copy the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + You should have three files inside: `<date>_<serialnumber>_sysnand_##.bin` (~1GB), `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs`
-  + Copy these files to multiple locations (such as online file storage, an external hard drive, etc.)
-  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
-1. Delete the `/gm9/out/` folder from your SD card
-1. If you have it, copy the `/luma/backups/` folder on your SD card to a safe location on your computer
 
 ___
 
-You're done! Custom firmware is now fully configured on your device.
+You're done! Custom firmware is now fully configured on your console.
 {: .notice--success}
-
-Hello! We're looking for feedback on the overall experience of following our guide. If you'd like to help out, check out the survey [here](https://forms.gle/vZNoc4QLCz5MEXCK7) (only available in English). Thanks!
-{: .notice--info}
 
 ### Information and Notes
 

@@ -22,4 +22,4 @@ jobs:
 
       - name: Run Jekyll
         # Build the site using Jekyll
-        run: bundle exec jekyll build
+        run: JEKYLL_ENV=production bundle exec jekyll build
