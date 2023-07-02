@@ -81,10 +81,10 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 
 1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
   + If one of these buttons is broken, download [config.ini]({{ base_path }}/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
-1. Select “Miscellaneous options”
-1. Select “Dump DSP firmware”
+1. Select "Miscellaneous options"
+1. Select "Dump DSP firmware"
 1. Press (B) to continue
-1. Select “Nullify user time offset”
+1. Select "Nullify user time offset"
 1. Press (B) to continue
 1. Press (B) to return to the Rosalina main menu
 1. Press (B) to exit the Rosalina menu
