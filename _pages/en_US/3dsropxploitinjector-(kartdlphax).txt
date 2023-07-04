@@ -87,5 +87,4 @@ In this section, you will use Download Play to transfer the exploit data from th
 If your shoulder buttons (L and R) are working, continue to [Installing boot9strap (3DS ROP xPloit Injector-USM)]
 {: .notice--primary}
 
-If your shoulder buttons (L and R) are NOT working, continue to [Installing menuhax67 (3DS ROP xPloit Injector)]
-{: .notice--warning}
+If your shoulder buttons (L and R) are NOT working, continue to [menuhax67 + nimhax (3DS ROP xPloit Injector)](menuhax67-nimhax-(3dsropxploitinjector))
