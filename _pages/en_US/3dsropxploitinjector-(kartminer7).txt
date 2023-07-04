@@ -68,5 +68,5 @@ In this section, you will have the 3DS generate some data in Mario Kart 7 that w
 If your shoulder buttons (L and R) are working, continue to [Installing boot9strap (3DS ROP xPloit Injector-USM)]
 {: .notice--primary}
 
-If your shoulder buttons (L and R) are NOT working, continue to [menuhax67 + nimhax (3DS ROP xPloit Injector)](menuhax67-nimhax-(3dsropxploitinjector))
+If your shoulder buttons (L and R) are NOT working, continue to [menuhax67 + Frogtool (3DS ROP xPloit Injector)](menuhax67-frogtool-(3dsropxploitinjector))
 {: .notice--warning}
