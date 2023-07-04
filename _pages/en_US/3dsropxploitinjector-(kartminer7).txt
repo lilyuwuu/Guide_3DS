@@ -1,0 +1,70 @@
+---
+title: "3DS ROP xPloit Injector (kartminer7)"
+redirect_from:
+  - installing-boot9strap-(kartdlphax)
+---
+
+{% include toc title="Table of Contents" %}
+
+{% capture technical_info %}
+<summary><em>Technical Details (optional)</em></summary>
+
+To install boot9strap on your console, we derive your console's unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your console.
+
+Once we have `movable.sed`, we can edit the SD card data of the game Mario Kart 7 to allow us to install further exploits.
+
+See [here](https://github.com/zoogie/kartminer7) for information about kartminer7 and [here](https://github.com/PabloMK7/3dsropxploitinjector) for information about 3DS ROP xPloit Injector.
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+### What You Need
+
+* A physical or digital copy of Mario Kart 7
+* A Windows computer
+* Your `movable.sed` file from completing Seedminer
+* The latest release of [Kartminer7](https://github.com/zoogie/Kartminer7/releases/latest)
+
+#### Section I - Preparing Mario Kart 7 data
+
+In this section, you will have the 3DS generate some data in Mario Kart 7 that will be used to install the exploit in a later section.
+
+1. Insert your SD card into your console
+1. Open Mario Kart 7
+1. Tap the "Mario Kart Channel" button on the bottom
+1. If you are prompted to, hit "Next" and "OK" to all of the prompts that you see
+1. Tap the "StreetPass List" button on the bottom of the screen, in the middle
+1. Press the (Home) button to suspend Mario Kart 7
+1. Disable wireless connections by flicking the wireless switch on the side of the console or by navigating to HOME Menu Settings (top left) -> Wireless Communication -> OFF
+1. Power off your console
+
+#### Section II - Prep Work
+
+1. Insert your SD card into your computer
+1. Extract the Release_BETA_mk7 `.zip` to somewhere on your computer (i.e. your desktop)
+1. Copy your `movable.sed` file to the `resources` folder of the Release_BETA_mk7 folder
+  + Ensure that the file is named exactly `movable.sed`
+1. Open the `backup` folder inside of the Release_BETA_mk7 folder
+1. Double-click on the `.bat` file corresponding to your console's region
+  + If you get a message from Windows Defender, click "More info", "Run anyway", then press any key to continue
+  + If the backup was successful, you should see a new folder appear
+1. Go back to the Release_BETA_mk7 folder, then double-click on the `.bat` file corresponding to your console's region AND model
+1. Reinsert your SD card into your console
+
+#### Section III - Kartminer7
+
+1. Power on your console
+1. Open Mario Kart 7
+1. Tap the "Mario Kart Channel" button on the bottom
+1. Tap the "StreetPass List" button on the bottom of the screen, in the middle
+1. Press (A) over and over again
+1. If the exploit was successful, the **target 3DS** will have booted into the 3DS ROP xPloit Injector
+
+### Next steps
+
+If your shoulder buttons (L and R) are working, continue to [Installing boot9strap (3DS ROP xPloit Injector-USM)]
+{: .notice--primary}
+
+If your shoulder buttons (L and R) are NOT working, continue to [Installing menuhax67 (3DS ROP xPloit Injector)]
+{: .notice--warning}

@@ -10,7 +10,13 @@ ___
 
 ### Next steps
 
-Select the method based on the application that you have installed on your 3DS. No matter which method you pick, the end result will be the same.
+Select the method based on what you have access to. No matter which method you pick, the end result will be the same.
+
+#### Mario Kart 7
+
+A physical or digital (including preloaded) copy of Mario Kart 7 can be used in conjunction with Seedminer to install custom firmware.
+
+Continue to [3DS ROP xPloit Injector (Kartminer7)](3dsropxploitinjector-(kartminer7))
 
 #### DSiWare
 
