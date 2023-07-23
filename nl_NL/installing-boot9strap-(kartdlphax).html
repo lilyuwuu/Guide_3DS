@@ -533,18 +533,10 @@ window.cookieconsent.initialise({
 
 <h3 id="wat-je-nodig-hebt">Wat je nodig hebt</h3>
 
-<p>Op de <strong>source 3DS</strong> (de 3DS met custom firmware):</p>
-
 <ul>
   <li>The latest release of <a href="https://github.com/PabloMK7/kartdlphax/releases/latest">kartdlphax</a> (<code class="language-plaintext highlighter-rouge">plugin.3gx</code>)</li>
-  <li>The latest release of <a href="https://github.com/PabloMK7/Luma3DS_3GX/releases/latest">Luma3DS 3GX Loader Edition</a> (<code class="language-plaintext highlighter-rouge">boot.firm</code>)</li>
-</ul>
-
-<p>Op de <strong>target 3DS</strong> (de 3DS die je probeert te wijzigen):</p>
-
-<ul>
   <li>De nieuwste versie van <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a> (directe download)</li>
-  <li>De nieuwste versie van <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">standaard Luma3DS</a> (the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> file)</li>
+  <li>De nieuwste versie van <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> (het Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> bestand)</li>
   <li>The latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a> (the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> file)</li>
 </ul>
 
@@ -570,7 +562,7 @@ window.cookieconsent.initialise({
 
 <ol>
   <li>Plaats de SD-kaart van je <strong>bron 3DS</strong> in je computer</li>
-  <li>Kopieer Luma 3GX Loader Edition’s <code class="language-plaintext highlighter-rouge">boot.firm</code> naar de hoofdmap van de <strong>bron 3DS</strong>’s SD-kaart, die elk bestaand bestand vervangt
+  <li>Copy <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of the <strong>source 3DS</strong>’s SD card, replacing any existing file
     <ul>
       <li>De hoofdmap van de SD-kaart verwijst naar de bovenste map van de SD-kaart, waarin je alle mappen op de SD-kaart kunt zien, waaronder de Nintendo 3DS map, zonder je in de Nintendo 3DS map te bevinden</li>
     </ul>
@@ -592,13 +584,13 @@ window.cookieconsent.initialise({
 
 <ol>
   <li>Plaats de SD-kaart van je <strong>doel 3DS</strong> in je computer</li>
-  <li>Kopieer <code class="language-plaintext highlighter-rouge">boot.firm</code> en <code class="language-plaintext highlighter-rouge">boot.3dsx</code> van de standaard Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> naar de hoofdmap van je SD-kaart</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">boot.firm</code> and <code class="language-plaintext highlighter-rouge">boot.3dsx</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of the <strong>target 3DS’s</strong> SD card</li>
   <li>Maak een map genaamd <code class="language-plaintext highlighter-rouge">boot9strap</code> op de hoofdmap van je SD-kaart</li>
-  <li>Kopieer <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> en <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> van de RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> naar de <code class="language-plaintext highlighter-rouge">/boot9strap/</code> map op je SD-kaart</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> and <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> from the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the <code class="language-plaintext highlighter-rouge">/boot9strap/</code> folder on your SD card</li>
   <li>Kopieer <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> van de SafeB9SInstaller <code class="language-plaintext highlighter-rouge">.zip</code> naar de hoofdmap van je SD-kaart</li>
-  <li>Kopieer <code class="language-plaintext highlighter-rouge">usm.bin</code> van de RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> naar de hoofdmap van je SD-kaart</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">usm.bin</code> from the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
   <li>Create a folder called <code class="language-plaintext highlighter-rouge">3ds</code> on the root of your SD card</li>
-  <li>Kopieer <code class="language-plaintext highlighter-rouge">slotTool.3dsx</code> van de <code class="language-plaintext highlighter-rouge">slotTool</code> map in de RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> naar de <code class="language-plaintext highlighter-rouge">/3ds/</code> map op je SD-kaart</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">slotTool.3dsx</code> from the <code class="language-plaintext highlighter-rouge">slotTool</code> folder inside the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the <code class="language-plaintext highlighter-rouge">/3ds/</code> folder on your SD card</li>
   <li>Haal de SD-kaart uit en stop deze in de <strong>doel 3DS</strong></li>
 </ol>
 
@@ -729,20 +721,21 @@ window.cookieconsent.initialise({
 
 <ol>
   <li>Start de Download Play applicatie (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
-  <li>Wacht tot je de twee knoppen ziet
-    <ul>
-      <li>Do not press either of the buttons</li>
-    </ul>
-  </li>
+  <li>Wacht tot je de ‘Nintendo 3DS’ en ‘Nintendo DS’ knoppen ziet</li>
   <li>Druk tegelijkertijd op (L) + (Down) + (Select) om het Rosalina menu te openen</li>
   <li>Selecteer “Miscellaneous options”</li>
   <li>Selecteer “Switch the hb. title to the current app.”</li>
   <li>Druk op (B) om door te gaan</li>
   <li>Druk op (B) om terug te gaan naar het Rosalina hoofdmenu</li>
   <li>Druk op (B) om het Rosalina menu af te sluiten</li>
-  <li>Druk op (Home), en sluit dan Download Play af</li>
-  <li>Relaunch the Download Play application</li>
-  <li>Your console should load the Homebrew Launcher</li>
+  <li>Press (Home) to suspend Download Play</li>
+  <li>Press the “Close” button on the bottom screen to close Download Play</li>
+  <li>Re-launch the Download Play application</li>
+  <li>Your console should load the Homebrew Launcher
+    <ul>
+      <li>If your console is stuck on the loading splash screen, you are missing <code class="language-plaintext highlighter-rouge">boot.3dsx</code> from the root of your SD card</li>
+    </ul>
+  </li>
   <li>Launch slotTool from the list of homebrew</li>
   <li>Select “RESTORE original wifi slots 1,2,3”</li>
   <li>Your console will then reboot</li>

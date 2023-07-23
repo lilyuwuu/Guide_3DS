@@ -505,15 +505,15 @@ window.cookieconsent.initialise({
 <details class="notice--info">
 <summary><em>技术细节（选看）</em></summary>
 
-<p>为了破解系统的 SAFE_MODE 固件，我们需要注入一个写入了漏洞的 WiFi 配置文件到主机中。</p>
+<p>In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.</p>
 
 <p>为了做到这一点，我们将用一台已安装了自制固件的 3DS 安装一个插件，然后利用马里奥赛车 7 这个游戏中的下载通信功能进行一些操作。</p>
 
-<p>这个插件将会发送带有漏洞的代码到未破解的主机中，然后它将会向未破解的主机中注入带有漏洞的配置文件到 WiFi 连接点列表。</p>
+<p>This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject the exploited WiFi profile into your connections list.</p>
 
-<p>一旦 WiFi 配置文件被注入，我们将会使用到 SAFE_MODE 来继续此教程。SAVE_MODE 是一个所有的 3DS 主机都存在的修复功能，之后它将用于激活被破解的 WiFi 配置文件。</p>
+<p>Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.</p>
 
-<p>如果想知道更多的技术细节，请参阅以下链接：<a href="https://github.com/PabloMK7/kartdlphax">kartdlphax</a>、<a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>。</p>
+<p>For a more technical explanation, see the following links for information on the kartdlphax and unSAFE_MODE exploits: <a href="https://github.com/PabloMK7/kartdlphax">kartdlphax</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
 
 </details>
 
@@ -534,19 +534,11 @@ window.cookieconsent.initialise({
 
 <h3 id="你需要准备点啥">你需要准备点啥？</h3>
 
-<p>在<strong>源 3DS</strong>（已安装自制固件的 3DS）上操作以下步骤：</p>
-
 <ul>
   <li>最新版本的 <a href="https://github.com/PabloMK7/kartdlphax/releases/latest">kartdlphax</a>（下载 <code class="language-plaintext highlighter-rouge">plugin.3gx</code>）</li>
-  <li>The latest release of <a href="https://github.com/PabloMK7/Luma3DS_3GX/releases/latest">Luma3DS 3GX Loader Edition</a> (<code class="language-plaintext highlighter-rouge">boot.firm</code>)</li>
-</ul>
-
-<p>在<strong>目标 3DS</strong>（你试图破解的 3DS）上：</p>
-
-<ul>
   <li>最新版本的 <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>（直链）</li>
   <li>最新版本的 <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a>（下载 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 文件）</li>
-  <li>最新版本的 <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a>（下载 RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> 文件）</li>
+  <li>The latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a> (the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> file)</li>
 </ul>
 
 <h4 id="section-i---hardware-button-check-target-3ds">Section I - Hardware Button Check (target 3DS)</h4>
@@ -571,7 +563,7 @@ window.cookieconsent.initialise({
 
 <ol>
   <li>在你的电脑中插入你的<strong>源 3DS</strong> 的 SD 卡</li>
-  <li>复制 Luma 3GX Loader Edition 的 <code class="language-plaintext highlighter-rouge">boot.firm</code> 到<strong>源 3DS</strong> 的 SD 卡根目录，替换当前已有的文件
+  <li>Copy <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of the <strong>source 3DS</strong>’s SD card, replacing any existing file
     <ul>
       <li>根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去</li>
     </ul>
@@ -581,7 +573,7 @@ window.cookieconsent.initialise({
       <li>美版： <code class="language-plaintext highlighter-rouge">luma/plugins/0004000000030800</code></li>
       <li>欧版： <code class="language-plaintext highlighter-rouge">luma/plugins/0004000000030700</code></li>
       <li>日版： <code class="language-plaintext highlighter-rouge">luma/plugins/0004000000030600</code>
-  如果 <code class="language-plaintext highlighter-rouge">plugins</code> 和 <code class="language-plaintext highlighter-rouge">00040000...</code> 文件夹不存在，请先创建它们</li>
+ 如果 <code class="language-plaintext highlighter-rouge">plugins</code> 和 <code class="language-plaintext highlighter-rouge">00040000...</code> 文件夹不存在，请先创建它们</li>
     </ul>
   </li>
   <li>弹出 SD 卡并将其插回<strong>源 3DS</strong></li>
@@ -589,23 +581,23 @@ window.cookieconsent.initialise({
 
 <h4 id="section-iii---prep-work-target-3ds">Section III - Prep Work (target 3DS)</h4>
 
-<p>为了修改目标 3DS（你正在破解的 3DS），你需要复制一些文件到目标 3DS 的 SD 卡中。</p>
+<p>In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your target 3DS (the 3DS that you are trying to modify)’s SD card.</p>
 
 <ol>
   <li>在你的电脑中插入你的<strong>目标 3DS</strong> 的 SD 卡</li>
-  <li>复制 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 里的 <code class="language-plaintext highlighter-rouge">boot.firm</code> 和 <code class="language-plaintext highlighter-rouge">boot.3dsx</code> 到你 SD 卡的根目录</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">boot.firm</code> and <code class="language-plaintext highlighter-rouge">boot.3dsx</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of the <strong>target 3DS’s</strong> SD card</li>
   <li>在 SD 卡根目录创建一个名为 <code class="language-plaintext highlighter-rouge">boot9strap</code> 的文件夹</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> and <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> from the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the <code class="language-plaintext highlighter-rouge">/boot9strap/</code> folder on your SD card</li>
   <li>从 SafeB9SInstaller <code class="language-plaintext highlighter-rouge">.zip</code> 压缩包中复制 <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> 到 SD 卡根目录下</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">usm.bin</code> from the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
-  <li>在你 SD 卡的根目录新建一个叫 <code class="language-plaintext highlighter-rouge">3ds</code> 的文件夹</li>
+  <li>Create a folder called <code class="language-plaintext highlighter-rouge">3ds</code> on the root of your SD card</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">slotTool.3dsx</code> from the <code class="language-plaintext highlighter-rouge">slotTool</code> folder inside the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the <code class="language-plaintext highlighter-rouge">/3ds/</code> folder on your SD card</li>
   <li>取下 SD 卡并将其插回<strong>目标 3DS</strong></li>
 </ol>
 
 <h4 id="section-iv---kartdlphax">Section IV - kartdlphax</h4>
 
-<p>本节中，你将使用下载通信程序来从源 3DS 传输带有漏洞的数据到目标 3DS，它将会用带有漏洞的数据覆盖你的 Wi-Fi 连接点设置槽。 你自己设置的 Wi-Fi 链接点将在这个过程中被暂时覆盖。</p>
+<p>In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.</p>
 
 <ol>
   <li>启动 **源 3DS **
@@ -659,15 +651,15 @@ window.cookieconsent.initialise({
       <li>如果漏洞没有成功触发，则请将<strong>源 3DS</strong> 和 <strong>目标 3DS</strong> 一起关机，然后从 <code class="language-plaintext highlighter-rouge">第三步 — kartdlphax</code> 重新开始</li>
     </ul>
   </li>
-  <li>按 X 键来注入 unSAFE_MODE</li>
-  <li>如果注入成功，<strong>目标 3DS</strong> 的屏幕闪绿屏，然后自动关机
+  <li>Press (X) to inject unSAFE_MODE</li>
+  <li>If the injection was successful, the screen will turn green and the <strong>target 3DS</strong> will automatically power off
     <ul>
-      <li>如果是闪红屏，则请将目标 3DS 关机，然后从 <code class="language-plaintext highlighter-rouge">第三步 — kartdlphax</code> 重新开始。 如果依然不行，请于 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 服务器</a>)寻求帮助</li>
+      <li>If the screen turns red, power off the target 3DS and start again from the beginning of <code class="language-plaintext highlighter-rouge">Section III - kartdlphax</code>. If this doesn’t work, ask for help at <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a>)</li>
     </ul>
   </li>
 </ol>
 
-<p class="notice--info">接下来的步骤中将<strong>不再</strong>需要使用<strong>源 3DS</strong> 来完成。 接下来的步骤应该只能在<strong>目标 3DS</strong>上完成。</p>
+<p class="notice--info">You will <strong>not</strong> need to use your <strong>source 3DS</strong> to complete any further steps on this guide. Any further steps should only be completed on the <strong>target 3DS</strong>.</p>
 
 <h4 id="section-v---unsafe_mode">Section V - unSAFE_MODE</h4>
 
@@ -730,21 +722,22 @@ window.cookieconsent.initialise({
 
 <ol>
   <li>启动“下载通信(Download Play)”程序 (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
-  <li>等到你看到两个按钮
-    <ul>
-      <li>Do not press either of the buttons</li>
-    </ul>
-  </li>
+  <li>等到你看到 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> 和 <code class="language-plaintext highlighter-rouge">Nintendo DS</code> 按钮</li>
   <li>同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单</li>
   <li>选择 “Miscellaneous options”</li>
   <li>选择 “Switch the hb. title to the current app.”</li>
   <li>按 “B” 键继续</li>
   <li>按 “B” 键返回 Rosalina 主菜单</li>
   <li>按 “B” 键退出 Rosalina 菜单</li>
-  <li>按下 “Home” 键，然后关闭“下载通信(Download Play)”</li>
-  <li>Relaunch the Download Play application</li>
-  <li>Your console should load the Homebrew Launcher</li>
-  <li>从自制程序列表中找到并启动 slotTool</li>
+  <li>Press (Home) to suspend Download Play</li>
+  <li>Press the “Close” button on the bottom screen to close Download Play</li>
+  <li>Re-launch the Download Play application</li>
+  <li>Your console should load the Homebrew Launcher
+    <ul>
+      <li>If your console is stuck on the loading splash screen, you are missing <code class="language-plaintext highlighter-rouge">boot.3dsx</code> from the root of your SD card</li>
+    </ul>
+  </li>
+  <li>Launch slotTool from the list of homebrew</li>
   <li>Select “RESTORE original wifi slots 1,2,3”</li>
   <li>Your console will then reboot</li>
 </ol>
