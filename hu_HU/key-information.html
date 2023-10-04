@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/hu_HU/site-navigation">Oldaltérkép</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/hu_HU/installing-boot9strap-(petit-compwner)'>Boot9strap telepítése (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/hu_HU/dumping-eshop-dsiware'>eShop DSiWare dumpolása</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -540,7 +562,7 @@ window.cookieconsent.initialise({
 </details>
 
 <details class="notice--warning">
-<summary><strong>Potential risks (Disclaimer)</strong></summary>
+<summary><strong>Potencionális kockázatok (Nyilatkozat)</strong></summary>
 
 <p>A konzolod moddolásával, van egy nagyon kicsi (de nem nulla) esélye a konzol bannolásának az online játékokból vagy hogy brickelődik (nem működővé válik). <strong><em>A rossz helyre rakott fájlok NEM brickelik a konzolodat</em></strong>, de szándékosan kihagyott lépések elképzelhető, hogy igen. Hasonlóan, a legutolsó ban hullám 5 évvel ezelőtt történt, de nincs garancia arra, hogy ne fordulna elő egy a jövőben.</p>
 
@@ -567,7 +589,7 @@ window.cookieconsent.initialise({
 </details>
 
 <details>
-<summary><strong>Downloading files from GitHub</strong></summary>
+<summary><strong>Fájlok letöltése a GitHub-ról</strong></summary>
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/onboarding/github.png" alt="" /></p>
 
 <p>In this guide, you will copy files that are downloaded on your computer/phone to your console’s SD card. Many of these files come from GitHub, which is a website used by developers to publish their open-source releases. When downloading files from GitHub, you should download the file that <em>isn’t</em> source code.</p>
@@ -597,9 +619,9 @@ window.cookieconsent.initialise({
 <p>Ha problémád van ezen útmutató követésével, többféle módja van, hogy segítséget kapj!</p>
 
 <ul>
-  <li>Ha olyan kérdésed van, amit nem válaszolt meg az az oldal, akkor a válaszaid lehet, hogy a <a href="faq#pre-installation-faq">Telepítés előtti gyakran ismételt kérdések</a> oldalon találhatók.</li>
-  <li>Ha hibát kaptál a útmutató követése közben, ránézhetsz a <a href="troubleshooting">Hibaelhárítás</a> oldalra a megoldásért.</li>
-  <li>Ha az itt található információk nem segítenek egy-egy támogatást kaphatsz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord csatornán</a>.</li>
+  <li>If you have any questions that haven’t been answered on this page, their answers might be in the <a href="faq#pre-installation-faq">Pre-Installation FAQ</a>.</li>
+  <li>If you experience an issue while following this guide, you can check the <a href="troubleshooting">Troubleshooting</a> page for a solution.</li>
+  <li>If the resources we’ve provided here aren’t helping, you can get one-on-one support over at <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a>.</li>
 </ul>
 
 <p class="notice--primary">Tovább a <a href="get-started">kezdeti lépésekhez</a></p>
@@ -651,29 +673,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Oldaltérkép</a> - <a href="privacy-policy">Adatvédelmi Irányelv</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

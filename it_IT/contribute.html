@@ -6,12 +6,11 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Contribute - 3DS Hacks Guide</title>
+<!-- begin _includes/seo.html --><title>Contribuisci - 3DS Hacks Guide</title>
 <meta name="description" content="A complete guide to 3DS custom firmware">
 
 
@@ -22,7 +21,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="3DS Hacks Guide">
-<meta property="og:title" content="Contribute">
+<meta property="og:title" content="Contribuisci">
 <meta property="og:url" content="https://3ds.hacks.guide/it_IT/contribute.html">
 
 
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/it_IT/site-navigation">Mappa del sito</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/it_IT/installing-boot9strap-(petit-compwner)'>Installazione di boot9strap (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/it_IT/dumping-eshop-dsiware'>Dump di DsiWare eShop</a></li>
           
         
@@ -441,12 +457,16 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
 
+<!-- hacks-guide change end-->
+
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Contribute">
+    <meta itemprop="headline" content="Contribuisci">
     
     
     
@@ -454,7 +474,7 @@ window.cookieconsent.initialise({
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Contribute
+          <h1 id="page-title" class="page__title" itemprop="headline">Contribuisci
 </h1>
           
 
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,16 +500,17 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
-        <p>We’re glad to hear that you’d like to contribute to 3ds.hacks.guide! Ecco alcuni modi in cui potresti farlo:</p>
+        <p>Siamo contenti di sapere che vorresti contribuire a 3ds.hacks.guide! Ecco alcuni modi in cui potresti farlo:</p>
 
 <h2 id="manutenzione">Manutenzione</h2>
 
-<p>This guide is open-source; our repository is available <a href="https://github.com/hacks-guide/Guide_3DS">here</a>. If you’ve noticed an issue on this guide, you can file an issue to make us aware, or file a pull request to make the necessary changes yourself.</p>
+<p>Questa guida è open source; il nostro repository è disponibile <a href="https://github.com/hacks-guide/Guide_3DS">qui</a>. Se hai notato un problema su questa guida, puoi inviare una segnalazione per farcelo sapere, o inviare una pull request per apportare autonomamente le modifiche necessarie.</p>
 
 <h2 id="traduzioni">Traduzioni</h2>
 
-<p>If you’d like to translate this guide into other languages (or help keep the existing translations up-to-date), check out our <a href="https://crowdin.com/project/3ds-guide">Crowdin</a>.</p>
+<p>Se vuoi tradurre questa guida in altre lingue (o se vuoi aiutarci a mantenere aggiornate le traduzioni esistenti), dai un’occhiata alla nostra pagina <a href="https://crowdin.com/project/3ds-guide">Crowdin</a>.</p>
 
 <h2 id="seeding">Seeding</h2>
 
@@ -498,11 +520,10 @@ window.cookieconsent.initialise({
 
 <h2 id="donazioni">Donazioni</h2>
 
-<p>Maintaining this guide (as well as our support channels) is primarily a volunteer effort, so if this guide has helped you in some way, donations are greatly appreciated!</p>
+<p>Mantenere questa guida (e i nostri canali di supporto) è principalmente uno sforzo volontario, per cui se questa guida ti ha aiutato in qualche modo, le donazioni sono molto apprezzate!</p>
 
 <p class="text-center notice--info"><a href="https://paypal.me/NintendoHomebrew" class="align-center"><img src="https://3ds.hacks.guide/images/paypal_white.png" alt="Paypal" height="72px" width="256px" style="padding-bottom: .35em" /></a>
 <a href="https://paypal.me/NintendoHomebrew">https://paypal.me/NintendoHomebrew</a></p>
-
 
         
       </section>
@@ -551,29 +572,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Mappa del sito</a> - <a href="privacy-policy">Informativa sulla Privacy</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

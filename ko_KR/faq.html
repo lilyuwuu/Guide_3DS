@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/ko_KR/site-navigation">사이트 탐색</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,11 +386,15 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/ko_KR/installing-boot9strap-(petit-compwner)'>boot9strap 설치 (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/ko_KR/dumping-eshop-dsiware'>eShop DSiWare 덤프</a></li>
           
         
           
-            <li style="display: none;" data-name="multiple-options"><i>(다중 옵션)</i></li>
+            <li style="display: none;" data-name="multiple-options"><i>(여러가지 옵션)</i></li>
           
         
           
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -511,14 +533,14 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>제 콘솔은 최신 버전입니다, 외부 하드웨어나 전제 조건 없이 내 콘솔을 해킹할 수 있습니까?</u></summary>
 
-<p>본체 모델에 따라 다릅니다. At the moment, New 3DS / New 3DS XL / New 2DS XL is <a href="installing-boot9strap-(super-skaterhax)">able to be modded on 11.17.0</a> without any prerequisites (e.g. 하지만 3DS, 3DS XL, 2DS의 경우 <a href="alternate-exploits">추가적인 소프트웨어 혹은 장비</a>가 필요합니다.</p>
+<p>본체 모델에 따라 다릅니다. 현재 New 3DS, New 3DS XL, New 2DS XL은 11.17.0 버전에서 별도의 준비물(e숍 타이틀, 물리적인 장비) 없이 <a href="installing-boot9strap-(super-skaterhax)">수정이 가능합니다</a>. 하지만 3DS, 3DS XL, 2DS의 경우 <a href="alternate-exploits">추가적인 소프트웨어 혹은 장비</a>가 필요합니다.</p>
 
 </details>
 
 <details>
 <summary><u>이 가이드를 어느 콘솔에 사용할 수 있나요?</u></summary>
 
-<p>이 가이드는 실제로 판매된 모든 3DS 시리즈 기기(3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL)에 대응하고 있습니다. 만약 시스템 버전이 “0.0.0-0”으로 표시된다면, 개발자 콘솔를 가지고 있는 것일 수 있습니다.</p>
+<p>이 가이드는 실제로 판매된 모든 3DS 시리즈 콘솔 (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL)에 대응하고 있습니다. 만약 시스템 버전이 “0.0.0-0”으로 표시된다면, 개발자 콘솔를 가지고 있는 것일 수 있습니다.</p>
 </details>
 
 <details>
@@ -550,7 +572,7 @@ window.cookieconsent.initialise({
 
 <p>NNID는 닌텐도 네트워크 ID의 약칭이며, 본 가이드에서 NNID 걱정은 하지 않아도 됩니다. 한국 (KOR), 중국 (CHN), 타이완 (TWN) 콘솔들에는 NNID 기능이 존재하지 않습니다. 만약 북미, 호주, 유럽 등 다른 지역의 콘솔을 한국으로 <a href="region-changing">지역 변경</a> 할 계획이라면 시리얼 번호를 유심히 보고 해당 문서의 주의사항을 각별히 읽은 후 진행하세요.</p>
 
-<p>Following this guide alone should not result in data loss (saves, digital games, etc), but SD card corruption is always a possibility. You should make a backup of your SD card contents if you have important data.</p>
+<p>이 가이드만을 따라간다면 데이터 손실은 없을 것이지만, SD 카드 파손은 언제나 가능성으로서 남아 있습니다. 만약 중요한 데이터가 있다면, SD 카드의 백업을 하는 것을 추천합니다.</p>
 </details>
 
 <details>
@@ -716,29 +738,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">사이트 탐색</a> - <a href="privacy-policy">개인정보 보호 정책</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

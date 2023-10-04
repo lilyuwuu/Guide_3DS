@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/hu_HU/site-navigation">Oldaltérkép</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/hu_HU/installing-boot9strap-(petit-compwner)'>Boot9strap telepítése (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/hu_HU/dumping-eshop-dsiware'>eShop DSiWare dumpolása</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -490,7 +512,7 @@ window.cookieconsent.initialise({
       <li><a href="#ii-rész---bannerbomb3" id="markdown-toc-ii-rész---bannerbomb3">II. rész - BannerBomb3</a></li>
     </ul>
   </li>
-  <li><a href="#continue-to-installing-boot9strap-menuhax" id="markdown-toc-continue-to-installing-boot9strap-menuhax">Continue to Installing boot9strap (menuhax)</a></li>
+  <li><a href="#tovább-a-boot9strap-telepítésére-menuhax" id="markdown-toc-tovább-a-boot9strap-telepítésére-menuhax">Tovább a Boot9strap telepítésére (menuhax)</a></li>
 </ul>
 
   </nav>
@@ -516,7 +538,7 @@ window.cookieconsent.initialise({
 
 <ul>
   <li>A <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlodra a Seedminer befejezéséből</li>
-  <li>A <a href="https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip">BannerBomb3</a> legfrissebb verziója (közvetlen letöltés)</li>
+  <li>A <a href="https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip">BannerBomb3</a> legfrissebb verziója (<code class="language-plaintext highlighter-rouge">Release_v3.0.zip</code>, közvetlen letöltés)</li>
 </ul>
 
 <h4 id="i-rész---előkészületek">I. rész - Előkészületek</h4>
@@ -526,11 +548,11 @@ window.cookieconsent.initialise({
 <ol>
   <li>Kapcsold ki a konzolod</li>
   <li>Helyezd az SD kártyád a számítógépbe</li>
-  <li>Open <a href="https://zoogie.github.io/web/bb3/">Bannerbomb3 Injector</a> on your computer</li>
+  <li>Nyisd meg a <a href="https://zoogie.github.io/web/bb3/">BannerBomb3 Injector</a> oldalt a számítógépeden</li>
   <li>Töltsd fel a <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlod a “Choose File” opcióval</li>
   <li>Kattints a “Build and Download”-ra
     <ul>
-      <li>This will download an exploit DSiWare called <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code>, which will be contained in a zip archive (<code class="language-plaintext highlighter-rouge">BannerBomb3.zip</code>)</li>
+      <li>Ez le fog tölteni egy exploit DSiWare fájlt <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> néven, egy zip fájlban (<code class="language-plaintext highlighter-rouge">BannerBomb3.zip</code>)</li>
     </ul>
   </li>
   <li>Másold át a <code class="language-plaintext highlighter-rouge">bb3.bin</code> fájlt a <code class="language-plaintext highlighter-rouge">Release_v3.0.zip</code>-ből az SD kártya gyökerébe
@@ -554,16 +576,17 @@ window.cookieconsent.initialise({
       <li>Ha már van mappád <em>és</em> van benne DSiWare mentés fájl (<code class="language-plaintext highlighter-rouge">&lt;8-character-id&gt;.bin</code>), másold őket a számítógépedre és töröld őket az SD kártyáról</li>
     </ul>
   </li>
-  <li>Copy the <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> file from <code class="language-plaintext highlighter-rouge">BannerBomb3.zip</code> to the <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> folder</li>
+  <li>Másold az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> fájlt a <code class="language-plaintext highlighter-rouge">BannerBomb3.zip</code>-ből a <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába</li>
 </ol>
 
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/bb3/dsiware-location-2.png" alt="" /></p>
 
 <h4 id="ii-rész---bannerbomb3">II. rész - BannerBomb3</h4>
 
-<p>In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and use it to install the menuhax67 exploit.</p>
+<p>Ebben a fejezetben elő fogod idézni a BannerBomb3 exploit-ot a DSIWare Management menü használatával és felhasználod a menuhax67 exploit telepítésére.</p>
 
 <ol>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
   <li>Kapcsold be a konzolod</li>
   <li>Lépj be a “System Settings”-be a konzolodon</li>
   <li>Navigálj ide: <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">kép</a>)
@@ -571,7 +594,7 @@ window.cookieconsent.initialise({
       <li>A konzolodnak a BB3 multihax menüt kell mutatnia</li>
     </ul>
   </li>
-  <li>Use the D-Pad to navigate and press the (A) button to select “Install *hax”
+  <li>Használd a D-Pad-et a navigáláshoz, és nyomd meg az (A) gombot az “Install *hax” kiválasztásához
     <ul>
       <li>A konzolodod automatikusan újra fog indulni</li>
     </ul>
@@ -581,7 +604,7 @@ window.cookieconsent.initialise({
 
 <hr />
 
-<h3 class="notice--primary" id="continue-to-installing-boot9strap-menuhax">Continue to <a href="installing-boot9strap-(menuhax)">Installing boot9strap (menuhax)</a></h3>
+<h3 class="notice--primary" id="tovább-a-boot9strap-telepítésére-menuhax">Tovább a <a href="installing-boot9strap-(menuhax)">Boot9strap telepítésére (menuhax)</a></h3>
 
         
       </section>
@@ -630,29 +653,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Oldaltérkép</a> - <a href="privacy-policy">Adatvédelmi Irányelv</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

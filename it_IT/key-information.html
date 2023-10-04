@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/it_IT/site-navigation">Mappa del sito</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/it_IT/installing-boot9strap-(petit-compwner)'>Installazione di boot9strap (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/it_IT/dumping-eshop-dsiware'>Dump di DsiWare eShop</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -540,7 +562,7 @@ window.cookieconsent.initialise({
 </details>
 
 <details class="notice--warning">
-<summary><strong>Potential risks (Disclaimer)</strong></summary>
+<summary><strong>Eventuali rischi (Disclaimer)</strong></summary>
 
 <p>Effettuando la modifica alla tua console, la sottoponi ad un remoto (ma possibile) rischio di esclusione dalle funzionalità di gioco online, o ad un brick (che la renderebbe inutilizzabile). <strong><em>Se sbagli a posizionare dei file NON brickerai la console</em></strong>, potresti invece brickarla saltando alcuni passaggi. Similmente, l’ultima ondata di ban dai servizi online è avvenuta più di cinque anni fa, ma non è garantito che non possa succedere nuovamente.</p>
 
@@ -551,26 +573,26 @@ window.cookieconsent.initialise({
 <h2 id="cose-che-devi-fare-sul-tuo-computer">Cose che devi fare sul tuo computer</h2>
 
 <details>
-<summary><strong>File placement terminology (e.g. "root of SD")</strong></summary>
+<summary><strong>Terminologia di posizionamento file (es. "directory principale della scheda SD")</strong></summary>
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/onboarding/sdroot.png" alt="" /></p>
 
-<p>When copying files to the SD card, it is important to copy them to the right location - otherwise, the console will not detect the file and the exploit or software you are trying to use will not work. A term you will see frequently on this guide is <strong>root of the SD card</strong>, which means you are not inside any folder on your SD card. The directory that appears when you first open your SD card on your computer is called the ‘root’.</p>
+<p>Quando si copiano i file nella scheda SD, è importante copiarli nella giusta posizione - altrimenti, la console non rileverà il file e l’exploit o il software che stai cercando di utilizzare non funzionerà. Un termine che vedrai frequentemente su questa guida è <strong>directory principale della scheda SD</strong>, il che significa che non si è all’interno di alcuna cartella sulla scheda SD. La cartella che appare immediatamente quando si apre la scheda SD sul computer è chiamata ‘directory principale’.</p>
 
-<p>You may also see folder names indicated like this: <code class="language-plaintext highlighter-rouge">/folder/</code>. The slashes are used to indicate directories and are not part of the name of the folder. For example, <code class="language-plaintext highlighter-rouge">/folder1/folder2/</code> would refer to <code class="language-plaintext highlighter-rouge">folder2</code> inside of <code class="language-plaintext highlighter-rouge">folder1</code>:</p>
+<p>Potresti anche vedere i nomi delle cartelle indicati in questa maniera: <code class="language-plaintext highlighter-rouge">/cartella/</code>. Gli slash sono usati per indicare le cartelle e non fanno parte del loro nome. Per esempio, <code class="language-plaintext highlighter-rouge">/cartella1/cartella2/</code> fa riferimento a <code class="language-plaintext highlighter-rouge">cartella2</code> all’interno di <code class="language-plaintext highlighter-rouge">cartella1</code>:</p>
 
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/onboarding/folders.png" alt="" /></p>
 
-<p><strong>Angle brackets</strong> (&lt; and &gt;) are also occasionally used to refer to system-specific identifiers. For example, if the guide says <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code>, it is referring to the system-specific identifier inside of the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder, rather than a folder literally named “ID0”:</p>
+<p><strong>Le parentesi angolari</strong> (&lt; e &gt;) sono usate anche occasionalmente per fare riferimento a identificatori specifici del sistema. Ad esempio, se la guida dice <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code>, si fa riferimento all’identificatore specifico di sistema all’interno della cartella <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code>, piuttosto che ad una cartella chiamata letteralmente “ID0”:</p>
 
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/onboarding/anglebrackets.png" alt="" /></p>
 
 </details>
 
 <details>
-<summary><strong>Downloading files from GitHub</strong></summary>
+<summary><strong>Scaricare i file da GitHub</strong></summary>
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/onboarding/github.png" alt="" /></p>
 
-<p>In this guide, you will copy files that are downloaded on your computer/phone to your console’s SD card. Many of these files come from GitHub, which is a website used by developers to publish their open-source releases. When downloading files from GitHub, you should download the file that <em>isn’t</em> source code.</p>
+<p>In questa guida copierai i file scaricati dal tuo computer o cellulare nella scheda SD della tua console. Molti di questi file provengono da GitHub, un sito web utilizzato da sviluppatori per pubblicare le proprie applicazioni open-source. Quando scarichi file da GitHub, dovresti scaricare il file che <em>non è</em> il codice sorgente.</p>
 
 </details>
 
@@ -651,29 +673,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Mappa del sito</a> - <a href="privacy-policy">Informativa sulla Privacy</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

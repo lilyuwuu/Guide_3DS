@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/ko_KR/site-navigation">사이트 탐색</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,11 +386,15 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/ko_KR/installing-boot9strap-(petit-compwner)'>boot9strap 설치 (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/ko_KR/dumping-eshop-dsiware'>eShop DSiWare 덤프</a></li>
           
         
           
-            <li style="display: none;" data-name="multiple-options"><i>(다중 옵션)</i></li>
+            <li style="display: none;" data-name="multiple-options"><i>(여러가지 옵션)</i></li>
           
         
           
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -563,14 +585,14 @@ window.cookieconsent.initialise({
 </ol>
 
 <h4 id="섹션-ii---ds-모드-확인">섹션 II - DS 모드 확인</h4>
-<p>이 섹션은 기기의 DS 모드 앱들이 커펌 제거후 올바르게 작동 할수 있는지 확인하는 작업을 합니다. 이 섹션을 건너간다면, 커펌 재설치 할 때가지 DS 모드와 이의 관련 기능들의 사용이 불가능 할 수 있습니다. 특히 한글판 (KOR) 기기들은 현재 이 기능 없이 <strong>커펌을 설치할 수가 없습니다!</strong></p>
+<p>이 섹션은 콘솔의 DS 모드 앱들이 커펌 제거후 올바르게 작동 할수 있는지 확인하는 작업을 합니다. 이 섹션을 건너간다면, 커펌 재설치 할 때가지 DS 모드와 이의 관련 기능들의 사용이 불가능 할 수 있습니다. 특히 한글판 (KOR) 구형 콘솔들은 현재 이 기능 없이 <strong>커펌을 설치할 수가 없습니다!</strong></p>
 
 <h5 id="ds-소프트웨어용-설정-테스트">DS 소프트웨어용 설정 테스트</h5>
 <ol>
   <li>콘솔의 전원을 켜 주세요</li>
   <li>콘솔에서 본체 설정을 열어 주세요</li>
   <li><code class="language-plaintext highlighter-rouge">인터넷 설정</code> -&gt; <code class="language-plaintext highlighter-rouge">DS 소프트웨어용 설정</code>으로 들어가 “OK”를 선택해 주세요</li>
-  <li>기기는 DS 소프트웨어용 설정으로 부팅 되었을 겁니다
+  <li>콘솔은 DS 소프트웨어용 설정으로 부팅 되었을 겁니다
     <ul>
       <li>만약 에러가 발생하거나, 검정색 화면이 표시되거나, 일본판 Flipnote Studio가 표시 되면, 이 테스트는 실패했습니다</li>
     </ul>
@@ -602,7 +624,7 @@ window.cookieconsent.initialise({
 <p class="notice--warning">만약 이 테스트 중 하나라도 실패했다면, 커펌 삭제 이후 DS 모드, DS 다운로드 플레이, 혹은 DS 연결 설정이 작동하지 않을 수 있습니다. <a href="troubleshooting#software-issues-on-devices-with-custom-firmware">DS 모드를 고치고</a> 계속해야 합니다.</p>
 
 <h4 id="섹션-iii---안전-테스트">섹션 III - 안전 테스트</h4>
-<p>이 섹션의 목적은 기기가 커펌 삭제 이후 정상적으로 부팅되며, 본체 설정이나 키보드와 같은 중요 기능이 정상적으로 작동함을 확인하는 것입니다. <strong>이 섹션을 건너뛴다면, 콘솔이 벽돌이 될 수 있습니다!</strong></p>
+<p>이 섹션의 목적은 콘솔이 커펌 삭제 이후 정상적으로 부팅되며, 본체 설정이나 키보드와 같은 중요 기능이 정상적으로 작동함을 확인하는 것입니다. <strong>이 섹션을 건너뛴다면, 콘솔이 벽돌이 될 수 있습니다!</strong></p>
 
 <ol>
   <li>(Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다</li>
@@ -623,7 +645,7 @@ window.cookieconsent.initialise({
   </li>
   <li>콘솔에서 본체 설정을 열어 주세요
     <ul>
-      <li>기기가 이 시점에서 오류가 발생한다면, 테스트가 실패했습니다</li>
+      <li>콘솔이 이 시점에서 오류가 발생한다면, 테스트가 실패했습니다</li>
     </ul>
   </li>
   <li>“기타 설정”을 선택해 주세요</li>
@@ -631,7 +653,7 @@ window.cookieconsent.initialise({
   <li>“사용자 이름”을 선택해 주세요</li>
   <li>새 사용자 이름을 입력할 수 있다면, 테스트는 성공했습니다
     <ul>
-      <li>키보드가 나타나지 않거나, 화면이 멈추거나, 기기에서 오류가 발생하면, 테스트는 실패했습니다</li>
+      <li>키보드가 나타나지 않거나, 화면이 멈추거나, 콘솔에서 오류가 발생하면, 테스트는 실패했습니다</li>
     </ul>
   </li>
   <li>콘솔의 전원을 꺼 주세요</li>
@@ -697,7 +719,7 @@ window.cookieconsent.initialise({
 </ol>
 
 <h4 id="섹션-vi---본체-초기화">섹션 VI - 본체 초기화</h4>
-<p>이 섹션에서는 모든 비정상 항목이 삭제되고, eShop이 정상적으로 동작하게 유도합니다. 이 과정에서 3DS에 설치된 모든 항목이 삭제되며, 한국 내수용이 아닌 기기에서는 NNID에서도 로그아웃됩니다. 이 과정에서 콘솔의 암호화 키가 재설정되며, 이는 SD 콘텐츠의 백업이 있더라도 기존 데이터를 사용하지 못하게 됨을 의미한다는 걸 명심하십시오.</p>
+<p>이 섹션에서는 모든 비정상 항목이 삭제되고, eShop이 정상적으로 동작하게 유도합니다. 이 과정에서 3DS에 설치된 모든 항목이 삭제되며, 한국 내수용이 아닌 콘솔에서는 NNID에서도 로그아웃됩니다. 이 과정에서 콘솔의 암호화 키가 재설정되며, 이는 SD 콘텐츠의 백업이 있더라도 기존 데이터를 사용하지 못하게 됨을 의미한다는 걸 명심하십시오.</p>
 
 <ol>
   <li>콘솔의 전원을 켜 주세요</li>
@@ -782,29 +804,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">사이트 탐색</a> - <a href="privacy-policy">개인정보 보호 정책</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

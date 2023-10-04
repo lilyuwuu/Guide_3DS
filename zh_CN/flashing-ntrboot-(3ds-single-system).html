@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/zh_CN/site-navigation">网站导航</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/zh_CN/installing-boot9strap-(petit-compwner)'>Installing boot9strap (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -480,6 +501,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -504,7 +526,7 @@ window.cookieconsent.initialise({
 
 <p>本方法只需一台未破解的 3DS 和一张兼容的烧录卡。 本教程烧录卡将用于在你的 3DS 上运行 ntrboot flasher <code class="language-plaintext highlighter-rouge">.nds</code> 文件。 这也就是说，若想要在3DS上使用你持有的烧录卡运行 <code class="language-plaintext highlighter-rouge">.nds</code> 文件，烧录卡必须支持在你的 3DS 系统版本上运行。 有关详细信息, 请查看 <a href="ntrboot">ntrboot</a> 上的烧录卡兼容表格。</p>
 
-<p class="notice--danger">请注意，在某些极少见情況下，某些假冒的烧录卡有可能会在破解过程中<strong>损坏</strong>并且无法恢复。 这不太可能， 但无论如何我们只支持写在兼容表格中的烧录卡。 为了防止买到伪劣烧录卡，我们建议你从一些知名度较高的网站上购买你需要的烧录卡（比如 <a href="http://www.nds-card.net/">NDS Card</a>）。</p>
+<p class="notice--danger">请注意，在某些极少见情況下，某些假冒的烧录卡有可能会在破解过程中<strong>损坏</strong>并且无法恢复。 这不太可能， 但无论如何我们只支持写在兼容表格中的烧录卡。 To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as <a href="https://www.nds-card.com/">NDS Card</a>).</p>
 
 <h3 id="你需要准备点啥">你需要准备点啥？</h3>
 
@@ -519,7 +541,7 @@ window.cookieconsent.initialise({
 <h4 id="第一步--准备工作">第一步 – 准备工作</h4>
 
 <ol>
-  <li>Power off your console</li>
+  <li>将主机关机</li>
   <li>将烧录卡中的 SD 卡插入电脑</li>
   <li>在烧录卡的 SD 卡根目录创建一个名为 <code class="language-plaintext highlighter-rouge">ntrboot</code> 的文件夹</li>
   <li>解压 bootstrap ntr <code class="language-plaintext highlighter-rouge">.zip</code> 然后复制 <code class="language-plaintext highlighter-rouge">boot9strap_ntr.firm</code> 到烧录卡的 SD 卡根目录的 <code class="language-plaintext highlighter-rouge">/ntrboot/</code> 文件夹</li>
@@ -543,7 +565,7 @@ window.cookieconsent.initialise({
   <li>选择 “Inject FIRM” 来安装 boot9starp 到你的烧录卡中</li>
   <li>依次按下屏幕上给出的按键</li>
   <li>按 “A” 键继续</li>
-  <li>Power off your console</li>
+  <li>将主机关机</li>
 </ol>
 
 <hr />
@@ -597,29 +619,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">网站导航</a> - <a href="privacy-policy">隐私政策</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

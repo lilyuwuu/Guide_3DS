@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/fr_FR/site-navigation">Index du site</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/fr_FR/installing-boot9strap-(petit-compwner)'>Installing boot9strap (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/fr_FR/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -491,8 +513,9 @@ window.cookieconsent.initialise({
       <li><a href="#section-iii---bannerbomb3" id="markdown-toc-section-iii---bannerbomb3">Section III - BannerBomb3</a></li>
       <li><a href="#section-iv---fredtool" id="markdown-toc-section-iv---fredtool">Section IV - Fredtool</a></li>
       <li><a href="#section-v---exploit-flipnote" id="markdown-toc-section-v---exploit-flipnote">Section V - Exploit Flipnote</a></li>
-      <li><a href="#section-vi---configuration-de-luma3ds" id="markdown-toc-section-vi---configuration-de-luma3ds">Section VI - Configuration de Luma3DS</a></li>
-      <li><a href="#section-vii---restauration-du-téléchargement-ds" id="markdown-toc-section-vii---restauration-du-téléchargement-ds">Section VII - Restauration du Téléchargement DS</a></li>
+      <li><a href="#section-vi---installation-de-boot9strap" id="markdown-toc-section-vi---installation-de-boot9strap">Section VI - Installation de boot9strap</a></li>
+      <li><a href="#section-vii---luma3ds-configuration" id="markdown-toc-section-vii---luma3ds-configuration">Section VII - Luma3DS Configuration</a></li>
+      <li><a href="#section-viii---restoring-ds-download-play" id="markdown-toc-section-viii---restoring-ds-download-play">Section VIII - Restoring DS Download Play</a></li>
     </ul>
   </li>
   <li><a href="#continuer-vers-finalisation-de-linstallation" id="markdown-toc-continuer-vers-finalisation-de-linstallation">Continuer vers Finalisation de l’installation</a></li>
@@ -516,7 +539,7 @@ window.cookieconsent.initialise({
 <ul>
   <li>Your <code class="language-plaintext highlighter-rouge">movable.sed</code> file completing <a href="seedminer-(twn)">Seedminer</a></li>
   <li>La dernière version de <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> (le fichier `.zip’ de Luma3DS)</li>
-  <li>La dernière version de <a href="https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip">b9stool</a> (téléchargement direct)</li>
+  <li>The latest release of <a href="https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip">b9stool</a> (direct download)</li>
   <li>La dernière version de <a href="https://github.com/zoogie/Frogminer/releases/latest">Frogminer_save</a> (<code class="language-plaintext highlighter-rouge">Frogminer_save.zip</code>)</li>
 </ul>
 
@@ -639,23 +662,23 @@ window.cookieconsent.initialise({
   <li>Naviguez vers<code class="language-plaintext highlighter-rouge">Gestion des données</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code></li>
   <li>Sous la section “Carte SD”, sélectionnez le titre “Haxxxxxxxxx!”</li>
   <li>Sélectionnez “Copier”, puis sélectionnez “OK”</li>
-  <li>Quittez Paramètres de la console</li>
-  <li>Launch Download Play on your console (the orange icon with a 3DS on it)</li>
-  <li>Sélectionnez “Nintendo DS”</li>
-  <li>Si l’exploit a réussi, votre 3DS devrait avoir démarré la version JPN de Flipnote Studio</li>
 </ol>
 
 <h4 id="section-v---exploit-flipnote">Section V - Exploit Flipnote</h4>
 
-<p class="notice--info">Si vous préférez un guide visuel pour cette section, un tel guide est disponible <a href="https://zoogie.github.io/web/flipnote_directions/">ici</a>.</p>
-
 <p>Dans cette section, vous allez effectuer une série d’étapes très spécifiques dans Flipnote Studio qui, une fois effectuées correctement, déclencheront le lancement de b9sTool, l’installateur de boot9strap (custom firmware).</p>
 
+<p class="notice--info">Si vous préférez un guide visuel pour cette section, un tel guide est disponible <a href="https://zoogie.github.io/web/flipnote_directions/">ici</a>.</p>
+
 <ol>
+  <li>Quittez Paramètres de la console</li>
+  <li>Launch Download Play on your console (the orange icon with a 3DS on it)</li>
+  <li>Sélectionnez “Nintendo DS”</li>
+  <li>Si l’exploit a réussi, votre 3DS devrait avoir démarré la version JPN de Flipnote Studio</li>
   <li>Terminez le processus de configuration initial de Flipnote Studio jusqu’à ce que vous atteigniez le menu principal
     <ul>
       <li>Sélectionnez l’option de gauche chaque fois que vous y êtes invité durant le processus de configuration</li>
-      <li>Si vous rencontrez un problème pendant que vous faites cette section, <a href="troubleshooting#installing-boot9strap-fredtool">consultez ce guide de dépannage</a></li>
+      <li>If you encounter an issue while doing this section, <a href="troubleshooting#installing-boot9strap-fredtool-inject">check this troubleshooting guide</a> for your issue</li>
     </ul>
   </li>
   <li>En utilisant l’écran tactile, sélectionnez la grande case à gauche, puis sélectionnez la boîte avec une icône de carte SD</li>
@@ -667,9 +690,16 @@ window.cookieconsent.initialise({
   <li>Défilez vers la gauche jusqu’à ce que la bobine “1/3” soit sélectionnée</li>
   <li>Touchez la quatrième case contenant la lettre “A”</li>
   <li>If the exploit was successful, your console will have loaded b9sTool</li>
+</ol>
+
+<h4 id="section-vi---installation-de-boot9strap">Section VI - Installation de boot9strap</h4>
+
+<p>In this section, you will install custom firmware onto your console.</p>
+
+<ol>
   <li>Séléctionnez “Install boot9strap” en utilisant la croix directionnelle
     <ul>
-      <li>Si vous manquez cette étape, la console retournera au menu HOME au lieu d’installer boot9strap et vous devrez ouvrir Mode téléchargement et recommencer depuis le début de cette section</li>
+      <li>If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to start over from the previous section</li>
     </ul>
   </li>
   <li>Appuyez sur (A), puis appuyez sur START et SELECT en même temps pour démarrer l’installation</li>
@@ -682,7 +712,7 @@ window.cookieconsent.initialise({
   </li>
 </ol>
 
-<h4 id="section-vi---configuration-de-luma3ds">Section VI - Configuration de Luma3DS</h4>
+<h4 id="section-vii---luma3ds-configuration">Section VII - Luma3DS Configuration</h4>
 
 <ol>
   <li>Press and hold (Select), and while holding (Select), power on your console</li>
@@ -696,7 +726,7 @@ window.cookieconsent.initialise({
   <li>Appuyez sur (Start) pour enregistrer les modifications et redémarrer</li>
 </ol>
 
-<h4 id="section-vii---restauration-du-téléchargement-ds">Section VII - Restauration du Téléchargement DS</h4>
+<h4 id="section-viii---restoring-ds-download-play">Section VIII - Restoring DS Download Play</h4>
 
 <ol>
   <li>Naviguez vers <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> sur votre carte SD</li>
@@ -762,29 +792,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Index du site</a> - <a href="privacy-policy">Politique de confidentialité</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

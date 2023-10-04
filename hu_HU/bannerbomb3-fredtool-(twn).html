@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/hu_HU/site-navigation">Oldaltérkép</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/hu_HU/installing-boot9strap-(petit-compwner)'>Boot9strap telepítése (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/hu_HU/dumping-eshop-dsiware'>eShop DSiWare dumpolása</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -491,8 +513,9 @@ window.cookieconsent.initialise({
       <li><a href="#iii-rész---bannerbomb3" id="markdown-toc-iii-rész---bannerbomb3">III. rész - BannerBomb3</a></li>
       <li><a href="#iv-rész---fredtool" id="markdown-toc-iv-rész---fredtool">IV. rész - Fredtool</a></li>
       <li><a href="#v-rész---flipnote-exploit" id="markdown-toc-v-rész---flipnote-exploit">V. rész - Flipnote Exploit</a></li>
-      <li><a href="#vi-rész---luma3ds-beállítás" id="markdown-toc-vi-rész---luma3ds-beállítás">VI. rész - Luma3DS beállítás</a></li>
-      <li><a href="#vii-rész---a-ds-download-play-visszaállítása" id="markdown-toc-vii-rész---a-ds-download-play-visszaállítása">VII. rész - A DS Download Play visszaállítása</a></li>
+      <li><a href="#vi-rész---boot9strap-telepítése" id="markdown-toc-vi-rész---boot9strap-telepítése">VI. rész - boot9strap telepítése</a></li>
+      <li><a href="#vii-rész---luma3ds-beállítás" id="markdown-toc-vii-rész---luma3ds-beállítás">VII. rész - Luma3DS beállítás</a></li>
+      <li><a href="#viii-rész---a-ds-download-play-visszaállítása" id="markdown-toc-viii-rész---a-ds-download-play-visszaállítása">VIII. rész - A DS Download Play visszaállítása</a></li>
     </ul>
   </li>
   <li><a href="#tovább-a-telepítés-véglegesítésére" id="markdown-toc-tovább-a-telepítés-véglegesítésére">Tovább a telepítés véglegesítésére</a></li>
@@ -514,7 +537,7 @@ window.cookieconsent.initialise({
 <h3 id="amire-szükséged-lesz">Amire szükséged lesz</h3>
 
 <ul>
-  <li>Your <code class="language-plaintext highlighter-rouge">movable.sed</code> file completing <a href="seedminer-(twn)">Seedminer</a></li>
+  <li>A <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlodra a <a href="seedminer-(twn)">Seedminer</a> befejezéséből</li>
   <li>A <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> legújabb kiadása (a Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> fájl)</li>
   <li>A <a href="https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip">b9stool</a> legfrissebb verziója (közvetlen letöltés)</li>
   <li>A [Frogminer_save] legújabb kiadása (https://github.com/zoogie/Frogminer/releases/latest) (<code class="language-plaintext highlighter-rouge">Frogminer_save.zip</code>)</li>
@@ -639,23 +662,23 @@ window.cookieconsent.initialise({
   <li>Navigálj ide: <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code></li>
   <li>Az “SD Card” szekcióban válaszd a “Haxxxxxxxxx!” címet</li>
   <li>Válaszd a “Copy”-t, majd az “OK”-t</li>
-  <li>Lépj ki a System Settings-ből</li>
-  <li>Idítsd el a Download Play-t a konzolodon (a narancssárga ikon egy 3DS-el)</li>
-  <li>Válaszd “Nintendo DS”-t</li>
-  <li>Ha az exploit sikeres volt, a 3DS-ednek ezt követően be kell töltenie a JPN verzióját a Flipnote Studio-nak</li>
 </ol>
 
 <h4 id="v-rész---flipnote-exploit">V. rész - Flipnote Exploit</h4>
 
-<p class="notice--info">Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, <a href="https://zoogie.github.io/web/flipnote_directions/">itt</a> elérhető egy.</p>
-
 <p>Ebben a fejezetben végrehajtasz egy specifikus lépés sorozatot a Flipnote Studio-val, ami ha helyesen került végrehajtásra, elindítja a boot9strap (egyedi firmware) telepítőt.</p>
 
+<p class="notice--info">Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, <a href="https://zoogie.github.io/web/flipnote_directions/">itt</a> elérhető egy.</p>
+
 <ol>
+  <li>Lépj ki a System Settings-ből</li>
+  <li>Idítsd el a Download Play-t a konzolodon (a narancssárga ikon egy 3DS-el)</li>
+  <li>Válaszd “Nintendo DS”-t</li>
+  <li>Ha az exploit sikeres volt, a 3DS-ednek ezt követően be kell töltenie a JPN verzióját a Flipnote Studio-nak</li>
   <li>Fejezd be a kezdeti telepítését az elindított játéknak, amíg el nem éri a fő menüt
     <ul>
       <li>Válaszd a bal opciót, ha kérdezi a telepítési folyamat során</li>
-      <li>Ha problémába futsz ebben a fejezetben, <a href="troubleshooting#installing-boot9strap-fredtool">kövesd ezt a hibaelhárítási útmutatót</a> a problémáddal</li>
+      <li>Ha problémába futsz ebben a fejezetben, <a href="troubleshooting#installing-boot9strap-fredtool-inject">kövesd ezt a hibaelhárítási útmutatót</a> a problémáddal</li>
     </ul>
   </li>
   <li>Az érintőképernyőt használva válaszd ki a bal nagy dobozt, majd válaszd a dobozt az SD kártya ikonnal</li>
@@ -667,9 +690,16 @@ window.cookieconsent.initialise({
   <li>Görgess balra, amíg a 1/3 filmtekercs kiválasztásra kerül</li>
   <li>Nyomd meg a negyedik dobozt benne az “A” betűvel</li>
   <li>Ha az exploit sikeres volt, a konzolodnak ezt követően be kell töltenie a b9sTool-t</li>
+</ol>
+
+<h4 id="vi-rész---boot9strap-telepítése">VI. rész - boot9strap telepítése</h4>
+
+<p>Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.</p>
+
+<ol>
   <li>A D-Pad-dal menj az “Install boot9strap” opcióra
     <ul>
-      <li>Ha kihagytad ez a lépést a rendszer a HOME Menübe kerülsz a boot9strap telepítése helyett, és meg kell nyitnod a DS Download Play-t és elölről kell kezdened a ennek a résznek az elejétől</li>
+      <li>Ha kihagytad ezt a lépést a rendszer a HOME Menübe kerülsz a boot9strap telepítése helyett, és elölről kell kezdened az előző résztől</li>
     </ul>
   </li>
   <li>Nyomj (A)-t majd ezt követően START-ot és SELECT-et egyszerre a folyamat elkezdéséhez</li>
@@ -682,7 +712,7 @@ window.cookieconsent.initialise({
   </li>
 </ol>
 
-<h4 id="vi-rész---luma3ds-beállítás">VI. rész - Luma3DS beállítás</h4>
+<h4 id="vii-rész---luma3ds-beállítás">VII. rész - Luma3DS beállítás</h4>
 
 <ol>
   <li>Nyomd le és tartsd nyomva a (Select) gombot, és a (Select) nyomva tartása mellett kapcsold be a konzolod</li>
@@ -696,7 +726,7 @@ window.cookieconsent.initialise({
   <li>Mentéshez és újraindításhoz nyomd meg a (Start) gombot</li>
 </ol>
 
-<h4 id="vii-rész---a-ds-download-play-visszaállítása">VII. rész - A DS Download Play visszaállítása</h4>
+<h4 id="viii-rész---a-ds-download-play-visszaállítása">VIII. rész - A DS Download Play visszaállítása</h4>
 
 <ol>
   <li>Navigálj a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába az SD kártyán</li>
@@ -762,29 +792,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Oldaltérkép</a> - <a href="privacy-policy">Adatvédelmi Irányelv</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

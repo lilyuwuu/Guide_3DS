@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/ko_KR/site-navigation">사이트 탐색</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,11 +386,15 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/ko_KR/installing-boot9strap-(petit-compwner)'>boot9strap 설치 (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/ko_KR/dumping-eshop-dsiware'>eShop DSiWare 덤프</a></li>
           
         
           
-            <li style="display: none;" data-name="multiple-options"><i>(다중 옵션)</i></li>
+            <li style="display: none;" data-name="multiple-options"><i>(여러가지 옵션)</i></li>
           
         
           
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -542,7 +564,7 @@ window.cookieconsent.initialise({
 <details class="notice--warning">
 <summary><strong>Potential risks (Disclaimer)</strong></summary>
 
-<p>기기를 수정함으로서, 여러분은 온라인 플레이로부터 차단되거나 벽돌이 되는 것(기기가 작동하지 않는 현상)에 대한 희박한, 하지만 0은 아닌 가능성을 염두에 두어야 합니다. <strong>파일을 잘못 넣는다고 콘솔이 벽돌이 되지는 않지만</strong>, 의도적으로 순서를 건너뛴다면 벽돌이 될 수도 있습니다. 비슷하게, 마지막 대량 밴은 5년 이상 전에 진행되었지만, 미래에 그런 일이 절대로 벌어지지 않는다고 단정지을 수 없습니다.</p>
+<p>콘솔을 수정함으로서, 여러분은 온라인 플레이로부터 차단되거나 벽돌이 되는 것(콘솔이 작동하지 않는 현상)에 대한 희박한, 하지만 0은 아닌 가능성을 염두에 두어야 합니다. <strong>파일을 잘못 넣는다고 콘솔이 벽돌이 되지는 않지만</strong>, 의도적으로 순서를 건너뛴다면 벽돌이 될 수도 있습니다. 비슷하게, 마지막 대량 밴은 5년 이상 전에 진행되었지만, 미래에 그런 일이 절대로 벌어지지 않는다고 단정지을 수 없습니다.</p>
 
 <p>요약하자면: 콘솔을 수정하는 것은 안전하지만, 뭔가 잘못되었다면 그것은 __여러분의 책임__입니다.</p>
 
@@ -597,9 +619,9 @@ window.cookieconsent.initialise({
 <p>만약 이 가이드를 따라가다 문제가 발생했다면, 도움을 받을 수 있는 경로도 여러 가지입니다!</p>
 
 <ul>
-  <li>만약 이 페이지에 없는 것에 대한 질문이 있다면, <a href="faq#설치-전-자주-묻는-질문">설치 전 자주 묻는 질문</a>에서 찾을 수 있습니다.</li>
-  <li>만약 이 가이드를 따라가다 문제를 겪게 되었다면, <a href="troubleshooting">문제 해결</a> 페이지에서 해결 방법을 찾아볼 수 있습니다.</li>
-  <li>제공해드리는 정보들이 딱히 도움이 되지 않는다면, <a href="https://discord.gg/MWxPgEp">Discord의 Nintendo Homebrew</a>에서 (영어로) 1:1 지원을 요청할 수 있습니다.</li>
+  <li>If you have any questions that haven’t been answered on this page, their answers might be in the <a href="faq#pre-installation-faq">Pre-Installation FAQ</a>.</li>
+  <li>If you experience an issue while following this guide, you can check the <a href="troubleshooting">Troubleshooting</a> page for a solution.</li>
+  <li>If the resources we’ve provided here aren’t helping, you can get one-on-one support over at <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a>.</li>
 </ul>
 
 <p class="notice--primary"><a href="get-started">시작하기</a>로 계속합니다</p>
@@ -651,29 +673,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">사이트 탐색</a> - <a href="privacy-policy">개인정보 보호 정책</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

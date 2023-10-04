@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/ko_KR/site-navigation">사이트 탐색</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,11 +386,15 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/ko_KR/installing-boot9strap-(petit-compwner)'>boot9strap 설치 (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/ko_KR/dumping-eshop-dsiware'>eShop DSiWare 덤프</a></li>
           
         
           
-            <li style="display: none;" data-name="multiple-options"><i>(다중 옵션)</i></li>
+            <li style="display: none;" data-name="multiple-options"><i>(여러가지 옵션)</i></li>
           
         
           
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -505,7 +527,7 @@ window.cookieconsent.initialise({
 
 <p><code class="language-plaintext highlighter-rouge">boot.firm</code> 파일은 boot9strap이 NAND에서 로딩을 완료한 후 실행하는 것입니다. 이번 경우에서는, <a href="https://github.com/LumaTeam/">LumaTeam</a>의 Luma3DS를 사용해서 콘솔을 패치하고, 홈브류 소프트웨어를 실행할 수 있도록 합니다.</p>
 
-<p>On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.</p>
+<p>이 가이드에서는, 중요한 시스템 파일의 백업을 하고, 몆 가지의 홈브류 프로그램을 설치할 겁니다. Most of these steps will be automated using a script that you will run on your console.</p>
 
 <div class="notice--info">
 <p>The script will install the following applications:</p>
@@ -549,7 +571,7 @@ window.cookieconsent.initialise({
       <li>If you are using a Mac, hold the Option key while dragging the folders to the root of your SD card, then click “Merge”</li>
     </ul>
   </li>
-  <li>Insert your SD card into your console</li>
+  <li>SD 카드를 콘솔에 다시 삽입해 주세요</li>
 </ol>
 
 <p>The screenshot below indicates the minimum SD card layout that is required to follow this page. 이전에 따른 방법에 따라, SD 카드에 추가 파일과 폴더가 있을 수 있습니다.</p>
@@ -558,14 +580,14 @@ window.cookieconsent.initialise({
 
 <h4 id="섹션-ii---cfw-확인">섹션 II - CFW 확인</h4>
 
-<p>여기서 기기의 안전을 위해 커스텀 펌웨어가 설치되어 있는지 확인합니다. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.</p>
+<p>여기서 콘솔의 안전을 위해 커스텀 펌웨어가 설치되어 있는지 확인합니다. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.</p>
 
 <ol>
   <li>콘솔의 전원을 꺼 주세요</li>
   <li>(Select) 버튼을 길게 눌러 주세요</li>
   <li>(Select) 버튼을 계속 눌러 있는 상태에서 콘솔의 전원을 켜 주세요</li>
   <li>If the check was successful, your console should have booted into the Luma3DS configuration menu</li>
-  <li>(Start)를 눌러 저장하고 기기를 다시 시작해 주세요</li>
+  <li>(Start)를 눌러 저장하고 콘솔을 다시 시작해 주세요</li>
   <li>콘솔의 전원을 꺼 주세요</li>
 </ol>
 
@@ -620,7 +642,7 @@ window.cookieconsent.initialise({
   <li>만약 “RTC date&amp;time seems to be wrong” 메세지가 표시되면 (A) 버튼을 눌러 하고, 날짜와 시간을 고친 다음 (A) 버튼을 눌러 계속해 주세요</li>
   <li>(Home)을 눌러 작업 메뉴를 열어 주세요</li>
   <li>“Scripts…“를 선택해 주세요</li>
-  <li>Select “finalize”</li>
+  <li>“finalize”를 선택해 주세요</li>
   <li>Follow the prompts in the script, answering any questions that you are asked
     <ul>
       <li>If you encounter an error, follow the instructions in the error message or consult the <a href="troubleshooting#finalizing-setup">troubleshooting</a> page</li>
@@ -658,10 +680,10 @@ window.cookieconsent.initialise({
 <p>알아야 할 몇몇 버튼 콤보들이 있습니다:</p>
 
 <ul>
-  <li>(Select)를 누른 채 콘솔을 부팅시키면 Luma3DS 설정 메뉴가 실행됩니다.</li>
-  <li>(Start)를 누른 채 콘솔을 부팅시키면 GodMode9이나, <code class="language-plaintext highlighter-rouge">/luma/payloads/</code>에 페이로드를 여러 개 넣고 있다면, Luma3DS 체인로더가 실행됩니다.</li>
-  <li>기본으로는, 3DS 모드에 있을 때 (L) + (십자 아래) + (Select)를 누르면 Rosalina 메뉴가 열리며, 시스템 정보를 보거나, 스크린샷을 찍거나, 치트를 활성화시키는 등의 작업을 할 수 있습니다. 이 콤보는 Rosalina 메뉴에서 변경될 수 있습니다.</li>
-  <li>(Start) + (Select) + (X)를 누른 채 콘솔을 부팅시키면 알림 LED가 색을 표시할 겁니다. 이는 디버그를 위해 사용됩니다. 목록을 위해서는 <a href="https://github.com/SciresM/boot9strap/releases/tag/1.4">체인지로그</a>를 확인해 주세요.</li>
+  <li>Holding (Select) on boot will launch the Luma3DS configuration menu.</li>
+  <li>Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in <code class="language-plaintext highlighter-rouge">/luma/payloads/</code>, the Luma3DS chainloader.</li>
+  <li>By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. 이 콤보는 Rosalina 메뉴에서 변경될 수 있습니다.</li>
+  <li>Holding (Start) + (Select) + (X) on boot will make the notification LED show a color for debug purposes. 목록을 위해서는 <a href="https://github.com/SciresM/boot9strap/releases/tag/1.4">체인지로그</a>를 확인해 주세요.</li>
 </ul>
 </div>
 
@@ -714,29 +736,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">사이트 탐색</a> - <a href="privacy-policy">개인정보 보호 정책</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

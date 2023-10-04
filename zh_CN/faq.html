@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/zh_CN/site-navigation">网站导航</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/zh_CN/installing-boot9strap-(petit-compwner)'>Installing boot9strap (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -480,6 +501,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -494,13 +516,13 @@ window.cookieconsent.initialise({
 </aside>
 
 <div class="notice--danger">
-<p><strong>3DS firmware 11.17.0 was recently released</strong>. 以下是一些你应该知道的事情：</p>
+<p><strong>3DS 的系统固件已于最近更新至 11.17.0</strong>。 以下是一些你应该知道的事情：</p>
 
 <ul>
-  <li>If your console is running <em>Luma 10.2.1 or higher</em>, it is <em>100% safe</em> to update. You can check your Luma version by holding (Select) while booting your console.</li>
-  <li>If your console is on an older Luma version, you should <a href="checking-for-cfw">update Luma</a> before you update your console to 11.17.0.</li>
-  <li>If your console does not yet have custom firmware, <strong>do NOT update to the latest version</strong> unless this guide instructs you to.</li>
-  <li>If your unmodified console is ALREADY on 11.17.0, this guide has been updated accordingly. Specifically, New3DS-family consoles have a <a href="installing-boot9strap-(super-skaterhax)">free software method</a>, while Old3DS-family consoles will need to use <a href="alternate-exploits">alternate exploits</a> that rely on external hardware or software.</li>
+  <li>如果你的主机正在使用的 Luma 版本为 <strong>10.2.1 及以上</strong>的，那么升级系统是 <strong>100%</strong> 安全的。 你可以在关机状态下按住 SELECT 键，然后按下电源键开机以检查主机的 Luma 版本。</li>
+  <li>如果你的主机运行的 Luma 低于此版本，则你应该在更新系统到 11.17.0 前先<a href="checking-for-cfw">更新 Luma</a>。</li>
+  <li>如果你的主机还没有破解且你打算进行破解，<strong>请不要</strong>在操作之前更新系统至最新版本。</li>
+  <li>如果你的未破解主机已经升级到 11.17.0 了，本教程也已更新对应的方法。 具体来说，New 3DS 系列的主机有<a href="installing-boot9strap-(super-skaterhax)">免费的软破方法</a>，而老型号的 3DS 系列主机则需要使用需要<a href="alternate-exploits">外设或其它软件</a> 的方法进行破解。</li>
 </ul>
 
 </div>
@@ -717,29 +739,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">网站导航</a> - <a href="privacy-policy">隐私政策</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

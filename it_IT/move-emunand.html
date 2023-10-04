@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/it_IT/site-navigation">Mappa del sito</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/it_IT/installing-boot9strap-(petit-compwner)'>Installazione di boot9strap (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/it_IT/dumping-eshop-dsiware'>Dump di DsiWare eShop</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -516,7 +538,7 @@ window.cookieconsent.initialise({
 <p>*Una EmuNAND esistente</p>
 <ul>
   <li>L’ultima versione di <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a> (il file <code class="language-plaintext highlighter-rouge">.zip</code> di GodMode9)</li>
-  <li>The latest release of <a href="https://github.com/Steveice10/FBI/releases/latest">FBI</a> <em>(the <code class="language-plaintext highlighter-rouge">.3dsx</code> file)</em></li>
+  <li>L’ultima versione di <a href="https://github.com/Steveice10/FBI/releases/latest">FBI</a> <em>(il file <code class="language-plaintext highlighter-rouge">.3dsx</code>)</em></li>
 </ul>
 
 <h3 id="istruzioni">Istruzioni</h3>
@@ -670,15 +692,27 @@ window.cookieconsent.initialise({
   <li>Premi (B) per ritornare al menu principale</li>
   <li>Seleziona “Exit”</li>
   <li>Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura</li>
+  <li>Entra nella cartella <code class="language-plaintext highlighter-rouge">[S:] SYSNAND VIRTUAL</code></li>
+  <li>Premi (A) su <code class="language-plaintext highlighter-rouge">essential.exefs</code> per selezionarlo</li>
+  <li>Seleziona “Copy to 0:/gm9/out”
+    <ul>
+      <li>Se appare “Destination already exists”, premi (A) su “Overwrite file(s)”</li>
+    </ul>
+  </li>
+  <li>Premi il pulsante (A) per continuare</li>
   <li>Tenendo premuto (R), premi (Start) per spegnere la console</li>
   <li>Inserisci la scheda SD nel tuo computer</li>
-  <li>Copia i file <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin</code> ed <code class="language-plaintext highlighter-rouge">essential.exefs</code> dalla cartella <code class="language-plaintext highlighter-rouge">/gm9/out/</code> della tua scheda SD in una posizione sicura sul tuo computer
+  <li>Copia i file <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin</code>, <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin.sha</code> ed <code class="language-plaintext highlighter-rouge">essential.exefs</code> dalla cartella <code class="language-plaintext highlighter-rouge">/gm9/out/</code> della tua scheda SD in una posizione sicura sul tuo computer
     <ul>
-      <li>Crea dei backup in più posti (come ad esempio un servizio di storage dei file online)</li>
+      <li>Copia questi backup in più posti (ad esempio un archivio online, un disco rigido esterno, ecc.)</li>
       <li>Questi backup ti salveranno da un brick e/o ti aiuteranno a recuperare i file dalla NAND nel caso dovesse accadere qualcosa in futuro</li>
     </ul>
   </li>
-  <li>Dopo la copia, elimina i file <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin</code> e <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin.sha</code> dalla cartella <code class="language-plaintext highlighter-rouge">/gm9/out/</code> della tua scheda SD</li>
+  <li>Dopo la copia, elimina i file <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin</code> e <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin.sha</code> dalla cartella <code class="language-plaintext highlighter-rouge">/gm9/out/</code> della tua scheda SD
+    <ul>
+      <li>Gli altri file di backup sono di dimensioni trascurabili e possono essere conservati sulla tua scheda SD per comodità di accesso</li>
+    </ul>
+  </li>
   <li>Reinserisci la scheda SD nella tua console</li>
   <li><strong>Fai un backup di ogni file sulla tua scheda SD e conservalo in una cartella sul tuo computer in quanto la scheda SD verrà formattata nei prossimi passaggi</strong></li>
 </ol>
@@ -761,29 +795,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Mappa del sito</a> - <a href="privacy-policy">Informativa sulla Privacy</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

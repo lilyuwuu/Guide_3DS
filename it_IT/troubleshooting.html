@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/it_IT/site-navigation">Mappa del sito</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/it_IT/installing-boot9strap-(petit-compwner)'>Installazione di boot9strap (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/it_IT/dumping-eshop-dsiware'>Dump di DsiWare eShop</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <p>Questa pagina offre consigli per la risoluzione di problemi comuni. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel <a href="https://discord. g/MWxPgEp">canale Discord di Nintendo Homebrew</a> e descrivi il tuo problema, indicando quello che hai già provato.</p>
 
@@ -625,9 +647,9 @@ window.cookieconsent.initialise({
 
 <details>
 <summary><u>Il menu Gestione Nintendo DSiWare crasha senza visualizzare il menu BB3 multihax</u></summary>
-<p>Assicurati che il file <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> sia l’unico file presente in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>. In tal caso, ricrealo con <a href="http://3dstools.nhnarwhal.com/#/bb3gen">Bannerbomb3 Injector</a>.</p>
+<p>Assicurati che il file <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> sia l’unico file presente in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>. In tal caso, ricrealo con <a href="https://zoogie.github.io/web/bb3">Bannerbomb3 Injector</a>.</p>
 
-<p>Inoltre, assicurati che il file <code class="language-plaintext highlighter-rouge">bb3.bin</code> sia nella directory principale dela tua scheda SD. Se manca, scarica l’ultima versione di <a href="https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin">Bannerbomb3</a> (download diretto), e copia il file <code class="language-plaintext highlighter-rouge">bb3.bin</code> nella directory principale della tua scheda SD.</p>
+<p>Inoltre, assicurati che il file <code class="language-plaintext highlighter-rouge">bb3.bin</code> sia nella directory principale dela tua scheda SD. Se manca, scarica l’ultima versione di <a href="https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip">Bannerbomb3</a> (download diretto), e copia il file <code class="language-plaintext highlighter-rouge">bb3.bin</code> dall’arcivhio <code class="language-plaintext highlighter-rouge">.zip</code> di Release nella directory principale della tua scheda SD.</p>
 
 <p>Se nessuna di queste soluzioni dovesse risolvere il problema, allora un custom firmware potrebbe essere già stato disinstallato da questa console in modo tale da rendere questo metodo impossibile. In tal caso, puoi ricevere assistenza chiedendo, in inglese, nel <a href="https://discord.gg/MWxPgEp">canale Discord di Nintendo Homebrew</a>.</p>
 </details>
@@ -641,7 +663,7 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Il menu Gestione Nintendo DSiWare mostra un punto di domanda</u></summary>
 
-<p>Potrebbe esserci un problema con il tuo file <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> (potrebbe essere corrotto o per un diverso 3DS). Ri-crea il tuo file <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> con <a href="http://3dstools.nhnarwhal.com/#/bb3gen">Bannerbomb3 Injector</a>, assicurandoti di utilizzare il file <code class="language-plaintext highlighter-rouge">movable.sed</code> della tua console.</p>
+<p>Potrebbe esserci un problema con il tuo file <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> (potrebbe essere corrotto o per un diverso 3DS). Ri-crea il tuo file <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> con <a href="https://zoogie.github.io/web/bb3">Bannerbomb3 Injector</a>, assicurandoti di utilizzare il file <code class="language-plaintext highlighter-rouge">movable.sed</code> della tua console.</p>
 </details>
 
 <h2 id="installazione-di-boot9strap-fredtool-inject">Installazione di boot9strap (Fredtool-Inject)</h2>
@@ -775,7 +797,7 @@ window.cookieconsent.initialise({
 
 <p>Potrebbe esserci un problema con il tuo file <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. Scarica l’ultima versione di <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>, posiziona il file <code class="language-plaintext highlighter-rouge">otherapp.bin</code> nella directory principale della tua scheda SD<code class="language-plaintext highlighter-rouge"> e rinominalo in </code>arm11code.bin<code class="language-plaintext highlighter-rouge">. Non aggiungere l'estensione </code>.bin` se non la vedi presente.</p>
 
-<p>You can also try resetting your browser save data:</p>
+<p>Puoi anche provare a resettare i dati del tuo browser:</p>
 
 <ol>
   <li>Avvia il browser internet, quindi apri le sue impostazioni</li>
@@ -921,13 +943,6 @@ window.cookieconsent.initialise({
 </details>
 
 <details>
-<summary><u>Warning #01: No Nintendo 3DS folder</u></summary>
-
-<p>La tua scheda SD non ha una cartella <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code>. Accendi la tua console con la scheda SD inserita, quindi attendi che la console mostri il messaggio “Creazione delle informazioni di sistema del menu HOME”. Quando scompare il messaggio, spegni la console e riprova.</p>
-
-</details>
-
-<details>
 <summary><u>Error #02: Missing essential.exefs</u></summary>
 
 <p>Hai risposto ‘No’ alla richiesta “Make essential files backup?” in GodMode9. Spegni la console, riaccendila tenendo premuto (Start) per avviare GodMode9, rispondi ‘Yes’ alla domanda, quindi riprova.</p>
@@ -950,12 +965,11 @@ window.cookieconsent.initialise({
 
 <ol>
   <li>Spegni la tua console</li>
-  <li>Rimuovi la scheda SD e inseriscila nel tuo computer</li>
+  <li>Inserisci la scheda SD nel tuo computer</li>
   <li>Copia la cartella <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> dalla directory principale della tua scheda SD al tuo computer</li>
   <li>Elimina la cartella <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> dalla scheda SD</li>
   <li>Reinserisci la scheda SD nella tua console</li>
-  <li>Spegni la tua console</li>
-  <li>Accendi la console tenendo premuto il tasto START per avviare GodMode9</li>
+  <li>Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9</li>
   <li>Premi il pulsante (Home)</li>
   <li>Seleziona “Scripts…”</li>
   <li>Seleziona “finalize”</li>
@@ -979,12 +993,16 @@ window.cookieconsent.initialise({
 <p>Ora che hai il backup della NAND in un luogo sicuro:</p>
 
 <ol>
-  <li>Inserisci la scheda SD nella tua console</li>
-  <li>Accendi la console tenendo premuto il tasto START per avviare GodMode9</li>
+  <li>Reinserisci la scheda SD nella tua console</li>
+  <li>Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9</li>
   <li>Premi il pulsante (Home)</li>
   <li>Seleziona “Scripts…”</li>
   <li>Seleziona “finalize”</li>
-  <li>Continua lo script normalmente</li>
+  <li>Continua lo script normalmente
+    <ul>
+      <li>Il backup della NAND verrà automaticamente saltato</li>
+    </ul>
+  </li>
 </ol>
 
 </details>
@@ -992,7 +1010,7 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Information #05: No title database</u></summary>
 
-<p>Premi (A) per creare un database dei titoli, sblocca la scrittura della SysNAND inserendo i pulsanti a schermo, segui le istruzioni <a href="/images/screenshots/database-reset.jpg">qui</a>, quindi riesegui lo script.</p>
+<p>Premi (A) per importare un database dei titoli, inserisci i pulsanti mostrati a schermo per sbloccare la scrittura su SysNAND, quindi prosegui normalmente con lo script.</p>
 
 </details>
 
@@ -1002,11 +1020,11 @@ window.cookieconsent.initialise({
 <p>Assicurati di avere almeno 1.3GB disponibili nella tua scheda SD. Se non hai abbastanza spazio, segui questi passaggi:</p>
 <ol>
   <li>Spegni la tua console</li>
-  <li>Rimuovi la scheda SD e inseriscila nel tuo computer</li>
+  <li>Inserisci la scheda SD nel tuo computer</li>
   <li>Copia la cartella <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> dalla directory principale della tua scheda SD al tuo computer</li>
   <li>Elimina la cartella <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> dalla scheda SD</li>
   <li>Reinserisci la scheda SD nella tua console</li>
-  <li>Spegni la tua console, dopodiché riaccendila tenendo premuto il tasto START per avviare GodMode9</li>
+  <li>Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9</li>
   <li>Esegui un <a href="godmode9-usage#creating-a-nand-backup">Backup NAND</a></li>
   <li>Copia i file in <code class="language-plaintext highlighter-rouge">gm9/out</code> sulla tua SD in una posizione sicura sul tuo computer</li>
   <li>Elimina i file <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;seriale&gt;_sysnand_##.bin</code> e <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;seriale&gt;_sysnand_##.bin.sha</code> dalla scheda SD, mantenendo il file <code class="language-plaintext highlighter-rouge">essential.exefs</code> in <code class="language-plaintext highlighter-rouge">/gm9/out/</code></li>
@@ -1018,13 +1036,6 @@ window.cookieconsent.initialise({
 </details>
 
 <details>
-<summary><u>Error #08: Dummy title database</u></summary>
-
-<p>Non hai eliminato il database dei titoli fittizio creato da Error #05. Segui le istruzioni <a href="/images/screenshots/database-reset.jpg">qui</a>, quindi esegui nuovamente lo script.</p>
-
-</details>
-
-<details>
 <summary><u>Error #09: Unsupported GodMode9 version</u></summary>
 
 <p>Per qualche motivo stai eseguendo una versione di GodMode9 non inclusa con lo script. Assicurati di aver copiato il contenuto dell’archivio <code class="language-plaintext highlighter-rouge">finalize.zip</code> nella directory principale della tua scheda SD e che stai tenendo premuto il tasto START all’accensione della tua console.</p>
@@ -1032,9 +1043,42 @@ window.cookieconsent.initialise({
 </details>
 
 <details>
-<summary><u>Information #11: NAND backup flag detected</u></summary>
+<summary><u>Error #11: Missing donor database</u></summary>
 
-<p>Molto probabilmente hai già fatto un backup della NAND su questa console. Se non hai fatto un backup o ne hai perso l’accesso, seleziona “1. Make Another NAND Backup”. Altrimenti, seleziona “2. Skip NAND Backup”.</p>
+<p>Non hai copiato tutto dall’archivio <code class="language-plaintext highlighter-rouge">finalize.zip</code> nella directory principale della tua scheda SD. Ricorda, la tua scheda SD deve avere almeno questi file:</p>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/finalizing-root-layout.png" alt="" /></p>
+
+</details>
+
+<details>
+<summary><u>Error #12: Copy (file).db fail</u></summary>
+
+<p>Assicurati che la tua scheda SD non sia <a href="/images/sdlock.png">protetta dalla scrittura</a>. Se la scheda SD non è protetta e continui ad ottenere questo errore, entra nel <a href="https://discord.gg/MWxPgEp">canale Nintendo Homebrew su Discord</a> per ricevere assistenza.</p>
+
+</details>
+
+<details>
+<summary><u>Information #17: Duplicate NAND backup</u></summary>
+
+<p>Lo script ha rilevato che manca la cartella Nintendo 3DS E che hai precedentemente fatto un backup della NAND. Se intendi installare applicazioni homebrew, dovresti fare quanto segue:</p>
+
+<ol>
+  <li>Premi (B) per annullare la creazione di un altro backup della NAND</li>
+  <li>Tenendo premuto (R), premi (Start) per spegnere la console</li>
+  <li>Copia il contenuto della cartella <code class="language-plaintext highlighter-rouge">/gm9/backups/</code> in una posizione sicura sul tuo computer</li>
+  <li>Elimina la cartella <code class="language-plaintext highlighter-rouge">/gm9/backups/</code> dalla tua scheda SD</li>
+  <li>Se hai spostato la cartella Nintendo 3DS al di fuori dalla scheda SD, copiala nuovamente sulla scheda SD
+    <ul>
+      <li>Se non hai la cartella Nintendo 3DS, avvia il menu HOME con la scheda SD inserita per generarla automaticamente</li>
+    </ul>
+  </li>
+  <li>Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9</li>
+  <li>Premi il pulsante HOME per far apparire il menu delle azioni</li>
+  <li>Seleziona “Scripts…”</li>
+  <li>Seleziona “finalize”</li>
+  <li>Segui le istruzioni dello script, rispondendo alle domande che ti vengono poste</li>
+</ol>
 
 </details>
 
@@ -1288,7 +1332,6 @@ Tuttavia, se non conosci il PIN e quindi non puoi accedere alle impostazioni del
 </ol>
 </details>
 
-
         
       </section>
 
@@ -1336,29 +1379,36 @@ Tuttavia, se non conosci il PIN e quindi non puoi accedere alle impostazioni del
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Mappa del sito</a> - <a href="privacy-policy">Informativa sulla Privacy</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

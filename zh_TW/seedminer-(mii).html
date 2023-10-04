@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/zh_TW/site-navigation">網站導覽</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/zh_TW/installing-boot9strap-(petit-compwner)'>Installing boot9strap (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_TW/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -501,7 +523,7 @@ window.cookieconsent.initialise({
   <li>Your Mii QR code, uploaded directly to Discord (do not take a screenshot or a photo of the image, just send the HNI_XXXX.JPG image itself)</li>
   <li>Your console’s ID0 (the name of the 32-character folder directly inside of Nintendo 3DS - see <a href="https://3ds.hacks.guide/troubleshooting#seedminer">this troubleshooting section</a> if you have multiple)</li>
   <li>Your console model (e.g. 3DS, 3DS XL, 2DS, New3DS, New3DS XL, New2DS XL)</li>
-  <li>Your console’s approximate year of manufacturing (it may be present behind the frontplate or backplate; if you don’t know, just guess - it’s not super important)</li>
+  <li>Your console’s year of manufacturing; if you don’t know, don’t say it - it’s not super important</li>
 </ul>
 </div>
 
@@ -602,7 +624,9 @@ window.cookieconsent.initialise({
   <li>Once it completes, enter the command <code class="language-plaintext highlighter-rouge">py -3 seedminer_launcher3.py mii &lt;model&gt; &lt;year&gt;</code>
     <ul>
       <li>Replace <code class="language-plaintext highlighter-rouge">&lt;model&gt;</code> with the model of your console (<code class="language-plaintext highlighter-rouge">new</code> or <code class="language-plaintext highlighter-rouge">old</code>) - if you aren’t sure, only models with the ZL/ZR buttons and C-Stick are “new”</li>
-      <li>Replace <code class="language-plaintext highlighter-rouge">&lt;year&gt;</code> with the year the 3DS was made (you often find this behind the backplate) - leave this empty if you aren’t sure, in which case it will start from the middle</li>
+      <li>Replace <code class="language-plaintext highlighter-rouge">&lt;year&gt;</code> with the year the 3DS was made (On Old 3DS consoles, the years on the backplate, (M)2010/(C)2011, are always the same and NOT an indicator) - if you aren’t sure, see below</li>
+      <li>Estimate manufacturing years are: Old 3DS 2011, Old 3DS XL 2013, Old 2DS 2015, New 3DS 2016, New 3DS XL 2016, New 2DS XL 2017</li>
+      <li>You can also leave the year empty, which will make it start in the middle</li>
       <li>The mining process will usually take up to 90 minutes, depending on luck and your GPU’s strength</li>
       <li>The first stage will likely max out at roughly offset 1500, depending on console model</li>
       <li>If the second stage (after seeing <code class="language-plaintext highlighter-rouge">movable_part2.sed generation success</code>) gets past offset 100, verify that you input the correct ID0. If your ID0 is correct, you cannot use this method and will have to update to the latest version and see if a non-Seedminer method is available for you <a href="alternate-exploits">here</a></li>
@@ -662,29 +686,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">網站導覽</a> - <a href="privacy-policy">隱私權政策</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

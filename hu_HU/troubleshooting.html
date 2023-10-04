@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/hu_HU/site-navigation">Oldaltérkép</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/hu_HU/installing-boot9strap-(petit-compwner)'>Boot9strap telepítése (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/hu_HU/dumping-eshop-dsiware'>eShop DSiWare dumpolása</a></li>
           
         
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <p>Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz Discord-on</a> és írd le a problémádat és azt is hogy mi az amit már próbáltál.</p>
 
@@ -629,9 +651,9 @@ window.cookieconsent.initialise({
 
 <details>
 <summary><u>A DSiWare Management menü összeomlik a BB3 multihax menü megjelenése nélkül</u></summary>
-<p>Biztosítsd, hogy az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> az egyetlen fájl a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappában. Ha így van, hozd létre újra a <a href="http://3dstools.nhnarwhal.com/#/bb3gen">BannerBomb3 Injector</a> segítségével.</p>
+<p>Biztosítsd, hogy az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> az egyetlen fájl a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappában. Ha így van, hozd létre újra a <a href="https://zoogie.github.io/web/bb3">BannerBomb3 Injector</a> segítségével.</p>
 
-<p>Továbbá légy biztos abban, hogy a <code class="language-plaintext highlighter-rouge">bb3.bin</code> fájl megtalálható az SD kártyád gyökerében. Ha hiányzik, töltsd le a legutolsó kiadását az <a href="https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin">Bannerbomb3</a>-nak (közvetlen letöltés), és másold a <code class="language-plaintext highlighter-rouge">bb3.bin</code> fájlt az SD kártyád gyökerébe.</p>
+<p>Továbbá légy biztos abban, hogy a <code class="language-plaintext highlighter-rouge">bb3.bin</code> fájl megtalálható az SD kártyád gyökerében. Ha hiányzik, töltsd le a legutolsó kiadását az <a href="https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip">Bannerbomb3</a>-nak (közvetlen letöltés), és másold a <code class="language-plaintext highlighter-rouge">bb3.bin</code> fájlt a Release <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártyád gyökerébe.</p>
 
 <p>Ha ezen megoldások egyike sem javítja ezt a problémát, akkor az egyedi firmware eltávolításra kerülhetett erről a konzolról, úgy, hogy az lehetetlenné teszi ennek a metódusnak a végrehajtását. Ebben az esetben csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz Discord-on</a> és kérj, támogatást angolul.</p>
 </details>
@@ -645,13 +667,13 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>A DSiWare Management egy kérdőjelet mutat</u></summary>
 
-<p>Probléma van az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> fájloddal (hibás vagy másik 3DS-hez tartozik). Hozd létre újra az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> fájlod a <a href="http://3dstools.nhnarwhal.com/#/bb3gen">BannerBomb3 Injector</a> segítségével, biztosítva azt, hogy a konzolod <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlját használod hozzá.</p>
+<p>Probléma van az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> fájloddal (hibás vagy másik 3DS-hez tartozik). Hozd létre újra az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> fájlod a <a href="https://zoogie.github.io/web/bb3">BannerBomb3 Injector</a> segítségével, biztosítva azt, hogy a konzolod <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlját használod hozzá.</p>
 </details>
 
 <h2 id="boot9strap-telepítése-fredtool-inject">Boot9strap telepítése (Fredtool-Inject)</h2>
 
 <details>
-<summary><u>Error on DSiHaxInjector page</u></summary>
+<summary><u>Hiba a DSiHaxInjector oldalon</u></summary>
 
 <p>Biztosítsd, hogy a <code class="language-plaintext highlighter-rouge">movable.sed</code> és a DSiWare mentés ugyanarról a konzolról származik. Egy eltérés hibához vezet.</p>
 </details>
@@ -663,7 +685,7 @@ window.cookieconsent.initialise({
 </details>
 
 <details>
-<summary><u>DSiWare launches normally</u></summary>
+<summary><u>A DSiWare normálisan indul</u></summary>
 
 <p>A <code class="language-plaintext highlighter-rouge">Haxxxxxxxxx!</code> nem lett átmásolva az SD kártyádról a rendszer memóriába.</p>
 </details>
@@ -703,14 +725,14 @@ window.cookieconsent.initialise({
 <p>Csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz a Discord-on</a> és írd le, hogy mi történt.</p>
 </details>
 
-<h2 id="installing-boot9strap-pichaxx">Installing boot9strap (PicHaxx)</h2>
+<h2 id="boot9strap-telepítése-pichaxx">Boot9strap telepítése (PicHaxx)</h2>
 
 <details>
 <summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)</u></summary>
 
 <p>A <code class="language-plaintext highlighter-rouge">00000001.sav</code> és/vagy <code class="language-plaintext highlighter-rouge">otherapp.bin</code> fájljaid rossz helyre lehettek rakva. Biztosítsd, hogy a <code class="language-plaintext highlighter-rouge">00000001.sav</code> a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code> -&gt; <code class="language-plaintext highlighter-rouge">00040000</code> -&gt; <code class="language-plaintext highlighter-rouge">0017c100</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> mappában legyen és az <code class="language-plaintext highlighter-rouge">otherapp.bin</code> pedig az SD kártyád gyökerében.</p>
 
-<p>Ha a fájljaid jó helyen vannak, hozd létre újra a mentéseket a <a href="https://3dstools.nhnarwhal.com/#/pichaxx">PicHaxx Save Tool</a> használatával, majd rakd őket a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code> -&gt; <code class="language-plaintext highlighter-rouge">00040000</code> -&gt; <code class="language-plaintext highlighter-rouge">0017c100</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> mappába. Ügyelj arra, hogy a fájl pontosan <code class="language-plaintext highlighter-rouge">00000001.sav</code> nevű legyen és hogy a konzolod <code class="language-plaintext highlighter-rouge">movable.sed</code>-jét használd a létrehozáshoz. Re-download <a href="https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip">HBL otherapps</a>, place the <code class="language-plaintext highlighter-rouge">.bin</code> file relevant to your console to the root of your SD card, and rename it to <code class="language-plaintext highlighter-rouge">otherapp.bin</code>. Ne add hozzá a <code class="language-plaintext highlighter-rouge">.bin</code> kiterjesztést, ha nem látod.</p>
+<p>Ha a fájljaid jó helyen vannak, hozd létre újra a mentéseket a <a href="https://3dstools.nhnarwhal.com/#/pichaxx">PicHaxx Save Tool</a> használatával, majd rakd őket a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code> -&gt; <code class="language-plaintext highlighter-rouge">00040000</code> -&gt; <code class="language-plaintext highlighter-rouge">0017c100</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> mappába. Ügyelj arra, hogy a fájl pontosan <code class="language-plaintext highlighter-rouge">00000001.sav</code> nevű legyen és hogy a konzolod <code class="language-plaintext highlighter-rouge">movable.sed</code>-jét használd a létrehozáshoz. Töltsd le újra a <a href="https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip">HBL otherappokat</a> és rakd a konzolod SD kártyájára a releváns <code class="language-plaintext highlighter-rouge">.bin</code> fájlt, majd nevezd át <code class="language-plaintext highlighter-rouge">otherapp.bin</code>-re. Ne add hozzá a <code class="language-plaintext highlighter-rouge">.bin</code> kiterjesztést, ha nem látod.</p>
 </details>
 
 <details>
@@ -722,7 +744,7 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>"An error has occurred, forcing the software to close..." (fehér üzenet doboz)</u></summary>
 
-<p>Probléma van az <code class="language-plaintext highlighter-rouge">otherapp.bin</code> fájloddal. Download <a href="https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip">HBL otherapps</a>, place the <code class="language-plaintext highlighter-rouge">.bin</code> file relevant to your console to the root of your SD card, and rename it to <code class="language-plaintext highlighter-rouge">otherapp.bin</code>. Ne add hozzá a <code class="language-plaintext highlighter-rouge">.bin</code> kiterjesztést, ha nem látod.</p>
+<p>Probléma van az <code class="language-plaintext highlighter-rouge">otherapp.bin</code> fájloddal. Töltsd le a <a href="https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip">HBL otherappokat</a> és rakd a konzolod SD kártyájára a releváns <code class="language-plaintext highlighter-rouge">.bin</code> fájlt, majd nevezd át <code class="language-plaintext highlighter-rouge">otherapp.bin</code>-re. Ne add hozzá a <code class="language-plaintext highlighter-rouge">.bin</code> kiterjesztést, ha nem látod.</p>
 </details>
 
 <details>
@@ -779,7 +801,7 @@ window.cookieconsent.initialise({
 
 <p>Probléma lehet az arm11code.bin<code class="language-plaintext highlighter-rouge"> fájloddal. Töltsd le a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az </code>otherapp.bin<code class="language-plaintext highlighter-rouge"> fájlt az SD kártyád gyökerébe, majd nevezd át </code>arm11code.bin<code class="language-plaintext highlighter-rouge">-re. Ne add hozzá a </code>.bin` kiterjesztést, ha nem látod.</p>
 
-<p>You can also try resetting your browser save data:</p>
+<p>Megpróbálhatod még alaphelyzetbe állítani a böngésző mentés adatot:</p>
 
 <ol>
   <li>Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)</li>
@@ -874,7 +896,7 @@ window.cookieconsent.initialise({
 
 <ul>
   <li>Legyél biztos abban, hogy az <code class="language-plaintext highlighter-rouge">arm11code.bin</code>, <code class="language-plaintext highlighter-rouge">browserhax_hblauncher_ropbin_payload.bin</code>, és a <code class="language-plaintext highlighter-rouge">boot.3dsx</code> fájlok megtalálhatók az SD kártya gyökerében (nem pedig egy mappában)</li>
-  <li>Legyél biztos abban, hogy a régiódnak ÉS a rendszerednek megfelel payload-ot választottad</li>
+  <li>Legyél biztos abban, hogy a régiódnak ÉS a rendszerednek megfelelő payload-ot választottad</li>
   <li>Legyél biztos abban, hogy a régiós beállításaid <a href="/images/screenshots/skater_lang.png">így néznek ki</a></li>
   <li>Próbáld meg törölni a böngésző adatot:
     <ol>
@@ -891,7 +913,7 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)</u></summary>
 
-<p>A <code class="language-plaintext highlighter-rouge">arm11code.bin</code> fájl hiányzik, vagy rossz helyen van. Make sure to copy the files of the <a href="https://github.com/zoogie/super-skaterhax/releases/latest">latest version of super-skaterhax</a> for your region and version to the root of your SD card (not inside of a folder).</p>
+<p>A <code class="language-plaintext highlighter-rouge">arm11code.bin</code> fájl hiányzik, vagy rossz helyen van. Biztosítsd, hogy <a href="https://github.com/zoogie/super-skaterhax/releases/latest">super-skaterhax legfrissebb verziójából</a> régiódhoz és verziódhoz tartozó fájlokat az SD kártya gyökerébe másold (nem egy mappán belülre).</p>
 
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/skater-root-layout.png" alt="" /></p>
 
@@ -925,16 +947,9 @@ window.cookieconsent.initialise({
 </details>
 
 <details>
-<summary><u>Warning #01: No Nintendo 3DS folder</u></summary>
-
-<p>Your SD card does not have the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder. Power on your device with your SD card inserted, then wait for the device to show a message box that says “Creating HOME Menu management information”. Once the message box disappears, power off your device and try again.</p>
-
-</details>
-
-<details>
 <summary><u>Error #02: Missing essential.exefs</u></summary>
 
-<p>You said ‘No’ to the “Make essential files backup?” prompt in GodMode9. Power off your device, power it on while holding (Start) to re-enter GodMode9, say ‘Yes’ to the prompt, then try again.</p>
+<p>You said ‘No’ to the “Make essential files backup?” prompt in GodMode9. Power off your console, power it on while holding (Start) to re-enter GodMode9, say ‘Yes’ to the prompt, then try again.</p>
 
 </details>
 
@@ -954,15 +969,14 @@ window.cookieconsent.initialise({
 
 <ol>
   <li>Kapcsold ki a konzolod</li>
-  <li>Távolítsd el az SD kártyád, majd csatlakoztasd a számítógépedhez</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
   <li>Másold a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát az SD kártya gyökeréből a számítógépedre</li>
   <li>Töröld a Nintendo 3DS mappát az SD kártyáról</li>
   <li>Tedd vissza az SD kártyád a konzoldba</li>
-  <li>Kapcsold ki a konzolod</li>
-  <li>Hold START and power on still holding START to open GodMode9</li>
+  <li>Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et</li>
   <li>Press the (Home) button</li>
   <li>Válaszd a “Scripts…” opciót</li>
-  <li>Select “finalize”</li>
+  <li>Válaszd az “finalize” opciót</li>
   <li>Press (A) to create a NAND backup
     <ul>
       <li>This may take around fifteen minutes</li>
@@ -983,12 +997,16 @@ window.cookieconsent.initialise({
 <p>Now that you have your NAND backup in a safe place:</p>
 
 <ol>
-  <li>Helyezd az SD kártyád a konzolodba</li>
-  <li>Hold START and power on still holding START to open GodMode9</li>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
+  <li>Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et</li>
   <li>Press the (Home) button</li>
   <li>Válaszd a “Scripts…” opciót</li>
-  <li>Select “finalize”</li>
-  <li>Continue the script as normal</li>
+  <li>Válaszd az “finalize” opciót</li>
+  <li>Continue the script as normal
+    <ul>
+      <li>The NAND backup will be automatically skipped</li>
+    </ul>
+  </li>
 </ol>
 
 </details>
@@ -996,21 +1014,21 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Information #05: No title database</u></summary>
 
-<p>Press (A) to create a title database, unlock SysNAND writing by entering the buttons on-screen, follow the prompts <a href="/images/screenshots/database-reset.jpg">here</a>, then re-run the script.</p>
+<p>Press (A) to import a title database, unlock SysNAND writing by entering the buttons on-screen, then continue the script as normal.</p>
 
 </details>
 
 <details>
-<summary><u>Error #06 or "Error: Could not open directory" when attempting a NAND backup</u></summary>
+<summary><u>Error #06 "Backup failed" vagy "Error: Could not open directory" a NAND backup készítésének megpróbálásakor</u></summary>
 
 <p>Győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon. Ha nincs elég szabad helyed, kövesd ezeket a lépéseket:</p>
 <ol>
   <li>Kapcsold ki a konzolod</li>
-  <li>Távolítsd el az SD kártyád, majd csatlakoztasd a számítógépedhez</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
   <li>Másold a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát az SD kártya gyökeréből a számítógépedre</li>
   <li>Töröld a Nintendo 3DS mappát az SD kártyáról</li>
   <li>Tedd vissza az SD kártyád a konzoldba</li>
-  <li>Kapcsold ki a konzolod, tartsd nyomva a START és power gombokat, továbbra is nyomva a START gombot a GodMode9-be bootoláshoz</li>
+  <li>Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et</li>
   <li>Hajts végre egy <a href="godmode9-usage#creating-a-nand-backup">NAND Backup</a>-ot</li>
   <li>Másold a <code class="language-plaintext highlighter-rouge">gm9/out</code> mappát az SD kártyádról egy biztonságos helyre a számítógépeden</li>
   <li>Töröld a <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> és a <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin.sha</code> fájlokat az SD kártyád <code class="language-plaintext highlighter-rouge">/gm9/out/</code> mappájából, megtartva az essential.exefs-t a <code class="language-plaintext highlighter-rouge">/gm9/out/</code> -ban</li>
@@ -1022,13 +1040,6 @@ window.cookieconsent.initialise({
 </details>
 
 <details>
-<summary><u>Error #08: Dummy title database</u></summary>
-
-<p>You didn’t delete the dummy title database that was created by Error #05. Follow the prompts <a href="/images/screenshots/database-reset.jpg">here</a>, then re-run the script.</p>
-
-</details>
-
-<details>
 <summary><u>Error #09: Unsupported GodMode9 version</u></summary>
 
 <p>You are somehow running a version of GodMode9 not packaged with the script. Make sure you copied the contents of <code class="language-plaintext highlighter-rouge">finalize.zip</code> to the root of your SD card and that you are holding START while powering on your console.</p>
@@ -1036,9 +1047,42 @@ window.cookieconsent.initialise({
 </details>
 
 <details>
-<summary><u>Information #11: NAND backup flag detected</u></summary>
+<summary><u>Error #11: Missing donor database</u></summary>
 
-<p>You most likely already made a NAND backup on this console. If you did not make a backup or lost access to your backup, select “1. Make Another NAND Backup”. Otherwise, select “2. Skip NAND Backup”.</p>
+<p>You did not copy everything from <code class="language-plaintext highlighter-rouge">finalize.zip</code> to the root of your SD card. Remember, your SD card should have at least these files:</p>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/finalizing-root-layout.png" alt="" /></p>
+
+</details>
+
+<details>
+<summary><u>Error #12: Copy (file).db fail</u></summary>
+
+<p>Ensure that your SD card is not <a href="/images/sdlock.png">locked</a>. If the SD card is not locked and you continue to get this error, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for assistance.</p>
+
+</details>
+
+<details>
+<summary><u>Information #17: Duplicate NAND backup</u></summary>
+
+<p>The script has detected that the Nintendo 3DS folder is missing AND that you have already made a NAND backup before. If you intend to install homebrew applications, you should do the following:</p>
+
+<ol>
+  <li>Press (B) to cancel making another NAND backup</li>
+  <li>Az (R) lenyomva tartása közben nyomd meg a (Start) gombot a konzolod kikapcsolásához</li>
+  <li>Copy the contents of <code class="language-plaintext highlighter-rouge">/gm9/backups/</code> to a safe location on your computer</li>
+  <li>Delete <code class="language-plaintext highlighter-rouge">/gm9/backups/</code> from your SD card</li>
+  <li>If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
+    <ul>
+      <li>If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it</li>
+    </ul>
+  </li>
+  <li>Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et</li>
+  <li>Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü</li>
+  <li>Válaszd a “Scripts…” opciót</li>
+  <li>Válaszd az “finalize” opciót</li>
+  <li>Kövesd a script utasításait és válaszolj meg minden kérdést</li>
+</ol>
 
 </details>
 
@@ -1293,7 +1337,6 @@ Azonban, ha nem tudod a PIN-t így nem tudsz hozzáférni az konzol beállítás
 </ol>
 </details>
 
-
         
       </section>
 
@@ -1341,29 +1384,36 @@ Azonban, ha nem tudod a PIN-t így nem tudsz hozzáférni az konzol beállítás
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Oldaltérkép</a> - <a href="privacy-policy">Adatvédelmi Irányelv</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 

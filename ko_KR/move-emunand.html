@@ -6,7 +6,6 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
-<!-- for guide purposes all caching is removed and is separately built. -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -91,7 +90,10 @@
 
 
     <!-- start custom head snippets -->
+
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
@@ -135,10 +137,13 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<!-- hacks-guide change end -->
 
 <!-- end custom head snippets -->
+
   </head>
 
+<!-- hacks-guide change start: Disable caching -->
   <body class="layout--single">
     <nav class="skip-links">
   <ul>
@@ -159,13 +164,16 @@ window.cookieconsent.initialise({
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <!-- <a class="site-title" href="/">
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
           3DS Hacks Guide
           
         </a>
       -->
+<!-- hacks-guide change end -->
         <ul class="visible-links">
-          <!-- modified to use multilang, guide-specific -->
+<!-- hacks-guide change start: multi-language configuration -->
           
           
           
@@ -212,10 +220,10 @@ window.cookieconsent.initialise({
               <li class="masthead__menu-item"><a href="/ko_KR/site-navigation">사이트 탐색</a></li>
             
           
-          <!-- end guide specific -->
+<!-- hacks-guide change end -->
         </ul>
         
-        <!-- completely redo hidden links for multilang, guide-specific -->
+<!-- hacks-guide change start: Add language selector -->
         <ul class="hidden-links links-menu hidden"></ul>
         <ul class="hidden-links lang-menu hidden">
           
@@ -259,6 +267,7 @@ window.cookieconsent.initialise({
           <div class="navicon"></div>
         </button>
         <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
       </nav>
     </div>
   </div>
@@ -271,7 +280,9 @@ window.cookieconsent.initialise({
 
 
 <div id="main" role="main">
-  <!-- 
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
   <div class="sidebar sticky">
   
   
@@ -285,7 +296,8 @@ window.cookieconsent.initialise({
 
 
 <div class="sidebar sticky" style="display: none;">
-  
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
 
 
 
@@ -374,11 +386,15 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/ko_KR/installing-boot9strap-(petit-compwner)'>boot9strap 설치 (petit-compwner)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/ko_KR/dumping-eshop-dsiware'>eShop DSiWare 덤프</a></li>
           
         
           
-            <li style="display: none;" data-name="multiple-options"><i>(다중 옵션)</i></li>
+            <li style="display: none;" data-name="multiple-options"><i>(여러가지 옵션)</i></li>
           
         
           
@@ -441,8 +457,12 @@ window.cookieconsent.initialise({
     </li>
   </ul>
 </nav>
+<!-- hacks-guide change end -->
+
 </div>
 
+
+<!-- hacks-guide change end-->
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -465,6 +485,7 @@ window.cookieconsent.initialise({
       <section class="page__content" itemprop="text">
         
 
+<!-- hacks-guide change start -->
         <hr>
 
         
@@ -479,6 +500,7 @@ window.cookieconsent.initialise({
         
 
         <hr>
+<!-- hacks-guide change end -->
 
         <aside class="sidebar__right">
 <nav class="toc">
@@ -545,7 +567,7 @@ window.cookieconsent.initialise({
   <li><code class="language-plaintext highlighter-rouge">[2:] SYSNAND TWLN</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code>로 이동해 주세요</li>
   <li><code class="language-plaintext highlighter-rouge">00030004</code> 폴더에 (R) 을 누른 채 (A) 를 눌러 선택하고 “Copy to 0:/gm9/out”을 선택해 주세요
     <ul>
-      <li>이 과정은 기기에 DSiWare 게임이 많다면 시간이 좀 걸릴 수 있습니다</li>
+      <li>이 과정은 콘솔에 DSiWare 게임이 많다면 시간이 좀 걸릴 수 있습니다</li>
     </ul>
   </li>
   <li>(B)를 두 번 눌러 메인 메뉴로 돌아가 주세요</li>
@@ -613,7 +635,7 @@ window.cookieconsent.initialise({
   <li>(A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요</li>
   <li>“Overwrite file(s)”를 선택해 주세요
     <ul>
-      <li>이 과정은 기기에 DSiWare 게임이 많다면 시간이 좀 걸릴 수 있습니다</li>
+      <li>이 과정은 콘솔에 DSiWare 게임이 많다면 시간이 좀 걸릴 수 있습니다</li>
     </ul>
   </li>
   <li>만약 메세지가 표시되면, (B) 를 눌러서 쓰기잠금을 거부해 주세요</li>
@@ -669,15 +691,27 @@ window.cookieconsent.initialise({
   <li>(B)를 눌러 메인 메뉴로 돌아가 주세요</li>
   <li>“Exit”를 선택해 주세요</li>
   <li>메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">[S:] SYSNAND VIRTUAL</code> 폴더로 이동해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">essential.exefs</code>에서 (A)를 눌러 선택해 주세요</li>
+  <li>“Copy to 0:/gm9/out”를 선택해 주세요
+    <ul>
+      <li>“Destination already exists”라는 메세지가 표시되면, “Overwrite file(s)”에 (A)를 눌러 주세요</li>
+    </ul>
+  </li>
+  <li>(A)를 눌러 진행해 주세요</li>
   <li>(R)을 누른 채 (Start)를 눌러 콘솔의 전원을 꺼 주세요</li>
   <li>SD 카드를 컴퓨터에 삽입해 주세요</li>
-  <li>SD 카드<code class="language-plaintext highlighter-rouge">/gm9/out/</code> 폴더의 <code class="language-plaintext highlighter-rouge">&lt;날짜&gt;_&lt;일련번호&gt;_nandmin_##.bin</code>과 ‘essential.exefs’ 를 컴퓨터의 안전한 위치에 복사해 주세요
+  <li>SD 카드의 <code class="language-plaintext highlighter-rouge">/gm9/out/</code> 폴더의 <code class="language-plaintext highlighter-rouge">&lt;날짜&gt;_&lt;일련번호&gt;_sysnand_##.bin</code>, <code class="language-plaintext highlighter-rouge">&lt;날짜&gt;_&lt;일련번호&gt;_sysnand_##.bin.sha</code>, <code class="language-plaintext highlighter-rouge">essential.exefs</code>을 컴퓨터의 안전한 위치에 복사해 주세요
     <ul>
-      <li>여러 위치에 백업을 해 주세요 (온라인 파일 저장 공간 등)</li>
+      <li>이 백업들을 여러 장소에 복사해 주세요 (온라인 파일 저장소, 하드 드라이브 등)</li>
       <li>이 백업들은 콘솔을 벽돌로부터 지켜줄 것이고 만약 나중에 문제가 생겼을 때 NAND 이미지로부터 파일을 복구하는 것을 도울 것입니다</li>
     </ul>
   </li>
-  <li>SD 카드에 있는 <code class="language-plaintext highlighter-rouge">/gm9/out/</code>의 <code class="language-plaintext highlighter-rouge">&lt;날짜&gt;_&lt;일련번호&gt;_sysnand_##.bin</code> 과`<날짜>_<일련번호>_sysnand_##.bin.sha' 파일을 복사 후에 지워 주세요</일련번호></날짜></li>
+  <li>SD 카드에 있는 <code class="language-plaintext highlighter-rouge">/gm9/out/</code>의 <code class="language-plaintext highlighter-rouge">&lt;날짜&gt;_&lt;일련번호&gt;_sysnand_##.bin</code> 과`<날짜>_<일련번호>_sysnand_##.bin.sha' 파일을 복사 후에 지워 주세요
+</일련번호></날짜>    <ul>
+      <li>나머지 파일들은 크기가 작으며, 편의성을 위해 SD 카드에 남겨 두셔도 됩니다</li>
+    </ul>
+  </li>
   <li>SD 카드를 콘솔에 다시 삽입해 주세요</li>
   <li><strong>SD 카드의 모든 파일을 컴퓨터에 백업해두세요. 다음 단계에서 SD 카드의 모든 파일이 삭제됩니다.</strong></li>
 </ol>
@@ -760,29 +794,36 @@ window.cookieconsent.initialise({
         
       
     
+
+<!-- hacks-guide change start: force disable atom feed-->
 <!--
     
       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
     </ul>
   -->
+<!-- hacks-guide change end -->
+
 </div>
 
-<!-- custom footer, guide specific -->
+<!-- hacks-guide change start: custom footer -->
 
 
 
 <div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">사이트 탐색</a> - <a href="privacy-policy">개인정보 보호 정책</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
 
       </footer>
     </div>
+<!-- hacks-guide change end -->
 
     
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- for guide purposes all caching is removed and is separately built. -->
+<!-- hacks-guide change start: Disable caching -->
 
+<!-- hacks-guide change end -->
 
 
 
