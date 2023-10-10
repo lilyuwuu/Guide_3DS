@@ -123,7 +123,7 @@ window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
-      "background": "#2e3440"
+      "background": "#28282b"
     },
     "button": {
       "background": "#60818f"
@@ -386,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(mset9)"><a href='/zh_CN/installing-boot9strap-(mset9)'>Installing boot9strap (MSET9)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/zh_CN/installing-boot9strap-(petit-compwner)'>Installing boot9strap (petit-compwner)</a></li>
           
         
@@ -564,7 +568,6 @@ window.cookieconsent.initialise({
     </ul>
   </li>
   <li>Transfer <code class="language-plaintext highlighter-rouge">SH2E-JPN.300.wav</code> from the Release_sh2e <code class="language-plaintext highlighter-rouge">.zip</code> to a device that can play <code class="language-plaintext highlighter-rouge">.wav</code> files, for example a phone</li>
-  <li>Copy the petitcom <code class="language-plaintext highlighter-rouge">.icn</code> for your region to the root of your SD card</li>
   <li>检查 SD 卡的根目录是否存在一个名为 <code class="language-plaintext highlighter-rouge">3ds</code> 的文件夹，如果没有则手动新建一个
     <ul>
       <li>This folder stores homebrew applications and data; it is different from the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder that the console automatically generates</li>
@@ -577,7 +580,7 @@ window.cookieconsent.initialise({
   <li>Power on your console</li>
 </ol>
 
-<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/smilehax-root-layout.png" alt="" /></p>
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/smilehax-jpn-root-layout.png" alt="" /></p>
 
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/boot9strap-folder.png" alt="" /></p>
 
@@ -605,7 +608,7 @@ window.cookieconsent.initialise({
   <li>Now select 300BPS, then play the <code class="language-plaintext highlighter-rouge">.wav</code> file</li>
   <li>When it finishes, press “Yes”, then press “OK”</li>
   <li>Press the START button</li>
-  <li>Select the SH2E-xxx.TXT file, then press OK, then “Yes” to execute it</li>
+  <li>Select the SH2E-JPN.TXT file, then press OK, then “Yes” to execute it</li>
   <li>Your console will have booted into the Homebrew Launcher</li>
   <li>Launch nimdsphax from the list of homebrew</li>
   <li>如果一切成功的话，你将自动进入 SafeB9SInstaller
@@ -727,12 +730,17 @@ window.cookieconsent.initialise({
 
 
   <script>
-  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-  ga('create','UA-86465881-1','auto');
-  ga('set', 'anonymizeIp', false);
-  ga('send','pageview')
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '397069354']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 </script>
-<script src="https://www.google-analytics.com/analytics.js" async></script>
 
 
 

@@ -123,7 +123,7 @@ window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
-      "background": "#2e3440"
+      "background": "#28282b"
     },
     "button": {
       "background": "#60818f"
@@ -386,6 +386,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(mset9)"><a href='/ko_KR/installing-boot9strap-(mset9)'>boot9strap 설치 (MSET9)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/ko_KR/installing-boot9strap-(petit-compwner)'>boot9strap 설치 (petit-compwner)</a></li>
           
         
@@ -394,7 +398,7 @@ window.cookieconsent.initialise({
           
         
           
-            <li style="display: none;" data-name="multiple-options"><i>(여러가지 옵션)</i></li>
+            <li style="display: none;" data-name="multiple-options"><i>(다중 옵션)</i></li>
           
         
           
@@ -680,7 +684,7 @@ window.cookieconsent.initialise({
   <li>메인 메뉴로 갈 때까지의 초기 설정을 완료하세요
     <ul>
       <li>만약 설정 중 선택이 표시될 시는 왼쪽을 선택해 주세요</li>
-      <li>If you encounter an issue while doing this section, <a href="troubleshooting#installing-boot9strap-fredtool-inject">check this troubleshooting guide</a> for your issue</li>
+      <li>여기까지 진행하는 데에 문제가 발생한다면, <a href="troubleshooting#installing-boot9strap-fredtool-inject">이 문제 해결 가이드</a>을 참고해 주세요</li>
     </ul>
   </li>
   <li>터치 스크린을 사용해서, 오른쪽의 큰 버튼을 선택하고, 그 후 SD 카드 아이콘이 붙은 버튼을 선택해 주세요</li>
@@ -701,7 +705,7 @@ window.cookieconsent.initialise({
 <ol>
   <li>십자 패드를 사용해서, “Install boot9strap”으로 이동해 주세요
     <ul>
-      <li>If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to start over from the previous section</li>
+      <li>이 단계를 놓쳤다면, 시스템은 boot9strap을 설치하는 대신 HOME 메뉴로 나가집니다. 이렇게 되면 이전 섹션의 처음부터 다시 시작해야 합니다</li>
     </ul>
   </li>
   <li>(A) 버튼을 누른 후, START와 SELECT를 동시에 눌러 작업을 실행해 주세요</li>
@@ -829,12 +833,17 @@ window.cookieconsent.initialise({
 
 
   <script>
-  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-  ga('create','UA-86465881-1','auto');
-  ga('set', 'anonymizeIp', false);
-  ga('send','pageview')
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '397069354']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 </script>
-<script src="https://www.google-analytics.com/analytics.js" async></script>
 
 
 
