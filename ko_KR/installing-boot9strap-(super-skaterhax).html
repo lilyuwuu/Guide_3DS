@@ -618,7 +618,8 @@ window.cookieconsent.initialise({
   <li>홈브류 목록에서 nimdsphax를 실행해 주세요</li>
   <li>익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
     <ul>
-      <li>만약 콘솔이 적색 화면에서 멈추는 경우, 전원 버튼을 길게 눌러 콘솔의 전원을 끄고, 섹션 II의 3단계를 다시 실행한 다음, 이 섹션을 다시 시도해 주세요</li>
+      <li>If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section</li>
+      <li>This may take up to five attempts</li>
     </ul>
   </li>
 </ol>
@@ -735,17 +736,14 @@ window.cookieconsent.initialise({
 
 
 
-  <script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '397069354']);
-  
-  _gaq.push(['_trackPageview']);
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-760Y60FQ3T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  gtag('config', 'G-760Y60FQ3T', { 'anonymize_ip': false});
 </script>
 
 

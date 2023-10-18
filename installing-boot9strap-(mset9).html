@@ -516,7 +516,7 @@ window.cookieconsent.initialise({
       <li><a href="#section-i---prep-work" id="markdown-toc-section-i---prep-work">Section I - Prep Work</a></li>
       <li><a href="#section-ii---mset9" id="markdown-toc-section-ii---mset9">Section II - MSET9</a></li>
       <li><a href="#section-iii---installing-boot9strap" id="markdown-toc-section-iii---installing-boot9strap">Section III - Installing boot9strap</a></li>
-      <li><a href="#section-iv---uninstalling-mset9" id="markdown-toc-section-iv---uninstalling-mset9">Section IV - Uninstalling MSET9</a></li>
+      <li><a href="#section-iv---removing-mset9" id="markdown-toc-section-iv---removing-mset9">Section IV - Removing MSET9</a></li>
     </ul>
   </li>
   <li><a href="#continue-to-finalizing-setup" id="markdown-toc-continue-to-finalizing-setup">Continue to Finalizing Setup</a></li>
@@ -568,7 +568,7 @@ window.cookieconsent.initialise({
 
     <p class="notice--info"><img src="/images/screenshots/mset9/mset9-root-layout.png" alt="MSET9 root layout" /></p>
   </li>
-  <li>Execute the <code class="language-plaintext highlighter-rouge">mset9.py</code> script on the root of your SD card
+  <li>Execute the MSET9 script in the following way, depending on your operating system:
     <ul>
       <li><strong>Windows</strong>: Double-click <code class="language-plaintext highlighter-rouge">mset9.bat</code>
         <ul>
@@ -636,7 +636,7 @@ window.cookieconsent.initialise({
       <li>The menu will refresh and say that no SD card is inserted, which is expected</li>
     </ul>
   </li>
-  <li>Insert your SD card into your computer</li>
+  <li>Insert your SD card into your computer, then wait a few seconds</li>
   <li>In the MSET9 window, type <code class="language-plaintext highlighter-rouge">2</code>, then press Enter to trigger MSET9
     <ul>
       <li>You should see “Injecting… done.”</li>
@@ -676,7 +676,7 @@ window.cookieconsent.initialise({
   <li>Press (Start) to save and reboot</li>
 </ol>
 
-<h4 id="section-iv---uninstalling-mset9">Section IV - Uninstalling MSET9</h4>
+<h4 id="section-iv---removing-mset9">Section IV - Removing MSET9</h4>
 
 <p>In this section, you will remove MSET9 to prevent further issues. (This will not remove the custom firmware that you just installed.)</p>
 
@@ -684,7 +684,7 @@ window.cookieconsent.initialise({
 
 <ol>
   <li>Power off your console</li>
-  <li>Insert your SD card into your computer</li>
+  <li>Insert your SD card into your computer, then wait a few seconds</li>
   <li>In the MSET9 window, type <code class="language-plaintext highlighter-rouge">4</code>, then press Enter to remove MSET9
     <ul>
       <li>You should see “Removing… done”</li>
@@ -700,6 +700,8 @@ window.cookieconsent.initialise({
 </ul>
 
 <hr />
+
+<p class="notice--danger">Did you follow Section IV (Removing MSET9)? That section is MANDATORY!</p>
 
 <h3 class="notice--primary" id="continue-to-finalizing-setup">Continue to <a href="finalizing-setup">Finalizing Setup</a></h3>
 
@@ -784,17 +786,14 @@ window.cookieconsent.initialise({
 
 
 
-  <script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '397069354']);
-  
-  _gaq.push(['_trackPageview']);
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-760Y60FQ3T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  gtag('config', 'G-760Y60FQ3T', { 'anonymize_ip': false});
 </script>
 
 
