@@ -234,7 +234,8 @@ $(document).ready(function() {
     "installing-boot9strap-(kartminer7)": "30",
     "installing-boot9strap-(petit-compwner)": "31",
     "installing-boot9strap-(smilehax-iie-jpn)": "32",
-	"installing-boot9strap-(mset9)": "33"
+	"installing-boot9strap-(mset9)": "33",
+        "installing-boot9strap-(mset9-play-store)": "34"
   };
 
   for(var device in devices){
@@ -299,7 +300,8 @@ $(document).ready(function() {
       "30": ["alternate-exploits", "seedminer-(alternate)", "installing-boot9strap-(kartminer7)", "finalizing-setup"],
       "31": ["alternate-exploits", "installing-boot9strap-(petit-compwner)", "finalizing-setup"],
       "32": ["alternate-exploits", "installing-boot9strap-(smilehax-iie-jpn)", "finalizing-setup"],
-	  "33": ["installing-boot9strap-(mset9)", "finalizing-setup"]
+	  "33": ["installing-boot9strap-(mset9)", "finalizing-setup"],
+	  "34": ["installing-boot9strap-(mset9-play-store)", "finalizing-setup"]
     }
     // Can add custom routing if necessary but currently both routes are identical
     var device_old =  Object.assign({}, device_common,{
