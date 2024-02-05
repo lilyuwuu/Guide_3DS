@@ -87,6 +87,7 @@ In this section, you will use a series of scripts to automate homebrew installat
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch the Finalizing Setup Helper
     + If you boot to the Luma3DS configuration menu, you held SELECT instead of START
     + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
+    + If you see a "Luma3DS Chainloader" menu, use the D-Pad and (A) buttons to navigate to and select `finalize_helper` from the list
     + If you encounter an error, consult the [troubleshooting](troubleshooting#finalizing-setup) page
 1. If the Helper was successful, your console will boot into GodMode9
     + From this point forward, you can access GodMode9 by holding START while powering on your console
