@@ -91,7 +91,7 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
     + **A white "Error has occurred" message box**: Open System Settings, change the language to a different one (if possible), then retry this section
     + **A black screen that says "An error has occurred"**: Your file placement is incorrect; ensure that the super-skaterhax files are on the root of the SD card
     + **A yellow screen**: Hold the POWER button until the console turns off, then retry this section
-    + **[The word "Text"]((/images/screenshots/skaterhax/skater-old3ds.png))**: You have an Old 3DS, where this exploit **does not work**. If this is the case, you should follow [MSET9](installing-boot9strap-(mset9)) instead
+    + **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. If this is the case, you should follow [MSET9](installing-boot9strap-(mset9)) instead
 1. Launch nimdsphax from the list of homebrew
 1. If the exploit was successful, you will have booted into SafeB9SInstaller
     + If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
